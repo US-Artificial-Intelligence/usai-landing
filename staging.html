@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,13 @@
     
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
+    <!--
+        this is for LaTeX
+    -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.css" integrity="sha384-YiVwk+MBV52+yIvvplLwDxm3iGDI7dYb731lqsN9ASGBpIpJ/dte35lBIuR5oGFU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.js" integrity="sha384-8JJEhHkwY0VI06p7huKe7LqvYgDhSS69qJxWSQGwlB8FmDnAgPKgZGk5Ui0VyuNH" crossorigin="anonymous"></script>
+
     <style>
         body {
             font-family: 'Lora', sans-serif;
@@ -18,7 +26,7 @@
             font-size: 1.25em;
         }
         #hidden {
-            color: f2f2f2;
+            color: #f2f2f2;
         }
         #content {
             margin: auto;
@@ -162,7 +170,7 @@
                 </div>
 
                 U.S. Artificial Intelligence offers three products off-the-shelf.
-                First, our AI-powered RFP Responder can use your company's previous bid responses to automatically answers to questions on new bids, helping you save time during the bidding process.
+                First, our AI-powered RFP Responder can use your company's previous bid responses to automatically answer questions on new bids, helping you save time during the bidding process.
                 The other two, Agrippa and Praetor, are designed for the AI research community.
                 <br/><br/>
                 <div class="subheading-title">
@@ -229,18 +237,42 @@
 
                 If AI is going to be very important in our world, it should make sense for everyone to try, as best they can, to understand a little bit of linear algebra.
                 Linear algebra, after all, is that branch of mathematics that has given us the miracles of modern machine learning.
-                The following proof of the "Fundamental Theorem of Linear Maps" (also known as the "Fundamental Theorem of Linear Algebra") appears in Sheldon Axler's textbook, <i>Linear Algebra Done Right</i>.
-                It is effectively made up of two separate theorems, the second one may recognize as the Rank-Nullity Theorem.
+                The following proof of the "Fundamental Theorem of Linear Maps" (also known as the "Fundamental Theorem of Linear Algebra") appears in Sheldon Axler's textbook <i>Linear Algebra Done Right</i>.
+                It is effectively made up of two separate theorems, the second of which you may recognize as the Rank-Nullity Theorem.
 
                 <br/><br/>
                 <div class="theorem">
                     <div class="subheading-title">
-                        3.1<pre style="display:inline">    </pre>Fundamental Theorem of Linear Maps
+                        4.1<pre style="display:inline">    </pre>Fundamental Theorem of Linear Maps
                     </div> <br/>
-                    <div>
-                        Suppose <i>V</i> is finite-dimensional and <i>T</i> 
+                    <div id="theorem-text">
+                        Suppose <span class="latex">V</span> is finite-dimensional and <span class="latex">T \in \mathcal{L}(V,W)</span>.
+                        Then <span class="latex">\textrm{range}\;T</span> is finite-dimensional and <br/> <br/>
+                        <div style="text-align: center;">
+                            <span class="latex">\textrm{dim}\;V = \textrm{dim null}\;T + \textrm{dim range}\;T</span>
+                        </div>
                     </div>
-                </div>
+                </div> <br/>
+
+                First, understand that <span class="latex">T</span> is simply a matrix (linear mapping) with <span class="latex">\textrm{dim}\;V</span> columns and
+                <span class="latex">\textrm{dim}\;W</span> rows.
+                The final equation states that the the number of columns in the matrix is equal to the dimension of the nullspace of the matrix (its kernel) plus the dimension of its range (image).
+
+                <br/><br/>
+
+                <span style="color:red">Proof</span><pre style="display:inline">    </pre>Let <span class="latex">u_1,\dots,u_m</span>
+                be a basis of <span class="latex">\textrm{null}\;T</span>; thus 
+
+                </span>
+
+                <script type="text/javascript">
+
+                    let fillins = document.getElementsByClassName("latex")
+                    for (let i = 0; i < fillins.length; i++){
+                        katex.render(fillins[i].textContent, fillins[i], {throwOnError: false});
+                    }
+
+                </script>
 
             </div>
         </div>
