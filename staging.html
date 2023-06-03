@@ -163,12 +163,6 @@
                     1<pre style="display:inline">    </pre>Products
                 </div> <br/>
 
-
-                <div class="figure" >
-                    <img src="zoomed.png" />
-                    Figure 1: The Agrippa model architecture visualizer showing the attention mechanism inside a Transformer</a>.
-                </div>
-
                 U.S. Artificial Intelligence offers three products off-the-shelf.
                 First, our AI-powered RFP Responder can use your company's previous bid responses to automatically answer questions on new bids, helping you save time during the bidding process.
                 The other two, Agrippa and Praetor, are designed for the AI research community.
@@ -179,12 +173,18 @@
 
                 Using an underlying AI model similar to ChatGPT, our AI-powered RFP Responder can automatically retrieve relevant information from your company documents and use that information to generate answers to questions on new RFPs.
                 While the new question might be unanswered in the previous docs, the model can pull together different resources and usually give a reasonable response.
-                You can work with the AI side-by-side, providing it additional information or steering its responses as you go. 
+                You can work with the AI side-by-side, providing it additional information or steering its responses as you go.
+                To try a demo, please email us at <a href="malto:team@agrippa.build">team@agrippa.build</a>.
 
                 <br/><br/>
                 <div class="subheading-title">
                     1.2<pre style="display:inline">    </pre>Agrippa
                 </div> <br/>
+
+                <div class="figure" >
+                    <img src="zoomed.png" />
+                    Figure 1: The Agrippa model architecture visualizer showing the attention mechanism inside a Transformer</a>.
+                </div>
 
                 We are the creators of <a href="https://agrippa.build">Agrippa</a>, a platform for building, visualizing, and sharing AI models.
                 Agrippa gives researchers the ability to specify new architectures using a markup language that mirrors how most people think about models.
@@ -261,16 +261,84 @@
                 <br/><br/>
 
                 <span style="color:red">Proof</span><pre style="display:inline">    </pre>Let <span class="latex">u_1,\dots,u_m</span>
-                be a basis of <span class="latex">\textrm{null}\;T</span>; thus 
-
-                </span>
-
+                be a basis of <span class="latex">\textrm{null}\;T</span>; thus <span class="latex">\textrm{dim null}\;T = m</span>. The linearly independent list 
+                <span class="latex">u_1,\dots,u_m</span> can be extended to a basis
+                <br/><br/>
+                <div style="text-align: center;">
+                    <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span>
+                </div>
+                <br/>
+                of <span class="latex">V</span> (left as an exercse to the reader). Thus <span class="latex">\textrm{dim}\;V = m+n</span>.
+                To complete the proof, we need only show that <span class="latex">\textrm{range}\;T</span> is finite-dimensional and
+                <span class="latex">\textrm{dim range}\;T = n</span>.
+                We will do this by proving that <span class="latex">Tv_1,\dots,Tv_n</span> is a basis of range <span class="latex">T</span>.
+                <br/>
+                <pre style="display:inline">    </pre>Let <span class="latex">v \in V</span>.
+                Because <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span> spans <span class="latex">V</span>, we can write
+                <br/><br/>
+                <div style="text-align: center;">
+                    <span class="latex">v = a_1u_1+\cdots+a_mu_m+b_1v_1+\cdots+b_nv_n,</span>
+                </div>
+                <br/>
+                where the <span class="latex">a</span>'s and <span class="latex">b</span>'s are in <span class="latex">\textbf{F}</span>.
+                Applying <span class="latex">T</span> to both sides of this equation, we get
+                <br/><br/>
+                <div style="text-align: center;">
+                    <span class="latex">Tv=b_1Tv_1+\cdots+b_nTv_n,</span>
+                </div>
+                <br/>
+                where the terms of the form <span class="latex">Tu_j</span> disappeared because each <span class="latex">u_j</span> is in
+                <span class="latex">\textrm{null}\;T</span>.
+                The last equation implies that <span class="latex">Tv_1,\dots,Tv_n</span> spans <span class="latex">\textrm{range}\;T</span>.
+                In particular, <span class="latex">\textrm{range}\;T</span> is finite-dimensional.
+                <br/>
+                <pre style="display:inline">    </pre>To show <span class="latex">Tv_1,\dots,Tv_n</span> is linearly independent, suppose
+                <span class="latex">c_1,\dots,c_n\in\textbf{F}</span> and
+                <br/><br/>
+                <div style="text-align: center;">
+                    <span class="latex">c_1Tv_1+\cdots+c_nTv_n=0</span>.
+                </div>
+                <br/>
+                Then
+                <br/><br/>
+                <div style="text-align: center;">
+                    <span class="latex">T(c_1v_1+\cdots+c_nv_n)=0</span>.
+                </div>
+                <br/>
+                Hence
+                <br/><br/>
+                <div style="text-align: center;">
+                    <span class="latex">c_1v_1+\cdots+c_nv_n\in\textrm{null}\;T</span>.
+                </div>
+                <br/>
+                Because <span class="latex">u_1,\dots,u_m</span> spans <span class="latex">\textrm{null}\;T</span>, we can write
+                <br/><br/>
+                <div style="text-align: center;">
+                    <span class="latex">c_1v_1+\cdots+c_nv_n=d_1u_1+\cdots+d_mu_m</span>.
+                </div>
+                <br/>
+                where the <span class="latex">d</span>'s are in <span class="latex">\textbf{F}</span>.
+                This equation implies that all the <span class="latex">c</span>'s (and <span class="latex">d</span>'s) are 0
+                (because <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span> is linearly independent).
+                Thus <span class="latex">Tv_1,\dots,Tv_n</span> is linearly independent and hence is a basis of <span class="latex">\textrm{range}\;T</span>, as desired. <span style="float:right" class="latex">\blacksquare</span>
                 <script type="text/javascript">
 
                     let fillins = document.getElementsByClassName("latex")
                     for (let i = 0; i < fillins.length; i++){
                         katex.render(fillins[i].textContent, fillins[i], {throwOnError: false});
                     }
+
+                    let toptext = document.getElementById("top-text");
+                    const sleep = ms => new Promise(res => setTimeout(res, ms));
+                    let txt = "U.S. Artificial Intelligence Inc.";
+                    async function doTxt(){
+                        toptext.innerHTML = "";
+                        for (let i = 0; i < txt.length; i++){
+                            toptext.innerHTML += txt.charAt(i);
+                            await sleep(50);
+                        }
+                    }
+                    doTxt();
 
                 </script>
 
