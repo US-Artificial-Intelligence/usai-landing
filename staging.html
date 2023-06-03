@@ -43,6 +43,17 @@
             width:10em;
             margin:auto;
         }
+        #math-selection {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .math-button {
+            padding-left: 20px;
+            padding-right: 20px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
         #top-text {
             text-align: center;
             font-weight: bold;
@@ -101,8 +112,8 @@
         }
         /* The animation code */
         @keyframes fade-in {
-            from {opacity: 0;}
-            to {opacity: 1;}
+            /*from {opacity: 0;}
+            to {opacity: 1;}*/
         }
         @media only screen and (max-width: 1200px) and (min-width: 700px) {
             #content{
@@ -251,93 +262,110 @@
                     <div class="heading-title">
                         4<pre style="display:inline">    </pre>Some Math
                     </div> <br/>
-
-                    If AI is going to be very important in our world, it should make sense for everyone to try, as best they can, to understand a little bit of linear algebra,
-                    which is the branch of math underlying machine learning.
-                    The following proof of the "Fundamental Theorem of Linear Maps" (also known as the "Fundamental Theorem of Linear Algebra") appears in Sheldon Axler's textbook <i>Linear Algebra Done Right</i>.
-                    It is effectively made up of two separate theorems, the second of which is known independently as the Rank-Nullity Theorem.
-
+                    For fun, we've put a few math lessons below on topics related to AI.
+                    If AI is going to be very important in our world, it should make sense for everyone to try to learn a little bit about how it works.
+                    The topics below go from left to right, least to most difficult.
                     <br/><br/>
-                    <div class="theorem">
-                        <div class="subheading-title">
-                            4.1<pre style="display:inline">    </pre>Fundamental Theorem of Linear Maps
-                        </div> <br/>
-                        <div id="theorem-text">
-                            Suppose <span class="latex">V</span> is finite-dimensional and <span class="latex">T \in \mathcal{L}(V,W).</span>
-                            Then <span class="latex">\textrm{range}\;T</span> is finite-dimensional and <br/> <br/>
-                            <div style="text-align: center;">
-                                <span class="latex">\textrm{dim}\;V = \textrm{dim null}\;T + \textrm{dim range}\;T</span>
-                            </div>
+                    <div id="math-selection">
+                        <div class="math-button">
+                            Neural Network Basics
                         </div>
-                    </div> <br/>
+                        <div class="math-button">
+                            How does a Transformer work?
+                        </div>
+                        <div class="math-button" onclick="revealLinalg()">
+                            Some linear algebra
+                        </div>
+                    </div>
 
-                    First, understand that <span class="latex">T</span> is simply a matrix (linear mapping) with <span class="latex">\textrm{dim}\;V</span> columns and
-                    <span class="latex">\textrm{dim}\;W</span> rows.
-                    The final equation states that the the number of columns in the matrix is equal to the dimension of the nullspace of the matrix (its kernel) plus the dimension of its range (image).
+                    <div id="linalg" style="display:none">
+                        <br/><br/>
+                        Liner algebra is the branch of math underlying most machine learning.
+                        The following proof of the "Fundamental Theorem of Linear Maps" (also known as the "Fundamental Theorem of Linear Algebra") appears in Sheldon Axler's textbook <i>Linear Algebra Done Right</i>.
+                        It is effectively made up of two separate theorems, the second of which is known independently as the Rank-Nullity Theorem.
 
-                    <br/><br/>
+                        <br/><br/>
+                        <div class="theorem">
+                            <div class="subheading-title">
+                                4.1<pre style="display:inline">    </pre>Fundamental Theorem of Linear Maps
+                            </div> <br/>
+                            <div id="theorem-text">
+                                Suppose <span class="latex">V</span> is finite-dimensional and <span class="latex">T \in \mathcal{L}(V,W).</span>
+                                Then <span class="latex">\textrm{range}\;T</span> is finite-dimensional and <br/> <br/>
+                                <div style="text-align: center;">
+                                    <span class="latex">\textrm{dim}\;V = \textrm{dim null}\;T + \textrm{dim range}\;T</span>
+                                </div>
+                            </div>
+                        </div> <br/>
 
-                    <span style="color:red">Proof</span><pre style="display:inline">    </pre>Let <span class="latex">u_1,\dots,u_m</span>
-                    be a basis of <span class="latex">\textrm{null}\;T</span>; thus <span class="latex">\textrm{dim null}\;T = m</span>. The linearly independent list 
-                    <span class="latex">u_1,\dots,u_m</span> can be extended to a basis
-                    <br/><br/>
-                    <div style="text-align: center;">
-                        <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span>
+                        First, understand that <span class="latex">T</span> is simply a matrix (linear mapping) with <span class="latex">\textrm{dim}\;V</span> columns and
+                        <span class="latex">\textrm{dim}\;W</span> rows.
+                        The final equation states that the the number of columns in the matrix is equal to the dimension of the nullspace of the matrix (its kernel) plus the dimension of its range (image).
+
+                        <br/><br/>
+
+                        <span style="color:red">Proof</span><pre style="display:inline">    </pre>Let <span class="latex">u_1,\dots,u_m</span>
+                        be a basis of <span class="latex">\textrm{null}\;T</span>; thus <span class="latex">\textrm{dim null}\;T = m</span>. The linearly independent list 
+                        <span class="latex">u_1,\dots,u_m</span> can be extended to a basis
+                        <br/><br/>
+                        <div style="text-align: center;">
+                            <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span>
+                        </div>
+                        <br/>
+                        of <span class="latex">V</span> (left as an exercse to the reader). Thus <span class="latex">\textrm{dim}\;V = m+n</span>.
+                        To complete the proof, we need only show that <span class="latex">\textrm{range}\;T</span> is finite-dimensional and
+                        <span class="latex">\textrm{dim range}\;T = n</span>.
+                        We will do this by proving that <span class="latex">Tv_1,\dots,Tv_n</span> is a basis of range <span class="latex">T</span>.
+                        <br/>
+                        <pre style="display:inline">    </pre>Let <span class="latex">v \in V</span>.
+                        Because <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span> spans <span class="latex">V</span>, we can write
+                        <br/><br/>
+                        <div style="text-align: center;">
+                            <span class="latex">v = a_1u_1+\cdots+a_mu_m+b_1v_1+\cdots+b_nv_n,</span>
+                        </div>
+                        <br/>
+                        where the <span class="latex">a</span>'s and <span class="latex">b</span>'s are in <span class="latex">\textbf{F}</span>.
+                        Applying <span class="latex">T</span> to both sides of this equation, we get
+                        <br/><br/>
+                        <div style="text-align: center;">
+                            <span class="latex">Tv=b_1Tv_1+\cdots+b_nTv_n,</span>
+                        </div>
+                        <br/>
+                        where the terms of the form <span class="latex">Tu_j</span> disappeared because each <span class="latex">u_j</span> is in
+                        <span class="latex">\textrm{null}\;T</span>.
+                        The last equation implies that <span class="latex">Tv_1,\dots,Tv_n</span> spans <span class="latex">\textrm{range}\;T</span>.
+                        In particular, <span class="latex">\textrm{range}\;T</span> is finite-dimensional.
+                        <br/>
+                        <pre style="display:inline">    </pre>To show <span class="latex">Tv_1,\dots,Tv_n</span> is linearly independent, suppose
+                        <span class="latex">c_1,\dots,c_n\in\textbf{F}</span> and
+                        <br/><br/>
+                        <div style="text-align: center;">
+                            <span class="latex">c_1Tv_1+\cdots+c_nTv_n=0</span>.
+                        </div>
+                        <br/>
+                        Then
+                        <br/><br/>
+                        <div style="text-align: center;">
+                            <span class="latex">T(c_1v_1+\cdots+c_nv_n)=0</span>.
+                        </div>
+                        <br/>
+                        Hence
+                        <br/><br/>
+                        <div style="text-align: center;">
+                            <span class="latex">c_1v_1+\cdots+c_nv_n\in\textrm{null}\;T</span>.
+                        </div>
+                        <br/>
+                        Because <span class="latex">u_1,\dots,u_m</span> spans <span class="latex">\textrm{null}\;T</span>, we can write
+                        <br/><br/>
+                        <div style="text-align: center;">
+                            <span class="latex">c_1v_1+\cdots+c_nv_n=d_1u_1+\cdots+d_mu_m</span>.
+                        </div>
+                        <br/>
+                        where the <span class="latex">d</span>'s are in <span class="latex">\textbf{F}</span>.
+                        This equation implies that all the <span class="latex">c</span>'s (and <span class="latex">d</span>'s) are 0
+                        (because <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span> is linearly independent).
+                        Thus <span class="latex">Tv_1,\dots,Tv_n</span> is linearly independent and hence is a basis of <span class="latex">\textrm{range}\;T</span>, as desired. <span style="float:right" class="latex">\blacksquare</span>
                     </div>
-                    <br/>
-                    of <span class="latex">V</span> (left as an exercse to the reader). Thus <span class="latex">\textrm{dim}\;V = m+n</span>.
-                    To complete the proof, we need only show that <span class="latex">\textrm{range}\;T</span> is finite-dimensional and
-                    <span class="latex">\textrm{dim range}\;T = n</span>.
-                    We will do this by proving that <span class="latex">Tv_1,\dots,Tv_n</span> is a basis of range <span class="latex">T</span>.
-                    <br/>
-                    <pre style="display:inline">    </pre>Let <span class="latex">v \in V</span>.
-                    Because <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span> spans <span class="latex">V</span>, we can write
-                    <br/><br/>
-                    <div style="text-align: center;">
-                        <span class="latex">v = a_1u_1+\cdots+a_mu_m+b_1v_1+\cdots+b_nv_n,</span>
-                    </div>
-                    <br/>
-                    where the <span class="latex">a</span>'s and <span class="latex">b</span>'s are in <span class="latex">\textbf{F}</span>.
-                    Applying <span class="latex">T</span> to both sides of this equation, we get
-                    <br/><br/>
-                    <div style="text-align: center;">
-                        <span class="latex">Tv=b_1Tv_1+\cdots+b_nTv_n,</span>
-                    </div>
-                    <br/>
-                    where the terms of the form <span class="latex">Tu_j</span> disappeared because each <span class="latex">u_j</span> is in
-                    <span class="latex">\textrm{null}\;T</span>.
-                    The last equation implies that <span class="latex">Tv_1,\dots,Tv_n</span> spans <span class="latex">\textrm{range}\;T</span>.
-                    In particular, <span class="latex">\textrm{range}\;T</span> is finite-dimensional.
-                    <br/>
-                    <pre style="display:inline">    </pre>To show <span class="latex">Tv_1,\dots,Tv_n</span> is linearly independent, suppose
-                    <span class="latex">c_1,\dots,c_n\in\textbf{F}</span> and
-                    <br/><br/>
-                    <div style="text-align: center;">
-                        <span class="latex">c_1Tv_1+\cdots+c_nTv_n=0</span>.
-                    </div>
-                    <br/>
-                    Then
-                    <br/><br/>
-                    <div style="text-align: center;">
-                        <span class="latex">T(c_1v_1+\cdots+c_nv_n)=0</span>.
-                    </div>
-                    <br/>
-                    Hence
-                    <br/><br/>
-                    <div style="text-align: center;">
-                        <span class="latex">c_1v_1+\cdots+c_nv_n\in\textrm{null}\;T</span>.
-                    </div>
-                    <br/>
-                    Because <span class="latex">u_1,\dots,u_m</span> spans <span class="latex">\textrm{null}\;T</span>, we can write
-                    <br/><br/>
-                    <div style="text-align: center;">
-                        <span class="latex">c_1v_1+\cdots+c_nv_n=d_1u_1+\cdots+d_mu_m</span>.
-                    </div>
-                    <br/>
-                    where the <span class="latex">d</span>'s are in <span class="latex">\textbf{F}</span>.
-                    This equation implies that all the <span class="latex">c</span>'s (and <span class="latex">d</span>'s) are 0
-                    (because <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span> is linearly independent).
-                    Thus <span class="latex">Tv_1,\dots,Tv_n</span> is linearly independent and hence is a basis of <span class="latex">\textrm{range}\;T</span>, as desired. <span style="float:right" class="latex">\blacksquare</span>
                 </div>
                 <script type="text/javascript">
 
@@ -358,6 +386,16 @@
                     }
                     // Commented out typing animation
                     // doTxt();
+
+                    function revealLinalg(){
+                        let curr = document.getElementById('linalg').style.display;
+                        if (curr == 'block'){
+                            document.getElementById('linalg').style.display = 'none';
+                        }
+                        else {
+                            document.getElementById('linalg').style.display = 'block';
+                        }
+                    }
 
                 </script>
 
