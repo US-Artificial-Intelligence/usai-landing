@@ -24,11 +24,14 @@
         body {
             font-family: 'Lora', sans-serif;
             /* background-color: #f6f6f6; */
-            background: linear-gradient(90deg, white 0%, #ececec 100%);
             color: #202020;
             font-size: 1.25em;
             margin: 0px;
+
+            /*background: linear-gradient(100deg, #ffffff, #e1f5e1);*/
+
         }
+
         #hidden {
             color: #f2f2f2;
         }
@@ -63,6 +66,20 @@
             display: flex;
             justify-content: center;
             font-weight: bold;
+
+            /*background: linear-gradient(
+                to right,
+                #1d4552 20%,
+                #034434 30%,
+                #13a37f 70%,
+                #1e6279 80%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            background-size: 500% auto;
+            animation: textShine 10s ease-in-out infinite alternate;*/
         }
         #abstract {
             max-width: 800px;
@@ -89,6 +106,15 @@
             font-weight: bold;
             margin-bottom: 20px;
         }
+        @keyframes textShine {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
         .subheading-title {
             display: inline-block;
             font-weight: bold;
@@ -195,6 +221,9 @@
                 width: calc(100% - 4em + 3rem);
                 border-width: 0px;
             }
+            #abstract-text {
+                margin-bottom: 2em;
+            }
         }
         h1 {
             all: unset;
@@ -254,9 +283,6 @@
                         document.getElementById('abstract-text').innerHTML = `
                         U.S. Artificial Intelligence Inc. is an American technology company bringing cutting-edge AI to the next million businesses and institutions.
                         `;
-                        //document.getElementById('abstract-title').innerHTML = "";
-
-                        document.getElementById('abstract-text').style.marginBottom = "2em";
                     }
                 </script>
                 <div id="products">
