@@ -171,6 +171,14 @@
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
             }
+            #top-image-container {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                border-top-width: 5px;
+            }
+            #top-text {
+                font-size: 2rem;
+            }
             .top-image{
                 width: 100%;
             }
@@ -235,73 +243,43 @@
                         See below for more information on our software offerings and contact information.
                     </div>
                 </div>
+                <script type="text/javascript">
+                    if (window.innerWidth <= 700){
+                        document.getElementById('abstract-text').innerHTML = `
+                        U.S. Artificial Intelligence Inc. can produce a tailored AI solution to enhance your business's productivity.
+                        We have built a variety of AI software products targeting users all the way from the ML research community to ordinary small businesses.
+                        `;
+                    }
+                </script>
                 <div id="products">
 
                     <br/><br/>
                     <div class="heading-title">
                         1<pre style="display:inline">    </pre>Client Work
-                    </div> <br/>
-                    Artificial Intelligence presents an incredible opportunity for businesses to outpace competitors.
-                    It can let one person do the work of ten or more.
-                    However, most companies have a hard time discerning the cases when AI is transformative from the cases when AI is overhyped.
+                    </div>
+                    <div id="client-text1">
+                        Artificial Intelligence presents an incredible opportunity for businesses to outpace competitors.
+                        It can let one person do the work of ten or more.
+                        However, most companies have a hard time discerning the cases when AI is transformative from the cases when AI is overhyped.
+                        <br/>
+                        <pre style="display:inline">    </pre>We can help your instutition identify areas where AI will give you an edge in addition to the areas where it won't.
+                        Once we've idenitifed areas where an AI-powered solution might make sense, we will build out a tool made specifically for your company.
+                    </div>
+
+                    <script type="text/javascript">
+                        if (window.innerWidth <= 700){
+                            document.getElementById('client-text1').innerHTML = `
+                            We can help your instutition identify areas where AI will give you an edge in addition to the areas where it won't.
+                            Once we've idenitifed areas where an AI-powered solution might make sense, we will build out a tool made specifically for your company.
+                            `;
+                        }
+                    </script>
+
                     <br/>
-                    <pre style="display:inline">    </pre>We can help your instutition identify areas where AI will give you an edge in addition to the areas where it won't.
-                    Once we've idenitifed areas where an AI-powered solution might make sense, we will build out a tool made specifically for your company.
-                    
-                    <br/><br/>
                     <div class="bluebox">
                         <div class="heading-title">
                             1.1<pre style="display:inline">    </pre>Some ways we could help your business include:
                         </div> <br/>
-                        <!--
-                        <div style="display:flex">
-                            <style>
-                                .flex-icon-item {
-                                    flex: 1 1 0;
-                                    width: 0;
-                                    text-align: center;
-                                    padding: .5em;
-                                    margin: 20px;
-                                    font-size: 1.25em;
-                                    border-radius: 10px;
-                                    /* box-shadow: 5px 5px 10px #808080; */
-                                    font-weight: bold;
-                                    display: flex;
-                                    flex-direction: column;
-                                    background: linear-gradient(125deg, white 0%, #e0e0e0 100%);
-                                }
-                                .flex-icon-item img {
-                                    width: 25%;
-                                    filter: opacity(.5);
-                                    margin-top: auto;
-                                }
-
-                            </style>
-                            <div class="flex-icon-item">
-                                <div>
-                                    Chat your company data <br/><br/> 
-                                </div>
-                                <div style="margin-top:auto">
-                                    <img src="chat.png" />
-                                </div>
-                            </div>
-                            <div class="flex-icon-item">
-                                <div>
-                                    Filter text and customer feedback instantly <br/><br/>
-                                </div>
-                                <div>
-                                    <img src="filter.png" /></div>
-                                </div>
-                            <div class="flex-icon-item">
-                                <div>
-                                    Automate your proposal process <br/><br/>
-                                </div>
-                                <div>
-                                    <img src="rfp.png" />
-                                </div>
-                            </div>
-                        </div>
-                        -->
                         <div style="display:flex;flex-direction:column">
                             <style>
                                 .option-row {
