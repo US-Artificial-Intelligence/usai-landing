@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <link rel="icon" type="image/x-icon" href="building.png">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
@@ -171,7 +174,7 @@
             margin-right: 20px;
             font-size: .8em;
         }
-        .figure img {
+        .figure video {
             width: 100%;
         }
         @keyframes fade-in-out {
@@ -337,7 +340,7 @@
                                     <b>Chat with your company data</b>
                                     <br/><br/>
                                     ChatGPT doesn't have access to your company's documents or your specific industry data.
-                                    We can hook up your company's data to an AI so that you can turn a chat-based AI into an expert in your business and industry.
+                                    We can hook up your company's data to AI so that you can turn a chat-based AI into an expert in your business and industry.
                                 </div>
                             </div>
                             <div class="option-row">
@@ -405,7 +408,13 @@
                     </div> <br/>
 
                     <div class="figure" >
-                        <img src="zoomed.png" />
+                        <video id="agr-video" poster="zoomed.png" playsinline autoplay muted loop>
+                            <source src="transformer.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <script type="text/javascript">
+                            document.getElementById("agr-video").playbackRate = 2.0;
+                        </script>
                         Figure 1: The Agrippa model architecture visualizer showing the attention mechanism inside a Transformer</a>.
                     </div>
 
@@ -431,7 +440,7 @@
                     U.S. Artificial Intelligence was founded by Gordon Kamer in 2023.
                     Before founding the company, Gordon graduated with a degree in Computer Science from Harvard College.
                     He worked for the Washington-based consultancy Long-Term Strategy Group as a researcher, primarily advising the Department of Defense on how AI may impact national security.
-                    Following his time at LTSG, Gordon worked independently for the DoD on similar issues.
+                    Following his time at LTSG, Gordon worked in the financial services industry at a quantitative trading firm.
 
                     <br/><br/>
                     <div class="heading-title">
@@ -463,7 +472,7 @@
                         The network is divided into layers, and there are different weights and biases for each layer.
                         Each weights matrix, <span class="latex">W</span>, has entries equal to its width times its height.
                         The biases (<span class="latex">b</span>) are each a single vector (where the matrix is 2d, the biases are 1d).
-                        The output of each layer is itself a vector. Mathematically, we can write the output of a layer of the network as so:
+                        The output of each layer is itself a vector. Mathematically, we can write the output of a layer of the network as such:
                         <br/><br/>
                         <div style="text-align:center">
                             <span class="latex">
@@ -595,7 +604,7 @@
                         The first step is taking a sentence and encoding it as numbers. In this step, you divide the text into segments called “tokens”, which are basically just words and symbols. For example, the sentence,
                         <br/><br/>
                         <div style="text-align:center">
-                            “Mary had a little lamb”
+                            “Mary had a little lamb.”
                         </div>
                         <br/><br/>
                         can be divided into the tokens
@@ -686,6 +695,8 @@
                         }
                         else {
                             document.getElementById('linalg').style.display = 'block';
+                            document.getElementById('neuralnetwork').style.display = 'none';
+                            document.getElementById('transformer').style.display = 'none';
                         }
                     }
 
@@ -696,6 +707,8 @@
                         }
                         else {
                             document.getElementById('transformer').style.display = 'block';
+                            document.getElementById('linalg').style.display = 'none';
+                            document.getElementById('neuralnetwork').style.display = 'none';
                         }
                     }
 
@@ -706,6 +719,8 @@
                         }
                         else {
                             document.getElementById('neuralnetwork').style.display = 'block';
+                            document.getElementById('transformer').style.display = 'none';
+                            document.getElementById('linalg').style.display = 'none';
                         }
                     }
 
