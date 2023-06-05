@@ -174,11 +174,10 @@
             #top-image-container {
                 padding-top: 20px;
                 padding-bottom: 20px;
-                border-top-width: 5px;
-                margin-bottom: -1.5em;
+                border-top-width: 6px;
             }
             #top-text {
-                font-size: 1.25rem;
+                font-size: 1.85rem;
             }
             .top-image{
                 width: 100%;
@@ -237,20 +236,21 @@
                     <span class="heading-title" id="abstract-title">
                         About
                     </span> <br/>
-                    <div id="abstract-text">
+                    <div id="abstract-text" style="margin-bottom: 2em;">
                         U.S. Artificial Intelligence Inc. is an American technology company bringing cutting-edge AI to the next million businesses and institutions.
                         Our engineers can produce a tailored AI solution to enhance your business's productivity.
                         In addition to our work with clients, we have built a variety of AI software products targeting users all the way from the ML research community to ordinary small businesses.
                         See below for more information on our software offerings and contact information.
-                        <br/>
-                    </div><br/>
+                    </div>
                 </div>
                 <script type="text/javascript">
                     if (window.innerWidth <= 700){
                         document.getElementById('abstract-text').innerHTML = `
                         U.S. Artificial Intelligence Inc. is an American technology company bringing cutting-edge AI to the next million businesses and institutions.
                         `;
-                        document.getElementById('abstract-title').innerHTML = "";
+                        //document.getElementById('abstract-title').innerHTML = "";
+
+                        document.getElementById('abstract-text').style.marginBottom = "1em";
                     }
                 </script>
                 <div id="products">
