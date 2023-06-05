@@ -7,6 +7,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     
     
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
@@ -57,24 +59,25 @@
             cursor: pointer;
         }
         #top-text {
-            text-align: center;
-            font-weight: bold;
             font-size: 2em;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
         }
         #abstract {
             max-width: 800px;
             margin: auto;
             text-align: center;
             animation-name: fade-in;
-            animation-duration: 1s;
+            animation-duration: 1.5s;
             animation-delay: 0s;
             animation-fill-mode: backwards;
         }
         #products {
             animation-name: fade-in;
 
-            animation-duration: 1s;
-            animation-delay: 0.2s;
+            animation-duration: 1.5s;
+            animation-delay: .75s;
             animation-fill-mode: backwards;
         }
         #abstract-text {
@@ -175,9 +178,10 @@
                 padding-top: 20px;
                 padding-bottom: 20px;
                 border-top-width: 6px;
+                text-align: center;
             }
             #top-text {
-                font-size: 1.85rem;
+                font-size: 1.9rem;
             }
             .top-image{
                 width: 100%;
@@ -226,7 +230,9 @@
                 <img src="US-AIFullSpace.svg" style="width:100%" />
             </div> -->
             <div id="top-text">
-                U.S. Artificial Intelligence Inc.
+                <div class="top-text-inner">
+                    U.S. Artificial Intelligence Inc.
+                </div>
             </div>
         </div>
         <br/>
@@ -250,7 +256,7 @@
                         `;
                         //document.getElementById('abstract-title').innerHTML = "";
 
-                        document.getElementById('abstract-text').style.marginBottom = "1em";
+                        document.getElementById('abstract-text').style.marginBottom = "2em";
                     }
                 </script>
                 <div id="products">
@@ -410,10 +416,10 @@
                     The topics below go from left to right, least to most difficult.
                     <br/><br/>
                     <div id="math-selection">
-                        <div class="math-button">
+                        <div class="math-button"  onclick="revealNN()">
                             Neural Network Basics
                         </div>
-                        <div class="math-button">
+                        <div class="math-button"  onclick="revealTransformer()">
                             How does a Transformer work?
                         </div>
                         <div class="math-button" onclick="revealLinalg()">
@@ -421,24 +427,48 @@
                         </div>
                     </div>
                     <div id="neuralnetwork" style="display:none">
-                        <br/>
+                        <br/><br/>
                         "Neural network" is ultimately a pretty broad term that encompasses a variety of statistical models.
                         Usually, though, the essence of a neural network is the "multi-layer perceptron" (MLP), which can standalone as a model
-                        or become integrated into bigger models (for example, in a Transformer, the model underlying ChatGPT). <br/>
-                        <pre style="display:inline">    </pre>An MLP is defined by its weights and biases. Given these numbers, you could recreate
+                        or become integrated into bigger models (for example, it is a part of a Transformer, the model underlying ChatGPT). <br/>
+                        <br/><br/>
+                        An MLP is defined by its weights and biases. Given these numbers, you could recreate
                         the computations of the model by hand - that is, given an input, calculate the output.
+                        The network is divided into layers, and there are different weights and biases for each layer.
+                        Each weights matrix, <span class="latex">W</span>, has entries equal to its width times its height.
+                        The biases (<span class="latex">b</span>) are each a single vector (where the matrix is 2d, the biases are 1d).
+                        The output of each layer is itself a vector. Mathematically, we can write the output of a layer of the network as so:
                         <br/><br/>
                         <div style="text-align:center">
                             <span class="latex">
                                 y = f(Wx+b)
                             </span>
                         </div>
+                        <br/>
+                        What's happening here is that the input vector, <span class="latex">x</span>, is being left-multiplied by the weights matrix before being added to the biases.
+                        Then, we apply an "activation function" to that list of numbers. The activation function is typically something like a ReLU, which is simply the function <span class="latex">f(x)=max(x, 0)</span>.
+                        The activation function is applied to each element in the resulting vector.
+                        The formula we just looked at is clever from a notational persepctive because I specify what's happening to the entire vectors. If we broke down this operation for each value in the output vector <span class="latex">y</span>, we would get something like the following:
                         <br/><br/>
                         <div style="text-align:center">
                             <span class="latex">
                                 y_i = f((w_1x_1+w_2x_2+\cdots+w_nx_n)+b_i)
                             </span>
                         </div>
+                        <br/>
+                        Recalling how matrix-vector multiplication works, we basically have a "weight" associated with every value in the input vector.
+                        Those weights are multiplied by the input values. We sum all of those products up. Then, we add the bias vector, which is just one number for each element in our resulting vector (the output of the layer).
+                        Note that, for each number in the output vector <span class="latex">y</span>, there is a different set of <span class="latex">w</span>'s and a different <span class="latex">b_i</span>.
+                        There can be as many numbers in the output vector as we want - we just need a set of weights covering the length of the input vector for each output and a new bias term.
+                        <br/><br/>
+                        Now that we have some understanding of each layer, we can combine them.
+                        To have multiple layers in our neural network, we simply make the output of one layer to be the input of the next.
+                        We can repeat this recursion however long we'd like.
+                        <br/><br/>
+                        So far, we've taken it for granted that we have access to weights and biases that work. But how are they chosen?
+                        They are determined through a process called "training". The details of neural network training is too far afield for the moment.
+                        However, if you want to learn more, the essential algorithms for neural network training are "stochastic gradient descent" and "backpropogation."
+                        There are many sources online, but I enjoyed <a href="https://windowsontheory.org/2020/11/03/yet-another-backpropagation-tutorial/">this one</a> written by Boaz Barak of Harvard University.
                     </div>
                     <div id="linalg" style="display:none">
                         <br/><br/>
@@ -528,8 +558,8 @@
                         (because <span class="latex">u_1,\dots,u_m,v_1,\dots,v_n</span> is linearly independent).
                         Thus <span class="latex">Tv_1,\dots,Tv_n</span> is linearly independent and hence is a basis of <span class="latex">\textrm{range}\;T</span>, as desired. <span style="float:right" class="latex">\blacksquare</span>
                     </div>
-                    <div id="transformers">
-                        <br/>
+                    <div id="transformer"  style="display:none">
+                        <br/><br/>
                         The Transformer, introduced by Google in 2017, is the architecture underlying ChatGPT and other generative language models. What follows is a simplified explanation of how it works.
                         <br/><br/>
                         The term “architecture” in this context means the process by which you can generate text using math - you could, in theory, reproduce ChatGPT’s outputs with pencil and paper calculations. It all boils down to simple additions and multiplications.
@@ -538,17 +568,19 @@
                         <br/><br/>
                         The first step is taking a sentence and encoding it as numbers. In this step, you divide the text into segments called “tokens”, which are basically just words and symbols. For example, the sentence,
                         <br/><br/>
-                        “Mary had a little lamb”
+                        <div style="text-align:center">
+                            “Mary had a little lamb”
+                        </div>
                         <br/><br/>
                         can be divided into the tokens
                         <br/><br/>
-                        “Mary”, “ had”, “ a”, “ little”, “ lamb”, “.”
+                        <div style="text-align:center">
+                            “Mary”, “ had”, “ a”, “ little”, “ lamb”, “.”
+                        </div>
                         <br/><br/>
                         Note that the spaces and punctuation are included in the list of tokens. The tokenization process is often a source of bugs - the model cannot use what it cannot see. 
                         <br/><br/>
-                        Then, we use a lookup table, learned during training, to associate each token with a list of numbers. We encode these “embeddings” into a matrix. For example, the embedding matrix for the above sentence might look like:
-                        <br/><br/>
-                        INSERT MATRIX
+                        Then, we use a lookup table, learned during training, to associate each token with a list of numbers. We encode these “embeddings” into a matrix.
                         <br/><br/>
                         Now, we will slowly morph each row (token) into new embeddings. At the end of the process, we will apply the inverse of the previous operation (the lookup table step) to reveal our new set of tokens. Each place in the sequence will hopefully turn into an embedding of the next token in the sequence. We are most concerned with the final embedding of the last token, which hopefully will resemble the embedding of the next token. That final token is the output of the model. If we continue to apply this process with the new addition appended to our input, we can generate new tokens forever. 
                         <br/><br/>
@@ -556,16 +588,28 @@
                         <br/><br/>
                         First, we apply three learned linear transformations to the embedding matrix. This simply means multiplying the embedding matrix by three matrices of numbers, given to us during training. The three new matrices, which are slightly modified versions of the original embedding matrix, are called “keys”, “queries”, and “values”.
                         <br/><br/>
-                        INSERT KQV FORMULA
-                        <br/><br/>
+                        <div style="text-align:center">
+                            <span class="latex">
+                                K=XW_K
+                            </span> <br/>
+                            <span class="latex">
+                                Q=XW_Q
+                            </span> <br/>
+                            <span class="latex">
+                                V=XW_V
+                            </span>
+                        </div>
+                        <br/>
                         With our new matrices, we now take dot products between every row in the key matrix and the query matrix. The dot product is a way to measure similarity between lists of numbers (rows of the matrices). This operation can be represented as a matrix multiply.
-                        <br/><br/>
-                        INSERT KV EQUATION
                         <br/><br/>
                         Now, having generated a list of “similarity scores” (the result of taking the dot products), we use those similarity scores in combination with the values matrix to pick out plausible new embeddings.
                         <br/><br/>
-                        INSERT FULL ATTENTION EQ
-                        <br/><br/>
+                        <div style="text-align:center">
+                            <span class="latex">
+                                \textrm{Attention}(Q, K, V)=\textrm{softmax}(\frac{QK^T}{\sqrt{d_k}})V
+                            </span>
+                        </div>
+                        <br/>
                         Now, generated those new embeddings, we can repeat the process many times in parallel with different sets of keys, queries, and values. The different values keys, queries, and values are designed so as to pick out different kinds of information. Some keys and values might emphasize the relationship between verbs and their respective objects. Others might emphasize relationships between different adjectives. It is generally a mystery as to which relationships the Transformer will learn to care about.
                         <br/><br/>
                         The different sets of values are appended together and combined so as to generate the final, single embedding matrix.
@@ -574,15 +618,19 @@
                         <br/><br/>
                         While this explanation only scratched the surface of how a Transformer functions, the main takeaways should be:
                         <br/><br/>
-                        - Text is first tokenized and transformed into lists of numbers before the model acts on them. At the end, the reverse process turns them back into text.
-                        <br/><br/>
-                        - In the model, token embeddings are compared with all other tokens in the sequence through an attention mechanism.  
-                        <br/><br/>
-                        - Each embedding is morphed into an embedding representing the next token in the sequence, the last of which is a guess at the next word to come. We repeat this process recursively to generate text. 
-                        <br/><br/>
-                        If you are interested in more of the details, you should feel free to read
-                        <br/><br/>
-                        INSERT LINKS
+                        <ul>
+                            <li>
+                                Text is first tokenized and transformed into lists of numbers before the model acts on them. At the end, the reverse process turns them back into text.
+                            </li> <br/>
+                            <li>
+                                In the model, token embeddings are compared with all other tokens in the sequence through an attention mechanism.  
+                            </li> <br/>
+                            <li>
+                                Each embedding is morphed into an embedding representing the next token in the sequence, the last of which is a guess at the next word to come. We repeat this process recursively to generate text. 
+                            </li>
+                        </ul>
+                        If you are interested in more of the details, you should feel free to read <a href="https://arxiv.org/pdf/1706.03762.pdf">the original paper</a> or
+                        any of the popular explanations, like <a href="http://nlp.seas.harvard.edu/annotated-transformer/">"The Annotated Transformer."</a>
                     </div>
                 </div>
                 <script type="text/javascript">
@@ -612,6 +660,26 @@
                         }
                         else {
                             document.getElementById('linalg').style.display = 'block';
+                        }
+                    }
+
+                    function revealTransformer(){
+                        let curr = document.getElementById('transformer').style.display;
+                        if (curr == 'block'){
+                            document.getElementById('transformer').style.display = 'none';
+                        }
+                        else {
+                            document.getElementById('transformer').style.display = 'block';
+                        }
+                    }
+
+                    function revealNN(){
+                        let curr = document.getElementById('neuralnetwork').style.display;
+                        if (curr == 'block'){
+                            document.getElementById('neuralnetwork').style.display = 'none';
+                        }
+                        else {
+                            document.getElementById('neuralnetwork').style.display = 'block';
                         }
                     }
 
