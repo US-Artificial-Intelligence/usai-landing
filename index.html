@@ -171,7 +171,7 @@
             margin-right: 20px;
             font-size: .8em;
         }
-        .figure img {
+        .figure video {
             width: 100%;
         }
         @keyframes fade-in-out {
@@ -405,7 +405,13 @@
                     </div> <br/>
 
                     <div class="figure" >
-                        <img src="zoomed.png" />
+                        <video autoplay muted id="agr-video" loop>
+                            <source src="transformer.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <script type="text/javascript">
+                            document.getElementById("agr-video").playbackRate = 2.0;
+                        </script>
                         Figure 1: The Agrippa model architecture visualizer showing the attention mechanism inside a Transformer</a>.
                     </div>
 
