@@ -175,9 +175,10 @@
                 padding-top: 20px;
                 padding-bottom: 20px;
                 border-top-width: 5px;
+                margin-bottom: -1.5em;
             }
             #top-text {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
             .top-image{
                 width: 100%;
@@ -233,7 +234,7 @@
         <div>
             <div>
                 <div id="abstract">
-                    <span class="heading-title">
+                    <span class="heading-title" id="abstract-title">
                         About
                     </span> <br/>
                     <div id="abstract-text">
@@ -241,18 +242,18 @@
                         Our engineers can produce a tailored AI solution to enhance your business's productivity.
                         In addition to our work with clients, we have built a variety of AI software products targeting users all the way from the ML research community to ordinary small businesses.
                         See below for more information on our software offerings and contact information.
-                    </div>
+                        <br/>
+                    </div><br/>
                 </div>
                 <script type="text/javascript">
                     if (window.innerWidth <= 700){
                         document.getElementById('abstract-text').innerHTML = `
-                        U.S. Artificial Intelligence Inc. can produce a tailored AI solution to enhance your business's productivity.
-                        We have built a variety of AI software products targeting users all the way from the ML research community to ordinary small businesses.
+                        U.S. Artificial Intelligence Inc. is an American technology company bringing cutting-edge AI to the next million businesses and institutions.
                         `;
+                        document.getElementById('abstract-title').innerHTML = "";
                     }
                 </script>
                 <div id="products">
-                    <br/>
                     <div class="heading-title">
                         1<pre style="display:inline">    </pre>Client Work
                     </div>
@@ -366,8 +367,7 @@
                             Please email <a href="malto:team@agrippa.build">team@agrippa.build</a> to request a quote and demo of our RFP Responder, or for any other questions you may have.
                         </div>
                     </div>
-
-                    <br/><br/>
+                    <br/>
                     <div class="subheading-title">
                         2.2<pre style="display:inline">    </pre>Agrippa
                     </div> <br/>
