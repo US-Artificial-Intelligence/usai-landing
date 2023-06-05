@@ -24,15 +24,15 @@
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.js" integrity="sha384-8JJEhHkwY0VI06p7huKe7LqvYgDhSS69qJxWSQGwlB8FmDnAgPKgZGk5Ui0VyuNH" crossorigin="anonymous"></script>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+            padding-bottom: 700px;
+        }
         body {
             font-family: 'Lora', sans-serif;
-            /* background-color: #f6f6f6; */
             color: #202020;
             font-size: 1.25em;
             margin: 0px;
-
-            /*background: linear-gradient(100deg, #ffffff, #e1f5e1);*/
-
         }
 
         #hidden {
@@ -44,10 +44,7 @@
             margin-top: 5em;
         }
         #top-image-container {
-            border-top: 10px solid black;
-            border-bottom: 2px solid black;
-            padding-top: 40px;
-            padding-bottom: 40px;
+            margin-bottom: 20px;
         }
         .top-image {
             width:10em;
@@ -64,26 +61,19 @@
             text-decoration: underline;
             cursor: pointer;
         }
+
         #top-text {
             font-size: 2em;
             display: flex;
             justify-content: center;
             font-weight: bold;
 
-            /*background: linear-gradient(
-                to right,
-                #1d4552 20%,
-                #034434 30%,
-                #13a37f 70%,
-                #1e6279 80%
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
-            background-size: 500% auto;
-            animation: textShine 10s ease-in-out infinite alternate;*/
+            background-color: #f8f8f8;
+            border: 1px solid #d0d0d0;
+
+            padding-top: .5rem;
         }
+
         #abstract {
             max-width: 800px;
             margin: auto;
@@ -92,6 +82,10 @@
             animation-duration: 1.5s;
             animation-delay: 0s;
             animation-fill-mode: backwards;
+            padding-bottom: 1.5em;
+        }
+        #abstract-title {
+            font-size: 1.25em;
         }
         #products {
             animation-name: fade-in;
@@ -105,7 +99,7 @@
         }
         .heading-title {
             display: inline-block;
-            font-size: 1.25em;
+            font-size: 1.75em;
             font-weight: bold;
             margin-bottom: 20px;
         }
@@ -157,7 +151,6 @@
             animation-delay: 0s;
             animation-fill-mode: backwards;
             animation-iteration-count: infinite;
-
         }
 
         .theorem {
@@ -176,6 +169,23 @@
         }
         .figure video {
             width: 100%;
+        }
+        .list-heading {
+            font-size: 1.75em;
+            font-weight: 400;
+        }
+        .menu-option {
+            padding: 30px;
+            text-align: center;
+        }
+        .menu-header {
+            font-weight: bold;
+        }
+        #top-menu {
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            padding-bottom: 20px;
         }
         @keyframes fade-in-out {
             0% {opacity: 0;}
@@ -204,10 +214,10 @@
                 font-size: .9em;
             }
             #top-image-container {
-                padding-top: 20px;
-                padding-bottom: 20px;
+                padding-top: 10px;
                 border-top-width: 6px;
                 text-align: center;
+                margin-bottom: 10px;
             }
             #top-text {
                 font-size: 1.9rem;
@@ -226,6 +236,25 @@
             }
             #abstract-text {
                 margin-bottom: 2em;
+            }
+            #abstract {
+                padding-bottom: 0px;
+            }
+            .heading-title {
+                font-size: 1.25em;
+            }
+            .list-heading {
+                font-size: 1.25em;
+            }
+            .menu-option {
+                padding: 5px;
+                padding-right: 15px;
+            }
+            #top-menu {
+                padding-top: 20px;
+            }
+            html {
+                padding-bottom: 200px;
             }
         }
         h1 {
@@ -258,24 +287,37 @@
 <body>
     <div id="content">
         <div id="top-image-container">
-            <!-- <div class="top-image">
-                <img src="US-AIFullSpace.svg" style="width:100%" />
-            </div> -->
             <div id="top-text">
                 <div class="top-text-inner">
-                    U.S. Artificial Intelligence Inc.
+                    <img src="US-AI.svg" style="height: 3em" />
                 </div>
             </div>
         </div>
-        <br/>
         <div>
             <div>
+                <div id="top-menu">
+                    <div class="menu-option">
+                        <a href="#what-we-do">
+                            <span class="menu-header">What We Do</span>
+                        </a>
+                    </div>
+                    <div class="menu-option">
+                        <a href="#our-products">
+                            <span class="menu-header">Products</span>
+                        </a>
+                    </div>
+                    <div class="menu-option">
+                        <a href="#team">
+                            <span class="menu-header">Our Team</span>
+                        </a>
+                    </div>
+                </div>
                 <div id="abstract">
                     <span class="heading-title" id="abstract-title">
                         About
                     </span> <br/>
                     <div id="abstract-text" style="margin-bottom: 2em;">
-                        U.S. Artificial Intelligence Inc. is an American technology company bringing cutting-edge AI to the next million businesses and institutions.
+                        <b>U.S. Artificial Intelligence Inc.</b> is an American technology company bringing cutting-edge AI to the next million businesses and institutions.
                         Our engineers can produce a tailored AI solution to enhance your business's productivity.
                         In addition to our work with clients, we have built a variety of AI software products targeting users all the way from the ML research community to ordinary small businesses.
                         See below for more information on our software offerings and contact information.
@@ -289,8 +331,10 @@
                     }
                 </script>
                 <div id="products">
-                    <div class="heading-title">
-                        1<pre style="display:inline">    </pre>Client Work
+                    <div id="what-we-do">
+                        <div class="heading-title">
+                            1<pre style="display:inline">    </pre>Bring AI to Your Business
+                        </div>
                     </div>
                     <div id="client-text1">
                         Artificial Intelligence presents an incredible opportunity for businesses to outpace competitors.
@@ -311,9 +355,6 @@
                     </script>
                     <br/>
                     <div class="bluebox">
-                        <div class="heading-title">
-                            1.1<pre style="display:inline">    </pre>Some ways we could help your business include:
-                        </div> <br/>
                         <div style="display:flex;flex-direction:column">
                             <style>
                                 .option-row {
@@ -333,33 +374,33 @@
                                 }
                             </style>
                             <div class="option-row">
-                                <div style="margin-right: 2em">
-                                    <b>1.1.1</b>
+                                <div  class="list-heading" style="margin-right: 2em">
+                                    1.1
                                 </div>
                                 <div style="flex:1">
-                                    <b>Chat with your company data</b>
+                                    <b class="list-heading">Chat with your company data</b>
                                     <br/><br/>
                                     ChatGPT doesn't have access to your company's documents or your specific industry data.
                                     We can hook up your company's data to AI so that you can turn a chat-based AI into an expert in your business and industry.
                                 </div>
                             </div>
                             <div class="option-row">
-                                <div style="margin-right: 2em">
-                                    <b>1.1.2</b>
+                                <div  class="list-heading" style="margin-right: 2em">
+                                    1.2
                                 </div>
                                 <div style="flex:1">
-                                    <b>Filter and classify text</b>
+                                    <b class="list-heading">Filter and classify text</b>
                                     <br/><br/>
                                     Whether it's customer feedback, emails, PDFs, or any other piece of unstructured text data, we can give your business
                                     a way to summarize, classify, categorize, and filter it. 
                                 </div>
                             </div>
                             <div class="option-row">
-                                <div style="margin-right: 2em">
-                                    <b>1.1.3</b>
+                                <div class="list-heading" style="margin-right: 2em">
+                                    1.3
                                 </div>
                                 <div style="flex:1">
-                                    <b>Automate your proposal process</b>
+                                    <b class="list-heading">Automate your proposal process</b>
                                     <br/><br/>
                                     A lot of business find themselves answering the same questions again and again, or slightly different variations thereof.
                                     Given access to your previous RFP responses, we can generate new ones, while still allowing you to guide and edit where needed.
@@ -369,7 +410,7 @@
                     </div>
 
                     <br/>
-                    <div class="subheading-title">
+                    <div class="subheading-title" id="contact-box">
                         1.2<pre style="display:inline">    </pre>Contact
                     </div> <br/>
                     <div>
@@ -377,10 +418,11 @@
                     </div>
 
                     <br/><br/>
-                    <div class="heading-title">
-                        2<pre style="display:inline">    </pre>Products
-                    </div> <br/>
-
+                    <div id="our-products">
+                        <div class="heading-title">
+                            2<pre style="display:inline">    </pre>Products
+                        </div>
+                    </div><br/>
                     U.S. Artificial Intelligence offers three products off-the-shelf.
                     First, our AI-powered RFP Responder can use your company's previous bid responses to automatically answer questions on new bids, helping you save time during the bidding process.
                     The other two, Agrippa and Praetor, are designed for the AI research community.
@@ -433,9 +475,12 @@
                     Praetor is extrememly simple and lightweight, so it can be a drop-in replacement to hacky scripts that you might be using currently to manage your LLM training data.
 
                     <br/><br/>
-                    <div class="heading-title">
-                        3<pre style="display:inline">    </pre>Team
-                    </div> <br/>
+                    <div id="team">
+                        <div class="heading-title">
+                            3<pre style="display:inline">    </pre>Team
+                        </div>
+                    </div>
+                    <br/>
 
                     U.S. Artificial Intelligence was founded by Gordon Kamer in 2023.
                     Before founding the company, Gordon graduated with a degree in Computer Science from Harvard College.
