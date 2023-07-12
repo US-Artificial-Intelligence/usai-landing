@@ -66,7 +66,7 @@
                 display: flex;
                 color: white;
                 padding: 2rem;
-                background-color: rgba(0, 0, 0, .75);
+                background-color: rgba(0, 0, 0, .5);
                 font-size: 1.25rem;
             }
             .menu-item{
@@ -76,6 +76,11 @@
             .heading-title {
                 font-size: 3rem;
                 margin-bottom: 3rem;
+            }
+            @media only screen and (max-width: 700px) {
+                .heading-title{
+                    font-size: 2em;
+                }
             }
         </style>
         
@@ -136,6 +141,7 @@
                 background-image: url("bicycle.png");
                 background-repeat: no-repeat;
                 background-position: center;
+                background-size: cover;
 
                 height: 85vh;
                 margin-top: 1rem;
