@@ -89,8 +89,8 @@
         #products {
             animation-name: fade-in;
 
-            animation-duration: .1s;
-            animation-delay: .1s;
+            animation-duration: 1.5s;
+            animation-delay: .75s;
             animation-fill-mode: backwards;
         }
         #abstract-text {
@@ -241,7 +241,7 @@
                 padding-bottom: 0px;
             }
             .heading-title {
-                font-size: 1.5em;
+                font-size: 1.25em;
             }
             .list-heading {
                 font-size: 1.25em;
@@ -314,18 +314,52 @@
                         </a>
                     </div>
                 </div>
+                <div id="abstract">
+                    <span class="heading-title" id="abstract-title">
+                        About
+                    </span> <br/>
+                    <div id="abstract-text" style="margin-bottom: 2em;">
+                        <b>U.S. Artificial Intelligence Inc.</b> is an American technology company bringing cutting-edge AI to the next million businesses and institutions.
+                        Our engineers produce tailored AI solutions to enhance your business's productivity.
+                        In addition to our work with enterprise clients, we have built a variety of AI software products targeting users from the ML research community to ordinary small businesses.
+                        See below for more on our software offerings and contact information.
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    if (window.innerWidth <= 700){
+                        document.getElementById('abstract-text').innerHTML = `
+                        U.S. Artificial Intelligence Inc. is an American technology company bringing cutting-edge AI to the next million businesses and institutions.
+                        `;
+                    }
+                </script>
                 <div id="products">
                     <div id="what-we-do">
-                        <br/>
                         <div class="heading-title" style="display:flex">
                             <div style="margin-right:2em">
                                 1
                             </div>
                             <div>
-                                Miracle Software for Knowledge Work
+                                Bring AI to Your Business
                             </div>
                         </div>
                     </div>
+                    <div id="client-text1">
+                        Artificial Intelligence presents an incredible opportunity for businesses to outpace competitors.
+                        It can let one person do the work of ten or more.
+                        However, many companies have difficulty discerning the cases when AI is transformative from the cases when AI is overhyped.
+                        <br/>
+                        <pre style="display:inline">    </pre>We help instutitions identify areas where AI provides an edge, in addition to the areas where it won't.
+                        Once we've idenitifed areas where an AI-powered solution adds value, we will build out a custom tool for your company.
+                    </div>
+
+                    <script type="text/javascript">
+                        if (window.innerWidth <= 700){
+                            document.getElementById('client-text1').innerHTML = `
+                            We can help your instutition identify areas where AI will give you an edge in addition to the areas where it won't.
+                            Once we've idenitifed areas where an AI-powered solution might make sense, we will build out a tool made specifically for your company.
+                            `;
+                        }
+                    </script>
                     <br/>
                     <div class="bluebox">
                         <div style="display:flex;flex-direction:column">
@@ -351,10 +385,10 @@
                                     1.1
                                 </div>
                                 <div style="flex:1">
-                                    <b class="list-heading">Automate your proposal process</b>
+                                    <b class="list-heading">Chat with your company data</b>
                                     <br/><br/>
-                                    Many businesses find themselves answering the same questions again and again.
-                                    Given access to your previous RFP responses, we can generate new ones, while still allowing you to guide and edit where needed.
+                                    ChatGPT doesn't have access to your company's documents or specific industry data.
+                                    We can connect your company's data to AI so that you can turn a chat-based AI into an expert in your business and industry.
                                 </div>
                             </div>
                             <div class="option-row">
@@ -362,10 +396,10 @@
                                     1.2
                                 </div>
                                 <div style="flex:1">
-                                    <b class="list-heading">Understand and filter documents</b>
+                                    <b class="list-heading">Filter and classify text</b>
                                     <br/><br/>
-                                    Whether it's legal briefs, customer feedback, emails, PDFs, or any other piece of unstructured text data, we offer your business
-                                    a way to summarize, classify, categorize, and filter it.
+                                    Whether it's customer feedback, emails, PDFs, or any other piece of unstructured text data, we offer your business
+                                    a way to summarize, classify, categorize, and filter it. 
                                 </div>
                             </div>
                             <div class="option-row">
@@ -373,10 +407,10 @@
                                     1.3
                                 </div>
                                 <div style="flex:1">
-                                    <b class="list-heading">Chat with your company data</b>
+                                    <b class="list-heading">Automate your proposal process</b>
                                     <br/><br/>
-                                    ChatGPT doesn't have access to your company's documents or specific industry data.
-                                    We can connect your company's data to AI so that you can turn a chat-based AI into an expert in your business and industry.
+                                    Many businesses find themselves answering the same questions again and again.
+                                    Given access to your previous RFP responses, we can generate new ones, while still allowing you to guide and edit where needed.
                                 </div>
                             </div>
                         </div>
@@ -384,7 +418,7 @@
 
                     <br/>
                     <div class="subheading-title" id="contact-box">
-                        1.4<pre style="display:inline">    </pre>Contact
+                        1.2<pre style="display:inline">    </pre>Contact
                     </div> <br/>
                     <div>
                         Please email <a href="malto:team@us.ai">team@us.ai</a> for information about partnerships, careers, or any other inquiries.
@@ -393,19 +427,19 @@
                     <br/><br/>
                     <div id="our-products">
                         <div class="heading-title">
-                            2<pre style="display:inline">    </pre>DEC: Our Platform
+                            2<pre style="display:inline">    </pre>Products
                         </div>
                     </div><br/>
-                    DEC is a platform that makes your life easier: summarizing, classifying, and reviewing documents has never been faster.
-                    Using underlying models similar to GPT-4, DEC can search through documents to answer complex questions.
-                    Keyword search is a thing of the past - describe what you need to know in natural language, and let the machine do the rest.
+                    U.S. Artificial Intelligence offers three off-the-shelf products.
+                    First, our AI-powered RFP Responder uses your company's previous bid responses to automatically answer questions on new bids, helping you save time during the bidding process.
+                    The other two, Agrippa and Praetor, are designed for the AI research community.
                     <br/><br/>
                     <div class="subheading-title">
                         2.1<pre style="display:inline">    </pre>RFP Responder
                     </div> <br/>
 
-                    Our AI-powered RFP Responder can automatically retrieve relevant information from your company documents and use that information to generate answers to questions on new RFPs.
-                    While the new question might be unanswered in the previous docs, the model can pull together different resources and give a reasonable response.
+                    Using an underlying AI model similar to ChatGPT, our AI-powered RFP Responder can automatically retrieve relevant information from your company documents and use that information to generate answers to questions on new RFPs.
+                    While the new question might be unanswered in the previous docs, the model can pull together different resources and usually give a reasonable response.
                     You can work with the AI side-by-side, providing it with additional information or steering its responses as you go.
 
                     <br/><br/>
@@ -419,14 +453,35 @@
                     </div>
                     <br/>
                     <div class="subheading-title">
-                        2.2<pre style="display:inline">    </pre>AI-Powered Research
+                        2.2<pre style="display:inline">    </pre>Agrippa
                     </div> <br/>
-                    Research is rarely about getting one answer to a small question.
-                    Other systems are designed to answer a bunch of questions quickly,
-                    but sometimes you need just one big answer that's actually right.
-                    Using industry-specific data and other high-quality documents, DEC can guide you to the right answer rather than just guessing.
-                    Working side by side with the AI model can give you confidence that you're getting the right information.
-                    <br/><br/><br/>
+
+                    <div class="figure" >
+                        <video id="agr-video" poster="zoomed.png" playsinline autoplay muted loop>
+                            <source src="transformer.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <script type="text/javascript">
+                            document.getElementById("agr-video").playbackRate = 2.0;
+                        </script>
+                        Figure 1: The Agrippa model architecture visualizer showing the attention mechanism inside a Transformer</a>.
+                    </div>
+
+                    We are the creators of <a href="https://agrippa.build">Agrippa</a>, a platform for building, visualizing, and sharing AI models.
+                    Agrippa gives researchers the ability to specify new architectures using a markup language that mirrors how most people think about models.
+                    Different component "blocks" are strung together in an intuitive way.
+                    Parameters are explicit and named.
+                    Shared parameters, parameter initialization schemes, and other tricks are similarly easy to implement.
+                    
+                    <br/><br/>
+                    <div class="subheading-title">
+                        2.3<pre style="display:inline">    </pre>Praetor
+                    </div> <br/>
+                    
+                    See also <a href="http://praetorai.com">Praetor</a>, a fine-tuning data and prompt management tool.
+                    Praetor is extrememly simple and lightweight, so it can be a drop-in replacement to hacky scripts that you might currently use to manage your LLM training data.
+
+                    <br/><br/>
                     <div id="team">
                         <div class="heading-title">
                             3<pre style="display:inline">    </pre>Team
