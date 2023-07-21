@@ -1,0 +1,393 @@
+<html>
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+
+html, body {
+    margin:0px;
+    padding:0px;
+}
+
+a {
+    all: unset;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Playfair Display";
+}
+
+#header {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-button {
+    background-color: white;
+    padding: .5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.main-text{
+    font-size: 3rem;
+    flex: 1;
+}
+
+.side-text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    font-family: "Playfair Display";
+    font-size: 2.5rem;
+}
+
+.first-page {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    height:100vh;
+    background-color: black;
+    color: white;
+}
+
+.bottom-row {
+    padding: 2rem;
+    border-top: 5px solid #808080;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-row-label {
+    padding-right: 2rem;
+    font-style:italic;
+}
+
+.bottom-row-item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section-container {
+    margin:auto;
+    width:80%;
+}
+
+.top-link {
+    padding-right: 30px;
+}
+
+.slide {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+
+    background-color: #f0f0f0;
+    /* background-image: linear-gradient(to top left, #e0e0fd, #f2f2fc); */
+
+    margin: 30px;
+    margin-top: 0px;
+    border-radius: 40px;
+
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.slide.active {
+    display: flex;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+}
+
+.slide-header {
+    font-size: 2rem;
+    flex: 1;
+    margin-bottom: 4rem;
+}
+
+#slides {
+    display:flex;
+    justify-content: center;
+}
+
+.slide-text {
+    color: #606060;
+}
+
+.slide-page {
+    height: 100vh;
+    background-color: #e9e9e9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer {
+    padding: 4rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .section-container {
+        width: 90%;
+    }
+    .slide {
+        padding: 25px;
+        margin: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .slide {
+        margin: 40px;
+        margin-top: 50px;
+
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+
+        display: none;
+    }
+    #usai-logo {
+        height: 40px;
+    }
+    .top-link {
+        padding-right: 15px;
+    }
+    .contact-button {
+        padding: .25rem;
+        padding-left: .75rem;
+        padding-right: .75rem;
+    }
+    #header{
+        padding: 20px;
+    }
+    .bicycle {
+        height: 200px;
+    }
+    .bottom-row{
+        padding: 1rem;
+    }
+    #see-our-solutions {
+        display: none;
+    }
+}
+
+</style>
+</head>
+<body onload="doOnLoad()">
+    <div class="first-page">
+        <div id="header">
+            <div style="flex:1">
+                <img id="usai-logo" src="US-AI-White.png" height="60px" />
+            </div>
+            <div class="top-link">
+                <a href="https://blog.us.ai">Blog</a>
+            </div>
+            <div class="top-link">
+                <a href="mailto:team@us.ai?subject=Career Inquiry">Careers</a>  
+            </div>
+            <a href="mailto:team@us.ai">
+                <div class="contact-button">
+                    Contact Us
+                </div>
+            </a>
+        </div>
+        <div class="main">
+            <div class="side-text">
+                <div style="margin:auto;">
+                    <img src="White-Bicycle.png" class="bicycle" height="300px" />
+                </div>
+                <div style="margin:auto;padding:2rem;text-align: center;">
+                    "Like a bicycle for the mind"
+                </div>
+            </div>
+        </div>
+        <div class="bottom-row">
+            <div class="bottom-row-label" id="see-our-solutions">
+                See our Software Solutions:
+            </div>
+            <script>
+                function dorfp(){
+                    changeSlide("rfp");
+                    let rfp = document.getElementsByClassName("slide-page")[0];
+                    rfp.scrollIntoView({behavior: "smooth"});
+                }
+                function dodoc(){
+                    changeSlide("docs")
+                    let docs = document.getElementsByClassName("slide-page")[0]
+                    docs.scrollIntoView({behavior: "smooth"});
+                }
+                function docustom(){
+                    changeSlide("custom")
+                    let custom = document.getElementsByClassName("slide-page")[0]
+                    custom.scrollIntoView({behavior: "smooth"});
+                }
+            </script>
+            <div class="bottom-row-item" onclick="dorfp()">
+                RFP Response Automation
+            </div>
+            <div class="bottom-row-item" onclick="dodoc()">
+                AI-Powered Document Review
+            </div>
+            <div class="bottom-row-item" onclick="docustom()">
+                Something Just For You
+            </div>
+        </div>
+    </div>
+    <div class="slide-page">
+        <div class="section-container">
+            <div id="slides">
+                <div class="slide" id="doc-review">
+                    <div class="slide-header">
+                        Doc Review
+                    </div>
+                    <div class="slide-text">
+                        Whether it's legal briefs, customer feedback, emails, PDFs, or any other piece of unstructured text data, we offer your business a way to summarize, classify, categorize, and filter it.
+                    </div>
+                </div>
+                <div class="slide" id="rfp">
+                    <div class="slide-header">
+                        RFP Response Automation
+                    </div>
+                    <div class="slide-text">
+                        Many businesses find themselves answering the same questions again and again. Given access to your previous RFP responses, we can generate new ones, while still allowing you to guide and edit where needed.
+                    </div>
+                </div>
+                <div class="slide" id="custom">
+                    <div class="slide-header">
+                        Custom Solutions
+                    </div>
+                    <div class="slide-text">
+                        AI presents a powerful new opportunity for businesses to work more efficiently and effectively.
+                        We can work with you to find areas where an AI-based solution may be appropriate.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <style>
+                    .circle-button{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 10px;
+                        background-color: #f0f0f0;
+                        margin: 10px;
+                        cursor: pointer;
+                    }
+                    .controls {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                </style>
+                <div class="controls" id="controls">
+                    <div class="circle-button" id="docButton" onclick="changeSlide('docs')">
+                    </div>
+                    <div class="circle-button" id="rfpButton" onclick="changeSlide('rfp')">
+                    </div>
+                    <div class="circle-button" id="customButton" onclick="changeSlide('custom')">
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    function doOnLoad(){
+                        addEventListener("resize", (event) => {correctForSizing()});
+                        correctForSizing();
+                    }
+    
+                    function correctForSizing(){
+                        document.getElementById("controls").style.display = "flex";
+                        if (window.innerWidth < 900){
+                            changeSlide("rfp");
+                        }
+                        else {
+                            document.getElementById("controls").style.display = "none";
+                        }
+                    }
+    
+                    function changeSlide(x){
+                        if (window.innerWidth >= 900){
+                            return;
+                        }
+    
+                        let rfp = document.getElementById("rfp");
+                        let doc = document.getElementById("doc-review");
+                        let custom = document.getElementById("custom");
+                        rfp.classList.remove('active');
+                        doc.classList.remove('active');
+                        custom.classList.remove('active');
+    
+                        let rfpButton = document.getElementById("rfpButton");
+                        let docButton = document.getElementById("docButton");
+                        let customButton = document.getElementById("customButton");
+                        rfpButton.style.backgroundColor = "#f0f0f0";
+                        docButton.style.backgroundColor = "#f0f0f0";
+                        customButton.style.backgroundColor = "#f0f0f0";
+                        if (x == "rfp"){
+                            rfp.classList.add('active');
+                            rfpButton.style.backgroundColor = "#808080";
+                        }
+                        else if (x == "docs"){
+                            doc.classList.add('active');
+                            docButton.style.backgroundColor = "#808080";
+                        }
+                        else if (x == "custom"){
+                            custom.classList.add('active');
+                            customButton.style.backgroundColor = "#808080";
+                        }
+                    }
+    
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="section-container" id="footer">
+        Copyright © U.S. Artificial Intelligence Inc. All rights reserved. Inquiries to team@us.ai.
+    </div>
+    <div style="display:none;flex-direction: column;">
+        <div>
+            <video controls>
+                <source src="MotherOfAllDemos.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div>
+            Doug Englebart's <a href="https://www.youtube.com/watch?v=UhpTiWyVa6k">"Mother of All Demos"</a>, introducing, among other things, the mouse, graphics, and video conferencing.
+        </div>
+        <br/><br/>
+    </div>
+</body>
+</html>
