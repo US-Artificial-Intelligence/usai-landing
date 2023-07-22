@@ -356,12 +356,13 @@ body {
                             return;
                         }
                         x = 1;
-                        addEventListener("resize", (event) => {correctForSizing()});
+                        if (!window.matchMedia("(max-width: 900px)").matches){
+                            addEventListener("resize", (event) => {correctForSizing()});
+                        }
                         correctForSizing();
                     }
     
                     function correctForSizing(){
-                        alert("BRUH");
                         document.getElementById("controls").style.display = "flex";
                         if (window.matchMedia("(max-width: 900px)").matches){
                             changeSlide("rfp");
