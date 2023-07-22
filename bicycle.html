@@ -245,7 +245,12 @@ body {
                 See our Software Solutions:
             </div>
             <script>
+                var x = 0;
                 function dorfp(){
+                    if(x != 0){
+                        return;
+                    }
+                    x = 1;
                     changeSlide("rfp");
                     let rfp = document.getElementsByClassName("slide-page")[0];
                     rfp.scrollIntoView({behavior: "smooth"});
