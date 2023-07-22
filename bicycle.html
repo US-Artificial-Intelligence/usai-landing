@@ -186,7 +186,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .slide {
         margin: 40px;
         margin-top: 50px;
@@ -293,7 +293,7 @@ body {
                     <div class="slide-header">
                         Doc Review
                     </div>
-                    <div style="flex:1;text-align:center;justify-content: center;align-items: center;display: flex;">
+                    <div style="flex:1;margin-top:2rem;margin-bottom:2rem;text-align:center;justify-content: center;align-items: center;display: flex;">
                         <img src="document.png" style="height:75px;" />
                     </div>
                     <div class="slide-text">
@@ -361,7 +361,7 @@ body {
     
                     function correctForSizing(){
                         document.getElementById("controls").style.display = "flex";
-                        if (window.innerWidth < 900){
+                        if (window.matchMedia("(max-width: 900px)").matches){
                             changeSlide("rfp");
                         }
                         else {
@@ -370,7 +370,7 @@ body {
                     }
     
                     function changeSlide(x){
-                        if (window.innerWidth >= 900){
+                        if (!window.matchMedia("(max-width: 900px)").matches){
                             return;
                         }
     
