@@ -135,8 +135,7 @@ body {
 
 .slide-header {
     font-size: 2rem;
-    flex: 1;
-    margin-bottom: 4rem;
+    flex: 0;
 }
 
 #slides {
@@ -155,6 +154,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.about-us-page {
+    height: 100vh;
+    background-color: black;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-container {
+    width: 80%;
 }
 
 #footer {
@@ -245,12 +259,7 @@ body {
                 See our Software Solutions:
             </div>
             <script>
-                var x = 0;
                 function dorfp(){
-                    if(x != 0){
-                        return;
-                    }
-                    x = 1;
                     changeSlide("rfp");
                     let rfp = document.getElementsByClassName("slide-page")[0];
                     rfp.scrollIntoView({behavior: "smooth"});
@@ -284,6 +293,9 @@ body {
                     <div class="slide-header">
                         Doc Review
                     </div>
+                    <div style="flex:1;text-align:center;justify-content: center;align-items: center;display: flex;">
+                        <img src="document.png" style="height:75px;" />
+                    </div>
                     <div class="slide-text">
                         Whether it's legal briefs, customer feedback, emails, PDFs, or any other piece of unstructured text data, we offer your business a way to summarize, classify, categorize, and filter it.
                     </div>
@@ -292,6 +304,9 @@ body {
                     <div class="slide-header">
                         RFP Response Automation
                     </div>
+                    <div style="flex:1;text-align:center;justify-content: center;align-items: center;display: flex;">
+                        <img src="bid.png" style="height:75px;" />
+                    </div>
                     <div class="slide-text">
                         Many businesses find themselves answering the same questions again and again. Given access to your previous RFP responses, we can generate new ones, while still allowing you to guide and edit where needed.
                     </div>
@@ -299,6 +314,9 @@ body {
                 <div class="slide" id="custom">
                     <div class="slide-header">
                         Custom Solutions
+                    </div>
+                    <div style="flex:1;margin-top:2rem;margin-bottom:2rem;text-align:center;justify-content: center;align-items: center;display: flex;">
+                        <img src="sketch.png" style="height:75px;" />
                     </div>
                     <div class="slide-text">
                         AI presents a powerful new opportunity for businesses to work more efficiently and effectively.
@@ -331,7 +349,12 @@ body {
                     </div>
                 </div>
                 <script type="text/javascript">
+                    var x = 0;
                     function doOnLoad(){
+                        if(x != 0){
+                            return;
+                        }
+                        x = 1;
                         addEventListener("resize", (event) => {correctForSizing()});
                         correctForSizing();
                     }
@@ -380,6 +403,23 @@ body {
     
                 </script>
             </div>
+        </div>
+    </div>
+    <div class="about-us-page">
+        <div class="about-us-container">
+            <h1>
+                About Us
+            </h1>
+            <p>
+                U.S. Artificial Intelligence was founded by Gordon Kamer in 2023.
+                Before founding the company, Gordon graduated with a degree in Computer Science from Harvard College.
+                While there, he researched machine learning methods for
+                    zero-shot image classification, declarative approaches to building neural network architectures, and other topics in AI.
+            </p>
+            <p>
+                He previously worked for the Washington-based consultancy Long-Term Strategy Group, where he advised the Department of Defense on how AI may impact national security.
+                Following his time at LTSG, Gordon worked in the financial services industry at a quantitative trading firm.
+            </p>
         </div>
     </div>
     <div class="section-container">
