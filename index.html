@@ -133,7 +133,7 @@ body {
 
 .slide.active {
     display: flex;
-    animation: fadeIn 1s;
+    animation: fadeIn 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -187,6 +187,8 @@ body {
         padding: 25px;
         margin: 20px;
         font-size: 1rem;
+
+        display: none;
     }
 }
 
@@ -194,9 +196,6 @@ body {
     .slide {
         margin: 40px;
         margin-top: 50px;
-
-        opacity: 0;
-        overflow: hidden;
 
         display: none;
     }
@@ -232,7 +231,7 @@ body {
 </style>
 </head>
 <body onload="doOnLoad()">
-    <div class="first-page">
+    <div class="first-page" id="bike-page">
         <div id="header">
             <div style="flex:1">
                 <img id="usai-logo" src="US-AI-White.png" height="60px" />
@@ -368,7 +367,7 @@ body {
     
                     function correctForSizing(){
                         document.getElementById("controls").style.display = "flex";
-                        if (window.matchMedia("(max-width: 900px)").matches){
+                        if (window.matchMedia("(max-width: 1200px)").matches){
                             changeSlide("rfp");
                         }
                         else {
@@ -377,7 +376,7 @@ body {
                     }
     
                     function changeSlide(x){
-                        if (!window.matchMedia("(max-width: 900px)").matches){
+                        if (!window.matchMedia("(max-width: 1200px)").matches){
                             return;
                         }
     
@@ -435,4 +434,25 @@ body {
         </div>
     </div>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+<script>
+VANTA.WAVES({
+  el: "#bike-page",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x2d2d2d,
+  shininess: 11.00,
+  waveHeight: 6.50,
+  waveSpeed: 0.65,
+  zoom: 1
+})
+</script>
+
 </html>
