@@ -179,7 +179,7 @@ body {
     padding: 4rem;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
     .section-container {
         width: 90%;
     }
@@ -359,7 +359,7 @@ body {
                             return;
                         }
                         x = 1;
-                        if (!window.matchMedia("(max-width: 900px)").matches){
+                        if (!window.matchMedia("(max-width: 1000px)").matches){
                             addEventListener("resize", (event) => {correctForSizing()});
                         }
                         correctForSizing();
@@ -367,7 +367,7 @@ body {
     
                     function correctForSizing(){
                         document.getElementById("controls").style.display = "flex";
-                        if (window.matchMedia("(max-width: 1200px)").matches){
+                        if (window.matchMedia("(max-width: 1000px)").matches){
                             changeSlide("rfp");
                         }
                         else {
@@ -376,7 +376,7 @@ body {
                     }
     
                     function changeSlide(x){
-                        if (!window.matchMedia("(max-width: 1200px)").matches){
+                        if (!window.matchMedia("(max-width: 1000px)").matches){
                             return;
                         }
     
@@ -447,7 +447,7 @@ VANTA.WAVES({
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-  color: 0x2d2d2d,
+  color: 0x151515,
   shininess: 11.00,
   waveHeight: 6.50,
   waveSpeed: 0.65,
