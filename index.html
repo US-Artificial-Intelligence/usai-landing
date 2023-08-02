@@ -160,6 +160,28 @@ body {
     align-items: center;
 }
 
+.premier-page {
+    min-height: 100vh;
+    background-color: #505050;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.premier-page-container {
+    width: 80%;
+    display: flex;
+
+    align-items: center;
+}
+
+.premier-page-container h1 {
+    font-size: 3.5rem;
+}
+
 .about-us-page {
     height: 100vh;
     background-color: black;
@@ -198,6 +220,15 @@ body {
         margin-top: 50px;
 
         display: none;
+    }
+
+    .premier-page-container {
+        flex-direction: column;
+        padding-bottom: 5rem;
+        font-size: 1rem;
+    }
+    .premier-page-container h1 {
+        font-size: 2.5rem;
     }
     #usai-logo {
         height: 40px;
@@ -411,20 +442,54 @@ body {
             </div>
         </div>
     </div>
+    <div class="premier-page" id="premier-page">
+        <div class="premier-page-container">
+            <div style="flex:1;margin-right:20px;font-size:1rem;margin-bottom: 2rem;">
+                <h1>
+                    Answer Once,
+                    Answered Forever
+                </h1>
+                <div>
+                    <p>
+                        You've answered the same question - or something like it - too many times before.
+                        Using your previous responses and company documents as sources, our software helps
+                        auto-complete RFPs, RFIs, and questionnaires, giving professional and accurate responses automatically.
+                    </p>
+                    <h2>
+                        You're in Charge
+                    </h2>
+                    <p>
+                        You are the expert.
+                        Our software lets you work seemlessly with AI rather than against it:
+                        Control the information is uses, and give direction when needed.
+                    </p>
+                    <h2>
+                        Auto-populate From Any Format
+                    </h2>
+                    <p>
+                        Not all businesses use the same software as you.
+                        Whether CSV, MS Word, PDF, or more, our software can automatically detect and respond to answers without any tedious entry.
+                    </p>
+                </div>
+            </div>
+            <div style="flex:1">
+                <img src="SoftwareScreenshotTrans.png" style="width:100%;border-radius:20px" />
+            </div>
+        </div>
+    </div>
     <div class="about-us-page">
-        <div class="about-us-container">
+        <div class="about-us-container" style="font-size:1.25rem;">
             <h1>
                 About Us
             </h1>
             <p>
-                U.S. Artificial Intelligence was founded by Gordon Kamer in 2023.
-                Before founding the company, Gordon graduated with a degree in Computer Science from Harvard College.
-                While there, he researched machine learning methods for
-                    zero-shot image classification, declarative approaches to building neural network architectures, and other topics in AI.
+                U.S. Artificial Intelligence was founded in Mountain View, CA in 2023.
+                We are happy to work with clients big and small as we grow with you.
             </p>
             <p>
-                He previously worked for the Washington-based consultancy Long-Term Strategy Group, where he advised the Department of Defense on how AI may impact national security.
-                Following his time at LTSG, Gordon worked in the financial services industry at a quantitative trading firm.
+                Our founder, Gordon Kamer, graduated with a degree in Computer Science from Harvard College.
+                While there, he researched machine learning methods for
+                    zero-shot image classification, declarative approaches to building neural network architectures, and other topics in AI.
             </p>
         </div>
     </div>
@@ -440,6 +505,22 @@ body {
 <script>
 VANTA.WAVES({
   el: "#bike-page",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x151515,
+  shininess: 11.00,
+  waveHeight: 6.50,
+  waveSpeed: 0.65,
+  zoom: 1
+})
+
+VANTA.WAVES({
+  el: "#premier-page",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
