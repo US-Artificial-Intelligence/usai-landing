@@ -8,6 +8,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="waves.js">
+<link rel="preload" href="three.js">
+
+<script src="three.js"></script>
+<script src="waves.js"></script>
+
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display&display=swap" rel="stylesheet">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-55KGTN4ZQQ"></script>
@@ -82,7 +89,7 @@ body {
     flex-direction:column;
     align-items:stretch;
     height:100vh;
-    background-color: black;
+    background-color: #2f2f2f;
     color: white;
 }
 
@@ -536,9 +543,6 @@ body {
         </div>
     </div>
 </body>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 <script>
 VANTA.WAVES({
   el: "#bike-page",
