@@ -15,7 +15,9 @@
 <script src="waves.js"></script>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
 
 <title>U.S. Artificial Intelligence Inc.</title>
 
@@ -33,7 +35,7 @@ a {
 }
 
 body {
-    font-family: "Playfair Display";
+    font-family: "Inter";
 }
 
 #header {
@@ -64,15 +66,6 @@ body {
 .main-text{
     font-size: 3rem;
     flex: 1;
-}
-
-.side-text{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    font-style: italic;
-    font-family: "Playfair Display";
-    font-size: 2.5rem;
 }
 
 .first-page {
@@ -276,11 +269,6 @@ body {
         padding-right: 15px;
         font-size: 1rem;
     }
-    .contact-button {
-        padding: .25rem;
-        padding-left: .75rem;
-        padding-right: .75rem;
-    }
     #header{
         padding: 20px;
     }
@@ -312,19 +300,68 @@ body {
             <div class="top-link">
                 <a href="mailto:team@us.ai?subject=Career Inquiry">Careers</a>  
             </div>
-            <a href="mailto:team@us.ai">
-                <div class="contact-button">
-                    Contact Us
-                </div>
-            </a>
         </div>
         <div class="main">
-            <div class="side-text">
-                <div style="margin:auto;">
-                    <img src="WhiteBicycle2.png" class="bicycle" height="300px" />
+            <div style="display:flex;padding:50px">
+                <div style="font-size:1.25rem;padding-right:30px;width:35vw">
+                    <div style="font-size:2.25rem;margin-bottom:2rem;text-align: justify;">
+                        Solving forms, proposals, and paperwork, <i>for good</i>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        Extract bids, auto-complete forms, convert docs to structured data, and more 
+                    </div>
+                    <div>
+                        <div style="margin-bottom: 1rem;">
+                            <i>Get on the waitlist
+                        </div>
+                        <div>
+                            <style>
+                                .contact-form {
+                                    outline: 0;
+                                    border-radius: 0px;
+                                    border-width: 0px;
+                                    padding: 10px;
+                                    width: 275px;
+                                    font-size: 1.25rem;
+                                    filter: opacity(50%);
+                                    margin: 0px;
+                                }
+                                .contact-button {
+                                    outline: 0;
+                                    border-radius: 0px;
+                                    border-width: 0px;
+                                    padding: 5px;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    background-color: #808080a0;
+                                    transition: .05s background-color ease-in-out;
+                                    font-size: 1.25rem;
+                                    margin: 0px;
+                                    color: white;
+                                    filter: invert(100%);
+
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                .contact-button img {
+                                    height: 25px;
+                                }
+                                .contact-button:hover {
+                                    background-color: #808080;
+                                }
+                            </style>
+                            <div style="display:flex">
+                                <input type="text" class="contact-form" placeholder="Email" />
+                                <div class="contact-button">
+                                    <image src="send-mail.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div style="margin:auto;padding:2rem;text-align: center;">
-                    "Like a bicycle for the mind"
+                <div>
+                    <img src="SoftwareScreenshotTrans.png" style="width:35vw;border-radius:20px;padding:40px" />
                 </div>
             </div>
         </div>

@@ -2,254 +2,115 @@
 <html>
 <head>
 
-    <link rel="icon" type="image/x-icon" href="building.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+<title>U.S. Artificial Intelligence Inc.</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+<style>
 
-    <!--
-        this is for LaTeX
-    -->
+    html, body {
+        background-color: #23312c;
+        font-family: Raleway;
+        margin: 0px;
+    }
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.css" integrity="sha384-YiVwk+MBV52+yIvvplLwDxm3iGDI7dYb731lqsN9ASGBpIpJ/dte35lBIuR5oGFU" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.js" integrity="sha384-8JJEhHkwY0VI06p7huKe7LqvYgDhSS69qJxWSQGwlB8FmDnAgPKgZGk5Ui0VyuNH" crossorigin="anonymous"></script>
+    .email-input {
+        outline: 0;
+        padding: 5px;
+        font-family: Raleway;
+        font-size: 1.25rem;
+        border-radius: 10px;
+        border-width: 0px;
+        width: 100%;
+        height: 50px;
+        box-sizing: border-box;
+        padding-left: 15px;
+    }
 
+    .send-mail-container {
+        border-radius: 10px;
+        background-color: #f0f0f0f0;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 10px;
+        color: black;
+    }
 
-    <style>
-        a {
-            all: unset;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        html, body{
-            padding:0px;
-            margin:0px;
-        }
-        body {
-            background-color: #000000;
-            font-family: 'EB Garamond';
-            color: white;
-            line-height: 1.5;
-        }
-        .main-column{
-            display: flex;
-            flex-direction: column;
-        }
-        
-    </style>
+    .send-mail-container:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
 
-    <title>U.S. Artificial Intelligence Inc.</title>
+</style>
+
+<script src="three.js"></script>
+<script src="waves.js"></script>
 
 </head>
 <body>
-    <div class="main-column">
-        <style>
-            .top {
-                background-image: url("autoshop.png");
-                background-size: cover;
-                background-position: right;
-                height: 100vh;
-
-                display: flex;
-                flex-direction: column;
-                animation: slideshow 20s infinite;
-            }
-            @keyframes slideshow {
-                0%   {background-image: url("rockwell_zoomed_out.png");background-position:center;}
-                25%   {background-image: url("rockwell_zoomed_out.png");background-position:center;}
-                50%  {background-image: url("autoshop.png");background-position:center;}
-                75%  {background-image: url("red_robot.png");background-position:center;}
-                100%  {background-image: url("rockwell_zoomed_out.png");background-position:center;}
-            }
-            .menu{
-                display: flex;
-                color: white;
-                padding: 2rem;
-                background-color: rgba(0, 0, 0, .75);
-                font-size: 1.25rem;
-            }
-            .menu-item{
-                padding-right: 2rem;
-                cursor: pointer;
-            }
-            .heading-title {
-                font-size: 3rem;
-                margin-bottom: 3rem;
-            }
-            .column-item {
-                font-size: 1.5rem;
-                padding: 4rem;
-            }
-            @media only screen and (max-width: 700px) {
-                .heading-title{
-                    font-size: 1.25em;
-                }
-                .menu-item{
-                    padding-right: 1.1rem;
-                }
-                .column-item {
-                    padding: 2rem;
-                    font-size: 1.5rem;
-                }
-                .top {
-                    height: 75vh;
-                }
-            }
-        </style>
-        
-        <div class="top">
-            <div style="flex:1;padding-top:2rem;display:flex;justify-content:center;color:white;">
-                <div style="width:min(80%, 250px)">
-                    <img src="US-AIFullSpace.svg" width="100%" />
+    <div id="premier-page" style="min-height: 100vh;">
+        <div style="width:80%;margin:auto">
+            <div style="padding-top: 2rem;display:flex;align-items:center;">
+                <div style="flex:1;display:flex;align-items: center;">
+                    <img src="US-AI-White.png" style="height:60px" />
+                </div>
+                <div style="color:white;font-size:1.25rem;">
+                    <a href="https://blog.us.ai" style="text-decoration: none;color: white;">
+                        Blog
+                    </a>
                 </div>
             </div>
-            <div class="menu">
-                <div class="menu-item">
-                    <a href="#who-we-are">Who we are</a>
-                </div>
-                <div class="menu-item">
-                    <a href="#what-we-do">What we do</a>
-                </div>
-                <div class="menu-item">
-                    <a href="#contact">Contact</a>
+            <div style="padding-top: 5rem; font-size: 1.25rem; color: white;">
+                <div style="display:flex;gap:75px;line-height: 1.25;">
+                    <div style="width: 30vw;flex:1">
+                        <div style="font-size:2.25rem;font-weight:bold;padding-top:2rem;">
+                            Solving forms, proposals, and paperwork.
+                        </div>
+                        <div style="color: #d0d0d0;padding-top: 2rem;">
+                            Turn unstructured documents into structured data.
+                            Use AI-powered search over company documents.
+                            Automate proposal-writing and management.
+                        </div>
+                        <div style="display:flex;padding-top:2rem;flex-direction: column;gap:1rem">
+                            <input type="text" class="email-input" placeholder="Email" />
+                            <div class="send-mail-container">
+                                <div style="display:flex;justify-content: center;padding:10px;">
+                                    Coming soon. Join the waitlist
+                                </div>
+                                <img src="send-mail.png" style="height:40px;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="SoftwareScreenshotTrans.png" style="width:45vw" />
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="column-item" id="what-we-do">
-            <div class="heading-title" style="display:flex">
-                <div style="margin-right:2em">
-                    1
-                </div>
-                <div>
-                    Bring AI to Your Business
-                </div>
-            </div>
-            <div>
-                Artificial Intelligence presents an incredible opportunity for businesses to outpace competitors.
-                It can let one person do the work of ten or more.
-                However, many companies have difficulty discerning the cases when AI is transformative from the cases when AI is overhyped.
-                <br/>
-                <pre style="display:inline">    </pre>We help instutitions identify areas where AI provides an edge, in addition to the areas where it won't.
-                Once we've idenitifed areas where an AI-powered solution adds value, we will build out a custom tool for your company.
-            </div>
-        </div>
-
-        <div class="column-item">
-            <div class="heading-title" style="display:flex">
-                <div style="margin-right:2em">
-                    1.1
-                </div>
-                <div>
-                    Automate Your Proposal Process
-                </div>
-            </div>
-            <div>
-                Using an underlying AI model similar to ChatGPT, our AI-powered RFP Responder can automatically retrieve relevant information from your company documents and use that information to generate answers to questions on new RFPs. While the new question might be unanswered in the previous docs, the model can pull together different resources and usually give a reasonable response. You can work with the AI side-by-side, providing it with additional information or steering its responses as you go.
-            </div>
-        </div>
-
-        <style>
-            .bicycle-div {
-                background-image: url("bicycle.png");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-
-                height: 85vh;
-                margin-top: 1rem;
-            }
-        </style>
-        <div class="bicycle-div"></div>
-
-        <style>
-            .bluebox {
-            /* background-color: #e4ebb2; */
-            background: linear-gradient(125deg, #faffe0, #e8e8ff);
-            padding: 2em;
-            z-index: 1;
-            position: relative;
-            margin-bottom: 1em;
-
-            color: black;
-            font-size: 1.5rem;
-        }
-        .bluebox::before {
-            position: absolute;
-            content: '';
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-image: linear-gradient(
-              90deg,
-              #e8e8ff,
-              #faffe0
-            );
-            z-index: -1;
-            transition: opacity 0.5s linear;
-            opacity: 0;
-
-            animation-name: fade-in-out;
-            animation-duration: 10s;
-            animation-delay: 0s;
-            animation-fill-mode: backwards;
-            animation-iteration-count: infinite;
-        }
-        </style>
-
-        <div class="bluebox">
-            <div class="subheading-title">
-                1.2<pre style="display:inline">    </pre>Want to see a demo?
-            </div> <br/>
-            <div class="boxed-text">
-                Please email <a href="malto:team@us.ai">team@us.ai</a> to request a quote and demo of our RFP Responder, or for any other questions you may have.
-            </div>
-        </div>
-
-        <div class="column-item" id="who-we-are">
-            <div class="heading-title" style="display:flex">
-                <div style="margin-right:2em">
-                    2
-                </div>
-                <div>
-                    Who We Are
-                </div>
-            </div>
-            <div>
-                U.S. Artificial Intelligence was founded by Gordon Kamer in 2023. Before founding the company, Gordon graduated with a degree in Computer Science from Harvard College. He previously worked for the Washington-based consultancy Long-Term Strategy Group, where he advised the Department of Defense on how AI may impact national security. Following his time at LTSG, Gordon worked in the financial services industry at a quantitative trading firm.
-            </div>
-        </div>
-
-        <div class="column-item" id="contact">
-            <div class="heading-title" style="display:flex">
-                <div style="margin-right:2em">
-                    3
-                </div>
-                <div>
-                    Contact
-                </div>
-            </div>
-            <div>
-                Please email <a href="malto:team@us.ai">team@us.ai</a> for information about partnerships, careers, or any other inquiries.
-            </div>
-        </div>
-
     </div>
 
-    <div style="height: 50vh">
-        
-    </div>
-
+<script type="text/javascript">
+VANTA.WAVES({
+  el: "#premier-page",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x23312c,
+  shininess: 11.00,
+  waveHeight: 6.50,
+  waveSpeed: 0.65,
+  zoom: 1
+})
+</script>
 </body>
 </html>
