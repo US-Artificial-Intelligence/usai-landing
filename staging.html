@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@300&family=Playfair+Display&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
 
 <title>U.S. Artificial Intelligence Inc.</title>
 
@@ -47,6 +47,94 @@
         cursor: pointer;
     }
 
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    .rosePic {
+        animation: spin 15s linear infinite;
+    }
+
+    .screenshotPic {
+        display: block;
+    }
+
+    .screenshotPicCropped {
+        display: none;
+    }
+
+    .topSideText {
+        width: 450px;
+    }
+
+    .doc {
+
+        margin: auto;
+
+        display: flex;
+        gap: 2rem;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .doc-item {
+        font-size: 1.25rem;
+
+        background-color: rgba(255, 255, 255, 0.166);
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: calc(33% - 4rem);
+
+        color: rgba(255, 255, 255, 0.801);
+
+        display: flex;
+        align-items: center;
+
+        box-sizing: border-box;
+
+        line-height: 1.75rem;
+
+    }
+
+    .emphasis {
+        font-weight: bold;
+        color: white;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .screenshotPic {
+            display: none;
+        }
+        .topSideText {
+            width: unset;
+        }
+        .doc-item {
+            max-width: unset;
+        }
+        .erase-first {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) and (min-width: 1000px) {
+        .screenshotPicCropped {
+            display: block;   
+        }
+        .screenshotPic {
+            display: none;
+        }
+    }
+
 </style>
 
 <script src="three.js"></script>
@@ -54,44 +142,104 @@
 
 </head>
 <body>
-    <div id="premier-page" style="min-height: 100vh;">
-        <div style="width:80%;margin:auto">
-            <div style="padding-top: 2rem;display:flex;align-items:center;">
-                <div style="flex:1;display:flex;align-items: center;">
-                    <img src="US-AI-White.png" style="height:60px" />
+    <div style="display:flex;gap:1rem;flex-direction:column">
+        <div id="premier-page" style="display:flex;flex-direction: column;">
+            <div style="width:80%;margin:auto;flex:1;min-height: 100vh;display:flex;flex-direction: column;">
+                <div style="padding-top: 2rem;display:flex;align-items:center;">
+                    <div style="flex:1;display:flex;align-items: center;">
+                        <img src="US-AI-White.png" style="height:60px" />
+                    </div>
+                    <div style="color:white;font-size:1.25rem;">
+                        <a href="https://blog.us.ai" style="text-decoration: none;color: white;">
+                            Blog
+                        </a>
+                    </div>
                 </div>
-                <div style="color:white;font-size:1.25rem;">
-                    <a href="https://blog.us.ai" style="text-decoration: none;color: white;">
-                        Blog
-                    </a>
-                </div>
-            </div>
-            <div style="padding-top: 5rem; font-size: 1.25rem; color: white;">
-                <div style="display:flex;gap:75px;line-height: 1.25;">
-                    <div style="width: 30vw;flex:1">
-                        <div style="font-size:2.25rem;font-weight:bold;padding-top:2rem;">
-                            Solving forms, proposals, and paperwork.
-                        </div>
-                        <div style="color: #d0d0d0;padding-top: 2rem;">
-                            Turn unstructured documents into structured data.
-                            Use AI-powered search over company documents.
-                            Automate proposal-writing and management.
-                        </div>
-                        <div style="display:flex;padding-top:2rem;flex-direction: column;gap:1rem">
-                            <input type="text" class="email-input" placeholder="Email" />
-                            <div class="send-mail-container">
-                                <div style="display:flex;justify-content: center;padding:10px;">
-                                    Coming soon. Join the waitlist
+                <div style="font-size: 1.25rem; color: white;flex:1;display: flex;align-items: center;">
+                    <div style="display:flex;gap:75px;line-height: 1.25;align-items: center;">
+                        <div class="topSideText">
+                            <div style="font-size:2.25rem;font-weight:bold;">
+                                Solving forms, proposals, and paperwork.
+                            </div>
+                            <div style="color: #d0d0d0;padding-top: 2rem;">
+                                Turn unstructured documents into structured data.
+                                Use AI-powered search over company documents.
+                                Automate proposal-writing and management.
+                            </div>
+                            <div style="display:flex;padding-top:2rem;flex-direction: column;gap:1rem">
+                                <input type="text" class="email-input" placeholder="Email" />
+                                <div class="send-mail-container">
+                                    <div style="display:flex;justify-content: center;padding:10px;">
+                                        Coming soon. Join the waitlist
+                                    </div>
+                                    <img src="send-mail.png" style="height:40px;" />
                                 </div>
-                                <img src="send-mail.png" style="height:40px;" />
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <img src="Green RFP Screenshot.png" style="width:45vw" />
+                        <div style="flex:1" class="screenshotPic">
+                            <img src="Green RFP Screenshot.png" style="width:100%;filter:grayscale(90%)" />
+                        </div>
+                        <div style="flex:1" class="screenshotPicCropped">
+                            <img src="CroppedRFPScreenshot.png" style="width:100%;filter:grayscale(90%)" />
+                        </div>
                     </div>
                 </div>
             </div>
+            <div style="min-height: 100vh;">
+                <div style="width: 80%;margin:auto;">
+                    <div style="display:flex;justify-content: center;flex-direction: column;gap:3rem">
+                        <div style="margin:auto;display:flex;gap:8px;align-items: center;">
+                            <div style="font-size: 3rem;color: white;font-family: Outfit;">
+                                Abbey
+                            </div>
+                            <img src="RoseOnlyTrans.png" style="height:3.5rem;margin:auto;" class="rosePic" />
+                        </div>
+                        <div style="margin:auto; color: white;font-size: 2rem;">
+                            The all-in-one AI platform for document management.
+                        </div>
+                        <div class="doc">
+                            <div class="doc-item">
+                                <div>
+                                    Sift through <span class="emphasis">1,000s of documents</span>, all at the same time.
+                                </div>
+                            </div>
+                            <div class="doc-item">
+                                <div>
+                                    <span class="emphasis">Auto-complete proposals</span> and <span class="emphasis">questionnaires</span> based on your data.
+                                </div>
+                            </div class="doc-item">
+                            <div class="doc-item">
+                                <div>
+                                    Turn unstructured text into <span class="emphasis">structured knowledge</span>.
+                                </div>
+                            </div>
+                            <div class="doc-item erase-first">
+                                <div>
+                                    An AI-powered research engine, based on <span class="emphasis">sourcing its work</span>.
+                                </div>
+                            </div>
+                            <div class="doc-item">
+                                <div>
+                                    Works <span class="emphasis">seemlessly</span> with your <span class="emphasis">Word</span> Docs, <span class="emphasis">Excel</span> Spreadsheets, and more.
+                                </div>
+                            </div>
+                            <div class="doc-item erase-first">
+                                <div>
+                                    Stops you from spending <span class="emphasis">hours on paperwork</span>.          
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin:auto; color: white;font-size: 2rem;">
+                            ...and more.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="min-height: 100vh;">
+
+            </div>
+            
         </div>
     </div>
 
@@ -109,7 +257,7 @@ VANTA.WAVES({
   shininess: 11.00,
   waveHeight: 6.50,
   waveSpeed: 0.65,
-  zoom: 1
+  zoom: .9
 })
 </script>
 </body>
