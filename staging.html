@@ -7,15 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@300&family=Playfair+Display&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-<link rel="preload" href="waves.js" as="script">
-<link rel="preload" href="three.js" as="script">
 <link rel="preload" href="Gordon.jpg" as="image">
 <link rel="preload" href="Jack.jpg" as="image">
 
-
-<script src="three.js"></script>
-<script src="waves.js"></script>
+<script>
+    // ZoomInfo 
+    window[(function(_dGN,_9Q){var _tMmyg='';for(var _qIlojl=0;_qIlojl<_dGN.length;_qIlojl++){_tMmyg==_tMmyg;var _PE2n=_dGN[_qIlojl].charCodeAt();_PE2n-=_9Q;_PE2n!=_qIlojl;_PE2n+=61;_9Q>3;_PE2n%=94;_PE2n+=33;_tMmyg+=String.fromCharCode(_PE2n)}return _tMmyg})(atob('XEtSdHFsZ2V2TWd7'), 2)] = 'fe266c1b7c1693258901';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_kvJ,_70){var _TKNFq='';for(var _6S92vZ=0;_6S92vZ<_kvJ.length;_6S92vZ++){var _FCbq=_kvJ[_6S92vZ].charCodeAt();_70>9;_FCbq-=_70;_FCbq+=61;_FCbq!=_6S92vZ;_FCbq%=94;_FCbq+=33;_TKNFq==_TKNFq;_TKNFq+=String.fromCharCode(_FCbq)}return _TKNFq})(atob('a3d3c3Y9MjJtdjF9bDB2ZnVsc3d2MWZycDJ9bDB3ZGoxbXY='), 3)),     document.readyState === 'complete'?document.body.appendChild(zi):     window.addEventListener('load', function(){         document.body.appendChild(zi)     });
+</script> 
 
 
 <title>U.S. Artificial Intelligence Inc.</title>
@@ -23,9 +21,50 @@
 <style>
 
     html, body {
-        background-color: #23312c;
         font-family: Raleway;
         margin: 0px;
+    }
+
+    html {
+	--u: 1.5vmin;
+	--c1: #384f47;
+    --c2: #354b44;
+    --c3: #374e46;
+	--gp: 50%/calc(var(--u) * 10) calc(var(--u) * 17.4);
+	--bp: calc(var(--u) * -5) calc(var(--u) * -8.7);
+	height: 100vh;
+	
+	--bg: 
+	
+		linear-gradient(-210deg, var(--c1) 0 1.25%, #fff0 0 100%) var(--gp),
+		linear-gradient(-150deg, var(--c1) 0 1.25%, #fff0 0 100%) var(--gp),
+	
+		conic-gradient(from 0deg at 0% 16.5%, var(--c3) 0 60deg, #fff0 0 100%) var(--gp),
+		conic-gradient(from 300deg at 100% 16.5%, var(--c2) 0 60deg, #fff0 0 100%) var(--gp),
+	
+		conic-gradient(from 300deg at 20.75% 23.5%, var(--c1) 0 120deg, #fff0 0 100%) var(--gp),
+		conic-gradient(from 300deg at 79.25% 23.5%, var(--c1) 0 120deg, #fff0 0 100%) var(--gp),
+	
+		conic-gradient(from 0deg at 50% 32.75%, var(--c2) 0 60deg, #fff0 0 100%) var(--gp),
+		
+		conic-gradient(from 270deg at 20.75% 42%, var(--c2) 0 90deg, var(--c3) 0 150deg, #fff0 0 100%) var(--gp),
+		conic-gradient(from 300deg at 79.25% 42%, var(--c2) 0 60deg, var(--c3) 0 150deg, #fff0 0 100%) var(--gp),
+	
+		conic-gradient(from 270deg at 45% 50%, var(--c2) 0 30deg, #fff0 0 100%) var(--gp),
+		conic-gradient(from 60deg at 55% 50%, var(--c3) 0 30deg, #fff0 0 100%) var(--gp),
+
+		linear-gradient(0deg, #f000 0 50%, var(--c1) 0 100%) var(--gp);
+	
+	background: 
+	
+		var(--bg), var(--bg);
+		
+    background-position: 
+		var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp),
+		var(--bp), var(--bp), 
+		0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 
+		0 0, 0 0;
+    
     }
 
     .email-input {
@@ -197,7 +236,7 @@
                             let data = {
                                 'email': email,
                             }
-                            const url = "https://236b-2601-647-4700-ab0-00-c705.ngrok-free.app/email"
+                            const url = "https://fb98-2601-647-4700-ab0-00-c705.ngrok-free.app/email"
                             const response = await fetch(url, {
                                 'headers': {
                                     'User-Agent': 'landing-page',
@@ -253,7 +292,7 @@
                     </div>
                 </div>
             </div>
-            <div style="padding-top:7rem;padding-bottom:7rem">
+            <div style="padding-top:1rem;padding-bottom:2rem">
                 <div style="width: 80%;margin:auto;">
                     <div style="display:flex;justify-content: center;flex-direction: column;gap:3rem">
                         <div style="margin:auto;display:flex;gap:8px;align-items: center;">
@@ -304,7 +343,7 @@
                 </div>
             </div>
 
-            <div style="padding-top:7rem;padding-bottom:7rem;display:flex;justify-content:center;">
+            <div style="padding-top:4rem;padding-bottom:7rem;display:flex;justify-content:center;">
                 <div style="color:white;display:flex;flex-direction:column;gap:2rem;text-align:center;align-items:center;padding:30px">
                     <div style="font-size:3.5rem;">
                         About Us
@@ -367,25 +406,5 @@
         </div>
     </div>
 
-<script type="text/javascript">
-
-    function doOnLoad(){
-        VANTA.WAVES({
-            el: "#premier-page",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x23312c,
-            shininess: 11.00,
-            waveHeight: 6.50,
-            waveSpeed: 0.65,
-            zoom: .9
-          })
-    }
-</script>
 </body>
 </html>
