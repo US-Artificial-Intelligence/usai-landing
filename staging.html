@@ -157,10 +157,6 @@
             font-size: 1.5rem;
             text-align: justify;
         }
-        .first-section {
-            min-height: 95vh;
-            margin-bottom: 10vh;
-        }
     }
 
     @media only screen and (max-width: 1200px) and (min-width: 1000px) {
@@ -223,7 +219,22 @@
                     }
 
                 </script>
-                <div style="font-size: 1.25rem; color: white;flex:1;display: flex;align-items: center;justify-content:center;padding-top:5rem">
+                <style>
+                    .top-container {
+                        font-size: 1.25rem;
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content:center;
+                        padding-top: 5rem;
+                    }
+                    @media only screen and (max-width: 1000px) {
+                        .top-container {
+                            padding-top: 3rem;
+                        }
+                    }
+                </style>
+                <div class="top-container">
                     <div style="display:flex;gap:75px;line-height: 1.25;align-items: center;justify-content:center">
                         <div class="topSideText">
                             <div style="font-size:2.25rem;font-weight:bold;">
