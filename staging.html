@@ -305,19 +305,53 @@
             </div>
 
             <div style="padding-top:5rem;">
-                <div style="padding-top:3rem;padding-bottom:3rem;background-color:rgb(254, 255, 244);color:black;display:flex;flex-direction: column;">
-                    <div style="display:flex;gap:10px;padding-left:10%;padding-right:10%;">
+                <div style="padding-top:3rem;padding-bottom:3rem;background-color:rgb(254, 255, 244);color:white;background-color:rgb(37, 37, 37);display:flex;flex-direction: column;">
+                    <style>
+                        .mag-image-container {
+                            display:flex;
+                            gap:2rem;
+                            padding-left:10%;
+                            padding-right:10%;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .mag-img {
+                            width: 100%;
+                        }
+                        .mag-text-container {
+                            padding:5%;
+                            margin-left: 5%;
+                            margin-right: 5%;
+                            line-height: 1.5rem;
+                            display:flex;
+                            gap:2rem;
+                        }
+                        @media only screen and (max-width: 1000px) {
+                            .mag-image-container {
+                                flex-direction: column;
+                            }
+                            .mag-img {
+                                width: unset;
+                                max-width: 100%;
+                                height: 120px;
+                            }
+                            .mag-text-container {
+                                flex-direction: column;
+                            }
+                        }
+                    </style>
+                    <div style="" class="mag-image-container">
                         <div>
-                            <img src="SlideRule.png" style="width:100%" />
+                            <img src="SlideRule.png" class="mag-img" />
                         </div>
                         <div>
-                            <img src="GPU.png" style="width:100%" />
+                            <img src="GPU.png" class="mag-img" />
                         </div>
                     </div>
-                    <div style="font-size:3rem;display:flex;justify-content: center;align-items: center;">
+                    <div style="font-size:3rem;display:flex;justify-content: center;align-items: center;padding-top:3rem;padding-bottom:1rem;padding-left:10%;padding-right:10%;">
                         We've come a long way.
                     </div>
-                    <div style="padding:5%;line-height: 1.5rem;display:flex;gap:2rem;">
+                    <div class="mag-text-container">
                         <div style="display:flex;flex-direction: column;gap:2rem;flex:1">
                             <div style="flex:1">
                                 Before calculators, an engineer was nothing without his slide rule. 
