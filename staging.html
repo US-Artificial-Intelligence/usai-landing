@@ -8,14 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<link rel="preload" href="waves.js" as="script">
-<link rel="preload" href="three.js" as="script">
 <link rel="preload" href="Gordon.jpg" as="image">
 <link rel="preload" href="Jack.jpg" as="image">
-
-
-<script src="three.js"></script>
-<script src="waves.js"></script>
 
 <script>
     // ZoomInfo 
@@ -194,7 +188,7 @@
                             let data = {
                                 'email': email,
                             }
-                            const url = "https://fb98-2601-647-4700-ab0-00-c705.ngrok-free.app/email"
+                            const url = "https://emails.ngrok.io/email"
                             const response = await fetch(url, {
                                 'headers': {
                                     'User-Agent': 'landing-page',
@@ -445,26 +439,5 @@
             </div>
         </div>
     </div>
-
-<script type="text/javascript">
-
-    /*function doOnLoad(){
-        VANTA.WAVES({
-            el: "#premier-page",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x23312c,
-            shininess: 11.00,
-            waveHeight: 6.50,
-            waveSpeed: 0.65,
-            zoom: .9
-          })
-    }*/
-</script>
 </body>
 </html>
