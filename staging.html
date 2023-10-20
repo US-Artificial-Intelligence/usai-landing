@@ -378,58 +378,116 @@
                 </div>
             </div>
 
-            <div style="padding-top:5rem;padding-bottom:5rem;display:flex;justify-content:center;">
-                <div style="color:white;display:flex;flex-direction:column;gap:2rem;text-align:center;align-items:center;padding:30px">
+            <div style="padding-top:5rem;padding-bottom:7rem;display:flex;justify-content:center;">
+                <div style="width:80%;color:white;display:flex;flex-direction:column;gap:2rem;text-align:center;align-items:center;padding:30px;">
                     <div style="font-size:3.5rem;">
                         About Us
                     </div>
-                    <div style="font-size:1.25rem">
-                        U.S. Artificial Intelligence was founded in Mountain View, CA in 2023.
-                    </div>
-                    <div style="font-size:2rem">
-                        Co-Founders
-                    </div>
                     <style>
-                        .bio {
-                            display: flex;
-                            gap: 2rem;
-                            flex-direction: column;
-                            background-color: rgba(255, 255, 255, 0.166);
-                            padding: 30px;
-                            justify-content: center;
-                            max-width: max(calc(200px + 60px), calc(20vw + 60px));
-                            align-items: center;
-                            border-radius: 20px;
+                        table {
+                            border-collapse: collapse;
+                            font-size: 1.1rem;
+                            width: 100%;
                         }
-                        .bio img {
-                            border-radius: 20px;
-                            width: calc(max(200px, 20vw));
-                            max-width: 300px;
+                        tbody tr {
+                            border-bottom: 1px solid #d9d9d9;
                         }
-                        .bio p {
+                        thead tr {
+                            border-bottom: 2px solid #f0f0f0;
+                        }
+                        th, td {
+                            padding: 15px;
+                            padding-top: 25px;
+                            padding-bottom: 25px;
                             text-align: left;
-                            line-height: 1.7rem;
-                            font-size: 1rem;
+                            line-height: 1.5rem;
+                        }
+                        td {
+                            /*background-color: rgba(255, 255, 255, 0.166);
+                        }
+                        th {
+                            /*background-color: rgba(255, 255, 255, 0.398);*/
+                        }
+                        @media only screen and (min-width: 1000px) {
+                            th, td {
+                                min-width: 200px;
+                            }
+                        }
+                        @media only screen and (max-width: 1000px) {
+                            th, td {
+                                font-size: .9rem;
+                            }
                         }
                     </style>
-                    <div style="display:flex;gap:3rem;flex-wrap:wrap;justify-content:center;">
-                        <div class="bio">
-                            <img src="Gordon.jpg" />
-                            <p>
-                                Gordon Kamer graduated with a degree in Computer Science from Harvard College. While there, he researched machine learning methods for zero-shot image classification, declarative approaches to building neural network architectures, and other topics in AI. 
-                            </p>
-                        </div>
-                        <div class="bio">
-                            <img src="Jack.jpg" />
-                            <p>
-                                Jack Montinaro studied Computer Science, Economics, and Data Science at MIT. After graduation, he worked as a quantitative trader at Susquehanna International Group (SIG) before helping start US AI. 
-                            </p>
-                        </div>
-                    </div>
-                    <div  style="font-size:1.25rem">
-                        You can find US AI on <a href="https://twitter.com/usaiinc">Twitter</a>, <a href="https://www.linkedin.com/company/us-artificial-intelligence-inc">LinkedIn</a>, our <a href="https://blog.us.ai">Blog</a>, or by email at team@us.ai.
-                    </div>
-
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Gordon Kamer</th>
+                                <th>Jack Montinaro</th>
+                                <th>Jack Ocken</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Title
+                                </td>
+                                <td>
+                                    Co-Founder & CEO
+                                </td>
+                                <td>
+                                    Co-Founder
+                                </td>
+                                <td>
+                                    Chief GTM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Hometown
+                                </td>
+                                <td>
+                                    Somers, NY
+                                </td>
+                                <td>
+                                    Riverside, CT
+                                </td>
+                                <td>
+                                    Bedford, NY
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Work Experience
+                                </td>
+                                <td>
+                                    Quant Trading <br/> Defense Research
+                                </td>
+                                <td>
+                                    Quant Trading <br/> Software Engineering
+                                </td>
+                                <td>
+                                    Business Analysis <br/> Clinical Research
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Education
+                                </td>
+                                <td>
+                                    Harvard
+                                </td>
+                                <td>
+                                    MIT
+                                </td>
+                                <td>
+                                    Yale
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
