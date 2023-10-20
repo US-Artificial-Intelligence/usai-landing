@@ -8,14 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<link rel="preload" href="waves.js" as="script">
-<link rel="preload" href="three.js" as="script">
 <link rel="preload" href="Gordon.jpg" as="image">
 <link rel="preload" href="Jack.jpg" as="image">
-
-
-<script src="three.js"></script>
-<script src="waves.js"></script>
 
 <script>
     // ZoomInfo 
@@ -116,7 +110,6 @@
         background-color: rgba(255, 255, 255, 0.166);
         padding: 2rem;
         border-radius: 10px;
-        max-width: calc(33% - 4rem);
 
         color: rgba(255, 255, 255, 0.801);
 
@@ -127,6 +120,8 @@
 
         line-height: 1.75rem;
 
+        width: calc(33% - 2rem);
+        align-items: stretch;
     }
 
     .emphasis {
@@ -148,7 +143,7 @@
             width: unset;
         }
         .doc-item {
-            max-width: unset;
+            width: 100%;
         }
         .erase-first {
             display: none;
@@ -193,7 +188,7 @@
                             let data = {
                                 'email': email,
                             }
-                            const url = "https://fb98-2601-647-4700-ab0-00-c705.ngrok-free.app/email"
+                            const url = "https://emails.ngrok.io/email"
                             const response = await fetch(url, {
                                 'headers': {
                                     'User-Agent': 'landing-page',
@@ -238,7 +233,7 @@
                     <div style="display:flex;gap:75px;line-height: 1.25;align-items: center;justify-content:center">
                         <div class="topSideText">
                             <div style="font-size:2.25rem;font-weight:bold;">
-                                Solving document understanding and response.
+                                AI for document understanding and response.
                             </div>
                             <div style="color: #d0d0d0;padding-top: 2rem;">
                                 Turn unstructured documents into structured data.
@@ -274,7 +269,7 @@
                             <img src="RoseOnlyTrans.png" style="height:4.5rem;margin:auto;" class="rosePic" />
                         </div>
                         <div class="abbey-first-text">
-                            The all-in-one AI platform for sourced knowledge.
+                            The AI platform for sourced knowledge.
                         </div>
                         <div class="doc">
                             <div class="doc-item">
@@ -365,32 +360,18 @@
                     <div class="mag-text-container">
                         <div style="display:flex;flex-direction: column;gap:2rem;flex:1">
                             <div style="flex:1">
-                                Before calculators, an engineer was nothing without his slide rule. 
-                                These entirely analog devices helped compute complicated multiplications and divisions much 
-                                faster than would be possible on paper. They took advantage of the fact that the log of a number, 
-                                when added to the log of another number, is the same as the log of the numbers' product. By arranging 
-                                the figures on a ruler in log scale, multiplication and division become just as easy as addition or subtraction.
+                                Before calculators, an engineer was nothing without his slide rule. These analog devices help compute large multiplications and divisions faster than with pen and paper. They take advantage of the fact that the log of a number, when added to the log of another number, is the same as the log of the numbers' product. Arranging the figures on a slide rule in log scale makes multiplication and division as easy as addition or subtraction. 
                             </div>
                             <div style="flex:1">
-                                Today, large language models like ChatGPT multiply and divide billions of numbers in the blink of an eye on GPUs.
-                                GPUs parallelize those operations, so that while a number is being muliplied in one part of the device, thousands of other operations are happening in other areas of the chip.
-                                Our software depends on GPUs to run AI models.
+                                Today, large language models like ChatGPT multiply and divide billions of numbers in the blink of an eye on GPUs. GPUs parallelize those operations so that while a number is being multiplied in one part of the device, thousands of other operations are happening in other areas of the chip.
                             </div>
                         </div>
                         <div style="display:flex;flex-direction: column;gap:2rem;flex:1">
                             <div>
-                                In the same way a GPU can multiply numbers in parallel, our products let you spawn hundreds of models all working for you at the same time.
-                                It can give you multiple answers to a single question, sourcing information from hundreds of different places.
-                                Or you can ask it a hundred questions at the same time and receive a hundred answers just a few seconds later.
+                                In the same way GPUs multiply numbers in parallel, our software spawns hundreds of copies of a language model at the same time, all working together for you. It can apply one question to hundreds of sources or ask a hundred questions of one source, and it answers in seconds. Parallelization is just one technique we use to make sure that you are receiving fast and accurate responses.
                             </div>
                             <div>
-                                While modern tools like GPUs and AI models have blazing speed, we lose something.
-                                In the past, if you multiplied numbers using a slide rule, you - the user - had an intricate understanding of what was happening.
-                                Just using a slide rule would open your mind to the clever log rules underlying their operation.
-                                Even adding numbers on paper gave you understanding and control of the process that modern software hides.
-                                We hope that by using our software, you can recover that same level of understanding and control.
-                                We choose not to hide from you important details, like: which models are being used; how we convert your text into AI-understandable tokens; or which sources the model the drawing from.
-                                We have certainly come a long way, but there is always something to be learned from the past.
+                                Most innovations - from the slide rule to the GPU to AI - increase complexity, detaching the user from the result. We hope that explanations like these as well as the software itself demystifies the process. A tool that exposes its functionality can be far more useful than a black box, especially when in the hands of an intelligent user. This belief is reflected in everything we do.
                             </div>
                         </div>
                     </div>
@@ -458,26 +439,5 @@
             </div>
         </div>
     </div>
-
-<script type="text/javascript">
-
-    /*function doOnLoad(){
-        VANTA.WAVES({
-            el: "#premier-page",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x23312c,
-            shininess: 11.00,
-            waveHeight: 6.50,
-            waveSpeed: 0.65,
-            zoom: .9
-          })
-    }*/
-</script>
 </body>
 </html>
