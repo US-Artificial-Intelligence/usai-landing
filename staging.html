@@ -402,12 +402,6 @@
                             text-align: left;
                             line-height: 2rem;
                         }
-                        td {
-                            /*background-color: rgba(255, 255, 255, 0.166);*/
-                        }
-                        th {
-                            /*background-color: rgba(255, 255, 255, 0.398);*/
-                        }
                         @media only screen and (min-width: 1000px) {
                             th, td {
                                 min-width: 200px;
@@ -425,8 +419,14 @@
                                 line-height: 1rem;
                             }
                             tbody tr, thead tr {
-                                border-bottom-width: 5px;
+                                border-bottom-width: 0px;
                                 border-bottom-color: rgba(255, 255, 255, 0.398);
+                            }
+                            td {
+                                background-color: rgba(255, 255, 255, 0.166);
+                            }
+                            th {
+                                background-color: rgba(255, 255, 255, 0.398);
                             }
                             td div {
                                 margin-top: .5rem;
@@ -436,7 +436,8 @@
                                 font-size: 2.75rem;
                             }
                             .aboutUsContainer {
-                                width: 90%;
+                                flex: 1;
+                                width: 80%;
                             }
                         }
                     </style>
@@ -454,9 +455,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th>
+                                <td>
                                     Title
-                                </th>
+                                </td>
                                 <td>
                                     Founder & CEO
                                 </td>
@@ -468,9 +469,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>
+                                <td>
                                     Hometown
-                                </th>
+                                </td>
                                 <td>
                                     Somers, NY
                                 </td>
@@ -482,9 +483,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>
+                                <td>
                                     Work Experience
-                                </th>
+                                </td>
                                 <td>
                                     <div>Quant Trading</div> <div>Defense Research</div>
                                 </td>
@@ -496,9 +497,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>
+                                <td>
                                     Education
-                                </th>
+                                </td>
                                 <td>
                                     Harvard
                                 </td>
