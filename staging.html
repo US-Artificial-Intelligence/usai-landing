@@ -379,11 +379,11 @@
             </div>
 
             <div style="padding-top:5rem;padding-bottom:7rem;display:flex;justify-content:center;">
-                <div style="width:80%;color:white;display:flex;flex-direction:column;gap:2rem;text-align:center;align-items:center;padding:30px;">
-                    <div style="font-size:3.5rem;">
-                        About Us
-                    </div>
+                <div class="aboutUsContainer" style="color:white;display:flex;flex-direction:column;gap:2rem;text-align:center;align-items:center;">
                     <style>
+                        .aboutUsHeader {
+                            font-size: 3.5rem;
+                        }
                         table {
                             border-collapse: collapse;
                             font-size: 1.1rem;
@@ -412,19 +412,37 @@
                             th, td {
                                 min-width: 200px;
                             }
+                            .aboutUsContainer {
+                                width:80%;
+                            }
                         }
                         @media only screen and (max-width: 1000px) {
                             th, td {
                                 font-size: .9rem;
                                 padding: 10px;
+                                padding-top: 20px;
+                                padding-bottom: 20px;
                                 line-height: 1rem;
+                            }
+                            tbody tr, thead tr {
+                                border-bottom-width: 5px;
+                                border-bottom-color: rgba(255, 255, 255, 0.398);
                             }
                             td div {
                                 margin-top: .5rem;
                                 margin-bottom: .5rem;
                             }
+                            .aboutUsHeader {
+                                font-size: 2.75rem;
+                            }
+                            .aboutUsContainer {
+                                flex: 1;
+                            }
                         }
                     </style>
+                    <div class="aboutUsHeader">
+                        About Us
+                    </div>
                     <table>
                         <thead>
                             <tr>
@@ -436,9 +454,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
+                                <th>
                                     Title
-                                </td>
+                                </th>
                                 <td>
                                     Founder & CEO
                                 </td>
@@ -450,9 +468,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <th>
                                     Hometown
-                                </td>
+                                </th>
                                 <td>
                                     Somers, NY
                                 </td>
@@ -464,9 +482,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <th>
                                     Work Experience
-                                </td>
+                                </th>
                                 <td>
                                     <div>Quant Trading</div> <div>Defense Research</div>
                                 </td>
@@ -478,9 +496,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <th>
                                     Education
-                                </td>
+                                </th>
                                 <td>
                                     Harvard
                                 </td>
