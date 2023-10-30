@@ -319,20 +319,54 @@
                         .pdfImage {
                             border-radius: 5%;
                         }
+                        .shortChatPic {
+                            width: 40%;
+                        }
+                        .dormList {
+                            width: 40%
+                        }
+                        
+                        .businessImageContainer {
+                            width: 40%;
+                        }
+                        .businessList {
+                            width: 40%;
+                        }
+                        @media only screen and (max-width: 1000px) {
+                            .dormroomContainer {
+                                flex-direction: column;
+                            }
+                            .shortChatPic {
+                                width: 100%;
+                            }
+                            .dormList {
+                                width: 100%;
+                                padding-top: 4rem;
+                            }
+                            .businessList {
+                                width: 100%;
+                            }
+                            .businessImageContainer {
+                                width: 100%;
+                            }
+                            .businessContainer {
+                                flex-direction: column-reverse;
+                            }
+                        }
                     </style>
                     <div style="width:80%;display: flex;flex-direction: column;gap:4rem">
                         <!--<div class="dormHeader">
                             From the dorm room...
                         </div>-->
                         <div>
-                            <div style="display:flex;gap:10%;align-items: center;justify-content: center;">
+                            <div style="display:flex;gap:10%;align-items: center;justify-content: center;" class="dormroomContainer">
                                 <!--<div style="width:25%">
                                     <img src="PdfSS.png" class="pdfImage" style="width:100%;" />
                                 </div>-->
-                                <div style="width:40%">
+                                <div class="shortChatPic">
                                     <img src="ShortChatSS.png" style="width:100%;" />
                                 </div>
-                                <div style="width:40%;display:flex;flex-direction: column;gap: 2rem;line-height:1.5rem;font-size: 1.25rem;">
+                                <div style="display:flex;flex-direction: column;gap: 2rem;line-height:1.5rem;font-size: 1.25rem;" class="dormList">
                                     <div style="display:flex;align-items: center;gap:1rem;">
                                         <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
                                         <div>
@@ -376,8 +410,8 @@
                                 To the board room...
                             </div>
                         </div>-->
-                        <div style="display:flex;gap:10%;align-items: center;justify-content: center;">
-                            <div style="width:40%;display:flex;flex-direction: column;gap: 2rem;line-height:1.5rem;font-size: 1.25rem;">
+                        <div style="display:flex;gap:10%;align-items: center;justify-content: center;" class="businessContainer">
+                            <div style="display:flex;flex-direction: column;gap: 2rem;line-height:1.5rem;font-size: 1.25rem;" class="businessList">
                                 <div style="display:flex;align-items: center;gap:1rem;">
                                     <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
                                     <div>
@@ -409,7 +443,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="width:40%">
+                            <div class="businessImageContainer">
                                 <img src="CroppedRFPScreenshot.png" style="width:100%;filter:grayscale(90%)" />
                             </div>
                         </div>
