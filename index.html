@@ -89,6 +89,9 @@
 
     .topSideText {
         width: 450px;
+        display:flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .doc {
@@ -235,16 +238,19 @@
                             <div style="font-size:2.25rem;font-weight:bold;">
                                 AI for document understanding and response.
                             </div>
-                            <div style="color: #d0d0d0;padding-top: 2rem;">
+                            <div style="color: #d0d0d0;">
                                 Turn unstructured documents into structured data.
                                 Use AI-powered knowledge discovery over your docs.
                                 Answer a hundred-part questionnaire in seconds.
                             </div>
-                            <div style="display:flex;padding-top:2rem;flex-direction: column;gap:1rem">
+                            <div>
+                                Check out <a href="https://abbey.us.ai">Abbey</a>
+                            </div>
+                            <div style="display:flex;padding-top:.5rem;flex-direction: column;gap:1rem">
                                 <input type="text" class="email-input" placeholder="Email" id="email" />
                                 <div class="send-mail-container" onclick="collectEmail()">
                                     <div style="display:flex;justify-content: center;padding:10px;" id="button-text-container">
-                                        Coming soon. Join the waitlist
+                                        Questions? Get in touch.
                                     </div>
                                     <img src="send-mail.png" style="height:40px;" />
                                 </div>
@@ -266,7 +272,7 @@
                             <div style="font-size: 4rem;color: white;font-family: Outfit;">
                                 Abbey
                             </div>
-                            <img src="RoseOnlyTrans.png" style="height:4.5rem;margin:auto;" class="rosePic" />
+                            <object data="Smallbookswave.svg" style="height:4.5rem;margin:auto;"></object>
                         </div>
                         <div class="abbey-first-text">
                             The AI platform for sourced knowledge.
@@ -305,6 +311,147 @@
                         </div>
                         <div style="margin:auto; color: white;font-size: 2rem;">
                             ...and more.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding-top:5rem;">
+                <div style="padding-top:3rem;padding-bottom:3rem;color:white;display:flex;flex-direction:column;align-items:center;">
+                    <style>
+                        .dormHeader {
+                            font-size: 2.5rem;
+                        }
+                        .pdfImage {
+                            border-radius: 5%;
+                        }
+                        .shortChatPic {
+                            width: 40%;
+                        }
+                        .dormList {
+                            width: 40%
+                        }
+                        
+                        .businessImageContainer {
+                            width: 40%;
+                        }
+                        .businessList {
+                            width: 40%;
+                        }
+                        @media only screen and (max-width: 1000px) {
+                            .dormroomContainer {
+                                flex-direction: column;
+                            }
+                            .shortChatPic {
+                                width: 100%;
+                            }
+                            .dormList {
+                                width: 100%;
+                                padding-top: 4rem;
+                            }
+                            .businessList {
+                                width: 100%;
+                            }
+                            .businessImageContainer {
+                                width: 100%;
+                            }
+                            .businessContainer {
+                                flex-direction: column-reverse;
+                            }
+                        }
+                    </style>
+                    <div style="width:80%;display: flex;flex-direction: column;gap:4rem">
+                        <!--<div class="dormHeader">
+                            From the dorm room...
+                        </div>-->
+                        <div>
+                            <div style="display:flex;gap:10%;align-items: center;justify-content: center;" class="dormroomContainer">
+                                <!--<div style="width:25%">
+                                    <img src="PdfSS.png" class="pdfImage" style="width:100%;" />
+                                </div>-->
+                                <div class="shortChatPic">
+                                    <img src="ShortChatSS.png" style="width:100%;" />
+                                </div>
+                                <div style="display:flex;flex-direction: column;gap: 2rem;line-height:1.5rem;font-size: 1.25rem;" class="dormList">
+                                    <div style="display:flex;align-items: center;gap:1rem;">
+                                        <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                        <div>
+                                            Get comphrehensive <b>summaries</b>, touching on the entirety of long documents
+                                        </div>
+                                    </div>
+                                    <div style="display:flex;align-items: center;gap:1rem;">
+                                        <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                        <div>
+                                            <b>Ask questions</b> of any document
+                                        </div>
+                                    </div>
+                                    <div style="display:flex;align-items: center;gap:1rem;">
+                                        <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                        <div>
+                                            Works with <b>scans and images</b> using optical character recognition 
+                                        </div>
+                                    </div>
+                                    <div style="display:flex;align-items: center;gap:1rem;">
+                                        <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                        <div>
+                                            Handles collections of documents of <b>unlimited length</b>
+                                        </div>
+                                    </div>
+                                    <div style="display:flex;align-items: center;gap:1rem;">
+                                        <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                        <div>
+                                            <b>Cites</b> its sources
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div style="width:50%;text-align: center;">
+                                <img src="CurvyArrow.png" style="filter:invert(90%);height:70px" />
+                            </div> -->
+                        </div>
+                        <!--
+                        <div style="display:flex;padding-top:4rem;">
+                            <div style="flex:1"></div>
+                            <div class="dormHeader">
+                                To the board room...
+                            </div>
+                        </div>-->
+                        <div style="display:flex;gap:10%;align-items: center;justify-content: center;" class="businessContainer">
+                            <div style="display:flex;flex-direction: column;gap: 2rem;line-height:1.5rem;font-size: 1.25rem;" class="businessList">
+                                <div style="display:flex;align-items: center;gap:1rem;">
+                                    <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                    <div>
+                                        Auto-complete long forms, like <b>security questionnaires, RFIs, and RFPs</b>.
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items: center;gap:1rem;">
+                                    <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                    <div>
+                                        Uses your previous responses and company <b>data</b>
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items: center;gap:1rem;">
+                                    <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                    <div>
+                                        Keeps your proprietary data <b>private</b>
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items: center;gap:1rem;">
+                                    <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                    <div>
+                                        Import from Word docs, Excel spreadhseets, and more
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items: center;gap:1rem;">
+                                    <img src="CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
+                                    <div>
+                                        Use any model; <b>don't get locked into</b> one company's tech.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="businessImageContainer">
+                                <img src="CroppedRFPScreenshot.png" style="width:100%;filter:grayscale(90%)" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -378,58 +525,144 @@
                 </div>
             </div>
 
-            <div style="padding-top:5rem;padding-bottom:5rem;display:flex;justify-content:center;">
-                <div style="color:white;display:flex;flex-direction:column;gap:2rem;text-align:center;align-items:center;padding:30px">
-                    <div style="font-size:3.5rem;">
-                        About Us
-                    </div>
-                    <div style="font-size:1.25rem">
-                        U.S. Artificial Intelligence Inc. was founded in Mountain View, CA in 2023.
-                    </div>
-                    <div style="font-size:2rem">
-                        Co-Founders
-                    </div>
+            <div style="padding-top:5rem;padding-bottom:7rem;display:flex;justify-content:center;">
+                <div class="aboutUsContainer" style="color:white;display:flex;flex-direction:column;gap:2rem;text-align:center;align-items:center;">
                     <style>
-                        .bio {
-                            display: flex;
-                            gap: 2rem;
-                            flex-direction: column;
-                            background-color: rgba(255, 255, 255, 0.166);
-                            padding: 30px;
-                            justify-content: center;
-                            max-width: max(calc(200px + 60px), calc(20vw + 60px));
-                            align-items: center;
-                            border-radius: 20px;
+                        .aboutUsHeader {
+                            font-size: 3.5rem;
                         }
-                        .bio img {
-                            border-radius: 20px;
-                            width: calc(max(200px, 20vw));
-                            max-width: 300px;
+                        table {
+                            border-collapse: collapse;
+                            font-size: 1.1rem;
+                            width: 100%;
                         }
-                        .bio p {
+                        tbody tr {
+                            border-bottom: 1px solid #d9d9d9;
+                        }
+                        thead tr {
+                            border-bottom: 2px solid #f0f0f0;
+                        }
+                        th, td {
+                            padding: 15px;
+                            padding-top: 25px;
+                            padding-bottom: 25px;
                             text-align: left;
-                            line-height: 1.7rem;
-                            font-size: 1rem;
+                            line-height: 2rem;
+                        }
+                        @media only screen and (min-width: 1000px) {
+                            th, td {
+                                min-width: 200px;
+                            }
+                            .aboutUsContainer {
+                                width:80%;
+                            }
+                        }
+                        @media only screen and (max-width: 1000px) {
+                            .ocken {
+                                display:none;
+                            }
+                            th, td {
+                                font-size: 1rem;
+                                padding: 15px;
+                                padding-top: 25px;
+                                padding-bottom: 25px;
+                                line-height: 1rem;
+                            }
+                            tbody tr, thead tr {
+                                border-bottom-width: 0px;
+                                border-bottom-color: rgba(255, 255, 255, 0.398);
+                            }
+                            td {
+                                background-color: rgba(255, 255, 255, 0.166);
+                            }
+                            th {
+                                background-color: rgba(255, 255, 255, 0.398);
+                            }
+                            td div {
+                                margin-top: .5rem;
+                                margin-bottom: .5rem;
+                            }
+                            .aboutUsHeader {
+                                font-size: 2.75rem;
+                            }
+                            .aboutUsContainer {
+                                flex: 1;
+                                width: 80%;
+                            }
                         }
                     </style>
-                    <div style="display:flex;gap:3rem;flex-wrap:wrap;justify-content:center;">
-                        <div class="bio">
-                            <img src="Gordon.jpg" />
-                            <p>
-                                Gordon Kamer graduated with a degree in Computer Science from Harvard College. While there, he researched machine learning methods for zero-shot image classification, declarative approaches to building neural network architectures, and other topics in AI. 
-                            </p>
-                        </div>
-                        <div class="bio">
-                            <img src="Jack.jpg" />
-                            <p>
-                                Jack Montinaro studied Computer Science, Economics, and Data Science at MIT. After graduation, he worked as a quantitative trader at Susquehanna International Group (SIG) before helping start US AI. 
-                            </p>
-                        </div>
+                    <div class="aboutUsHeader">
+                        About Us
                     </div>
-                    <div  style="font-size:1.25rem">
-                        You can find US AI on <a href="https://twitter.com/usaiinc">Twitter</a>, <a href="https://www.linkedin.com/company/us-artificial-intelligence-inc">LinkedIn</a>, our <a href="https://blog.us.ai">Blog</a>, or by email at team@us.ai.
-                    </div>
-
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Gordon Kamer</th>
+                                <th>Jack Montinaro</th>
+                                <th class="ocken">Jack Ocken</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Title
+                                </td>
+                                <td>
+                                    Founder & CEO
+                                </td>
+                                <td>
+                                    Founder
+                                </td>
+                                <td class="ocken">
+                                    Chief GTM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Hometown
+                                </td>
+                                <td>
+                                    Somers, NY
+                                </td>
+                                <td>
+                                    Riverside, CT
+                                </td>
+                                <td class="ocken">
+                                    Bedford, NY
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Background
+                                </td>
+                                <td>
+                                    <div>Quant Trading</div> <div>Defense Research</div>
+                                </td>
+                                <td>
+                                    <div>Quant Trading</div> <div>Software Engineering</div>
+                                </td>
+                                <td class="ocken">
+                                    <div>Business Analysis</div> <div>Clinical Research</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Education
+                                </td>
+                                <td>
+                                    Harvard
+                                </td>
+                                <td>
+                                    MIT
+                                </td>
+                                <td class="ocken">
+                                    Yale
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

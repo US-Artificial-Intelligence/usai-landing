@@ -89,6 +89,9 @@
 
     .topSideText {
         width: 450px;
+        display:flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .doc {
@@ -235,12 +238,15 @@
                             <div style="font-size:2.25rem;font-weight:bold;">
                                 AI for document understanding and response.
                             </div>
-                            <div style="color: #d0d0d0;padding-top: 2rem;">
+                            <div style="color: #d0d0d0;">
                                 Turn unstructured documents into structured data.
                                 Use AI-powered knowledge discovery over your docs.
                                 Answer a hundred-part questionnaire in seconds.
                             </div>
-                            <div style="display:flex;padding-top:2rem;flex-direction: column;gap:1rem">
+                            <div>
+                                Check out <a href="https://abbey.us.ai">Abbey</a>
+                            </div>
+                            <div style="display:flex;padding-top:.5rem;flex-direction: column;gap:1rem">
                                 <input type="text" class="email-input" placeholder="Email" id="email" />
                                 <div class="send-mail-container" onclick="collectEmail()">
                                     <div style="display:flex;justify-content: center;padding:10px;" id="button-text-container">
@@ -552,6 +558,9 @@
                             }
                         }
                         @media only screen and (max-width: 1000px) {
+                            .ocken {
+                                display:none;
+                            }
                             th, td {
                                 font-size: 1rem;
                                 padding: 15px;
@@ -591,7 +600,7 @@
                                 <th></th>
                                 <th>Gordon Kamer</th>
                                 <th>Jack Montinaro</th>
-                                <th>Jack Ocken</th>
+                                <th class="ocken">Jack Ocken</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -605,7 +614,7 @@
                                 <td>
                                     Founder
                                 </td>
-                                <td>
+                                <td class="ocken">
                                     Chief GTM
                                 </td>
                             </tr>
@@ -619,7 +628,7 @@
                                 <td>
                                     Riverside, CT
                                 </td>
-                                <td>
+                                <td class="ocken">
                                     Bedford, NY
                                 </td>
                             </tr>
@@ -633,7 +642,7 @@
                                 <td>
                                     <div>Quant Trading</div> <div>Software Engineering</div>
                                 </td>
-                                <td>
+                                <td class="ocken">
                                     <div>Business Analysis</div> <div>Clinical Research</div>
                                 </td>
                             </tr>
@@ -647,7 +656,7 @@
                                 <td>
                                     MIT
                                 </td>
-                                <td>
+                                <td class="ocken">
                                     Yale
                                 </td>
                             </tr>
