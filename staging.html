@@ -42,6 +42,16 @@
         animation: fadeIn ease 1.5s forwards; /* adjust duration as needed */
     }
 
+    .underlineAnimated:after {
+        display:block;
+        content: '';
+        border-bottom: solid 2px white;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+    }
+    .underlineAnimated:hover:after { transform: scaleX(1); }
+    .underlineAnimated:after{  transform-origin:  0% 50%; }
+
     .email-input {
         outline: 0;
         padding: 5px;
@@ -194,7 +204,7 @@
                         <img src="US-AI-White.png" style="height:60px" />
                     </div>
                     <div style="color:white;font-size:1.25rem;">
-                        <a href="https://blog.us.ai" style="text-decoration: none;color: white;">
+                        <a href="https://blog.us.ai" style="text-decoration: none;color: white;" class="underlineAnimated">
                             Blog
                         </a>
                     </div>
