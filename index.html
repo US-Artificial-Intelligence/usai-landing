@@ -58,7 +58,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 1px;
+        height: 2px;
         background: #fff;
         transform: scaleX(0);
         transform-origin: var(--transform-dir);
@@ -67,7 +67,10 @@
 
     .underlineAnimated:hover:after { transform: scaleX(1); }
 
-    
+    .headline {
+        font-size: 2.25rem;
+        font-weight: bold;
+    }
 
     .email-input {
         outline: 0;
@@ -198,9 +201,10 @@
             font-size: 1.5rem;
             text-align: justify;
         }
+        
     }
 
-    @media only screen and (max-width: 1200px) and (min-width: 1000px) {
+    @media only screen and (max-width: 1300px) and (min-width: 1000px) {
         .screenshotPicCropped {
             display: block;   
         }
@@ -278,13 +282,13 @@
                 <div class="top-container">
                     <div style="display:flex;gap:75px;line-height: 1.25;align-items: center;justify-content:center">
                         <div class="topSideText">
-                            <div style="font-size:2.25rem;font-weight:bold;">
-                                AI for document understanding and response.
+                            <div class="headline">
+                                AI for learning and upskilling
                             </div>
                             <div style="color: #d0d0d0;">
-                                Turn unstructured documents into structured data.
                                 Use AI-powered knowledge discovery over your docs.
-                                Answer a hundred-part questionnaire in seconds.
+                                Get comprehensive summaries.
+                                <i>Coming Soon</i>: Create and take customized AI-generated courses, sourcing from textbooks and the web.
                             </div>
                             <div>
                                 Check out <a class="underlineAnimated" style="font-weight: 700" href="https://abbey.us.ai">Abbey</a>
@@ -300,10 +304,10 @@
                             </div>
                         </div>
                         <div style="flex:1" class="screenshotPic">
-                            <img src="Green RFP Screenshot.png" style="width:100%;filter:grayscale(90%);max-width:800px" />
+                            <img src="WideChatSS.png" style="width:100%;filter:grayscale(30%);max-height:500px" />
                         </div>
                         <div style="flex:1" class="screenshotPicCropped">
-                            <img src="CroppedRFPScreenshot.png" style="width:100%;filter:grayscale(90%)" />
+                            <img src="ShortChatSS.png" style="width:100%;filter:grayscale(90%);max-height:450px" />
                         </div>
                     </div>
                 </div>
@@ -328,12 +332,12 @@
                             </div>
                             <div class="doc-item">
                                 <div>
-                                    <span class="emphasis">Auto-complete proposals</span> and <span class="emphasis">questionnaires</span> based on your data.
+                                    <span class="emphasis">AI Q&A</span> with any document, all stored online.
                                 </div>
                             </div class="doc-item">
                             <div class="doc-item">
                                 <div>
-                                    Turn unstructured text into <span class="emphasis">structured data</span>.
+                                    Works with scans using <span class="emphasis">optical character recognition</span>.
                                 </div>
                             </div>
                             <div class="doc-item erase-first">
@@ -348,7 +352,7 @@
                             </div>
                             <div class="doc-item erase-first">
                                 <div>
-                                    Finish <span class="emphasis">hours of paperwork in minutes.</span>        
+                                    Finish <span class="emphasis">hours of reading in minutes.</span>        
                                 </div>
                             </div>
                         </div>
