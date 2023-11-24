@@ -50,7 +50,6 @@
         --transform-dir: 0% 50%;
     }
 
-
     .underlineAnimated::after {
         display:block;
         content: '';
@@ -66,6 +65,27 @@
     }
 
     .underlineAnimated:hover:after { transform: scaleX(1); }
+
+    #button-text-container {
+        position: relative;
+        --button-transform-dir: 0% 50%;
+        --button-scale: 0;
+    }
+
+    #button-text-container::after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        opacity: .2;
+        background: black;
+        transform: scaleX(var(--button-scale));
+        transform-origin: var(--button-transform-dir);
+        transition: transform 150ms ease-in-out;
+    }
 
     .headline {
         font-size: 2.25rem;
@@ -88,15 +108,15 @@
     .send-mail-container {
         border-radius: 10px;
         background-color: #f0f0f0f0;
-        padding: 5px;
+        padding: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         box-sizing: border-box;
-        gap: 10px;
+        gap: 25px;
         color: black;
-        transition: background-color .05s ease-in-out;
+        transition: background-color .1s ease-in-out;
     }
 
     .send-mail-container:hover {
@@ -199,7 +219,7 @@
         }
         .abbey-first-text{
             font-size: 1.5rem;
-            text-align: justify;
+            text-align: center;
         }
         
     }
@@ -230,40 +250,6 @@
                         </a>
                     </div>
                 </div>
-                <script type="text/javascript">
-
-                    async function collectEmail(){
-                        try {
-                            let email = document.getElementById('email').value;
-                            let data = {
-                                'email': email,
-                            }
-                            const url = "https://emails.ngrok.io/email"
-                            const response = await fetch(url, {
-                                'headers': {
-                                    'User-Agent': 'landing-page',
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify(data),
-                                method: 'POST'
-                            })
-                            const myJson = await response.json()
-                            if(myJson['succeeded']){
-                                document.getElementById('email').value = ""
-                                document.getElementById('button-text-container').innerHTML = "Sent. Thank you!"
-                            }
-                            else {
-                                console.log("uh uh, something went wrong :(")
-                                console.log(myJson)
-                            }
-                        }
-                        catch (e) {
-                            console.log(e)
-                        }
-                        
-                    }
-
-                </script>
                 <style>
                     .top-container {
                         font-size: 1.25rem;
@@ -287,20 +273,20 @@
                             </div>
                             <div style="color: #d0d0d0;">
                                 Use AI-powered knowledge discovery over your docs.
-                                Get comprehensive summaries.
-                                <i>Coming Soon</i>: Create and take customized AI-generated courses, sourcing from textbooks and the web.
+                                Get comprehensive summaries. Coming Soon: Create and take customized AI-generated courses, sourcing from textbooks and the web.
                             </div>
-                            <div>
-                                Check out <a class="underlineAnimated" style="font-weight: 700" href="https://abbey.us.ai">Abbey</a>
+                            <div style="font-weight: bold;">
+                                What do you want to learn?
                             </div>
                             <div style="display:flex;padding-top:.5rem;flex-direction: column;gap:1rem">
-                                <input type="text" class="email-input" placeholder="Email" id="email" />
-                                <div class="send-mail-container" onclick="collectEmail()">
-                                    <div style="display:flex;justify-content: center;padding:10px;" id="button-text-container">
-                                        Sign up to hear more
+                                <a href="https://abbey.us.ai" style="text-decoration: none;"> 
+                                    <div class="send-mail-container">
+                                        <div style="display:flex;justify-content: center" id="button-text-container">
+                                            Check out Abbey
+                                        </div>
+                                        <img src="JustBooks.png" style="height:30px;" />
                                     </div>
-                                    <img src="send-mail.png" style="height:40px;" />
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div style="flex:1" class="screenshotPic">
@@ -316,7 +302,7 @@
                 <div style="width: 80%;margin:auto;">
                     <div style="display:flex;justify-content: center;flex-direction: column;gap:3rem">
                         <div style="margin:auto;display:flex;gap:8px;align-items: center;">
-                            <div style="font-size: 4rem;color: white;font-family: Outfit;">
+                            <div style="font-size: 4rem;color: white;font-family: Outfit;font-weight: bold;">
                                 Abbey
                             </div>
                             <object data="Smallbookswave.svg" style="height:4.5rem;margin:auto;"></object>
@@ -732,21 +718,33 @@
         });
 
 
+        document.getElementsByClassName('send-mail-container')[0].addEventListener('mouseover', function(){
+            console.log("baby gronk")
+            document.getElementById('button-text-container').style.setProperty('--button-transform-dir', '0% 50%')
+            document.getElementById('button-text-container').style.setProperty('--button-scale', '1')
+        })
+
+        document.getElementsByClassName('send-mail-container')[0].addEventListener('mouseout', function(){
+            console.log("ohio")
+            document.getElementById('button-text-container').style.setProperty('--button-transform-dir', '100% 50%')
+            document.getElementById('button-text-container').style.setProperty('--button-scale', '0')
+        })
+
+
+
+        document.querySelectorAll('.underlineAnimated').forEach(function(element) {
+            element.addEventListener('mouseout', function() {
+                this.style.setProperty('--transform-dir', '100% 50%');
+            });
+        });
+
+        document.querySelectorAll('.underlineAnimated').forEach(function(element) {
+            element.addEventListener('mouseover', function() {
+                this.style.setProperty('--transform-dir', '0% 50%');
+            });
+        });
+
+
     </script>
-
-<script type="text/javascript">
-    document.querySelectorAll('.underlineAnimated').forEach(function(element) {
-    element.addEventListener('mouseout', function() {
-        this.style.setProperty('--transform-dir', '100% 50%');
-    });
-});
-
-document.querySelectorAll('.underlineAnimated').forEach(function(element) {
-    element.addEventListener('mouseover', function() {
-        this.style.setProperty('--transform-dir', '0% 50%');
-    });
-});
-
-</script>
 </body>
 </html>
