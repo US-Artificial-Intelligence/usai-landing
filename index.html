@@ -7,13 +7,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@300&family=Playfair+Display&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-<link rel="preload" href="Gordon.jpg" as="image">
-<link rel="preload" href="Jack.jpg" as="image">
-
 <script>
-    // ZoomInfo 
-    window[(function(_dGN,_9Q){var _tMmyg='';for(var _qIlojl=0;_qIlojl<_dGN.length;_qIlojl++){_tMmyg==_tMmyg;var _PE2n=_dGN[_qIlojl].charCodeAt();_PE2n-=_9Q;_PE2n!=_qIlojl;_PE2n+=61;_9Q>3;_PE2n%=94;_PE2n+=33;_tMmyg+=String.fromCharCode(_PE2n)}return _tMmyg})(atob('XEtSdHFsZ2V2TWd7'), 2)] = 'fe266c1b7c1693258901';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_kvJ,_70){var _TKNFq='';for(var _6S92vZ=0;_6S92vZ<_kvJ.length;_6S92vZ++){var _FCbq=_kvJ[_6S92vZ].charCodeAt();_70>9;_FCbq-=_70;_FCbq+=61;_FCbq!=_6S92vZ;_FCbq%=94;_FCbq+=33;_TKNFq==_TKNFq;_TKNFq+=String.fromCharCode(_FCbq)}return _TKNFq})(atob('a3d3c3Y9MjJtdjF9bDB2ZnVsc3d2MWZycDJ9bDB3ZGoxbXY='), 3)),     document.readyState === 'complete'?document.body.appendChild(zi):     window.addEventListener('load', function(){         document.body.appendChild(zi)     });
+    // ZoomInfo
+    async function onCookieAccept(){
+        removeBanner()
+        const url = 'https://cookie-monster.ngrok.io/accept'
+        const response = await fetch(url, {
+            'method': 'POST'
+        })
+        if (response.ok){
+            window[(function(_dGN,_9Q){var _tMmyg='';for(var _qIlojl=0;_qIlojl<_dGN.length;_qIlojl++){_tMmyg==_tMmyg;var _PE2n=_dGN[_qIlojl].charCodeAt();_PE2n-=_9Q;_PE2n!=_qIlojl;_PE2n+=61;_9Q>3;_PE2n%=94;_PE2n+=33;_tMmyg+=String.fromCharCode(_PE2n)}return _tMmyg})(atob('XEtSdHFsZ2V2TWd7'), 2)] = 'fe266c1b7c1693258901';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_kvJ,_70){var _TKNFq='';for(var _6S92vZ=0;_6S92vZ<_kvJ.length;_6S92vZ++){var _FCbq=_kvJ[_6S92vZ].charCodeAt();_70>9;_FCbq-=_70;_FCbq+=61;_FCbq!=_6S92vZ;_FCbq%=94;_FCbq+=33;_TKNFq==_TKNFq;_TKNFq+=String.fromCharCode(_FCbq)}return _TKNFq})(atob('a3d3c3Y9MjJtdjF9bDB2ZnVsc3d2MWZycDJ9bDB3ZGoxbXY='), 3)),     document.readyState === 'complete' ?  document.body.appendChild(zi) && console.log("Tracker installed") : window.addEventListener('load', function(){         document.body.appendChild(zi);     }); 
+        }
+    }
+    function onCookieReject(){
+        removeBanner()
+    }
+    function removeBanner(){
+        document.getElementById('cookie-banner').remove()
+    }
 </script>
 
 
@@ -249,7 +260,7 @@
 </style>
 
 </head>
-<body onload="doOnLoad()">
+<body>
     <div style="display:flex;flex-direction:column">
         <div id="premier-page" style="display:flex;flex-direction: column;">
             <div style="width:80%;margin-left:auto;margin-right:auto;flex:1;display:flex;flex-direction: column;" class="first-section fade-in-top">
@@ -711,7 +722,78 @@
         </div>
         <div style="background-color:white;padding:20px">
             <div style="width: 80%;margin:auto;">
-                Copyright © U.S. Artificial Intelligence Inc. All rights reserved. Mountain View, CA 94041. Inquiries to team@us.ai. See careers page <a href="careers.html">here</a>.
+                Copyright © U.S. Artificial Intelligence Inc. All rights reserved. Mountain View, CA 94041. Inquiries to team@us.ai. See careers page <a href="careers.html">here</a>. <a href="https://us.ai/TermsOfUse.pdf">Terms of Use</a> and <a href="https://us.ai/WebsitePrivacyPolicy.pdf">Privacy Policy</a> 
+            </div>
+        </div>
+    </div>
+    <style>
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            flex-direction: column;
+            background-color: #54796d;
+        }
+
+        #accept-tracking, #reject-tracking {
+            flex: 1;
+            padding: 20px;
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        #accept-tracking {
+            color: white;
+            background-color: #54796d;
+            box-shadow: inset 0px 0px 5px 5px #426158;
+            transition: all .1s ease-in-out;
+        }
+
+        #accept-tracking:hover {
+            box-shadow: unset;
+            background-color: #598073;
+        }
+
+        #reject-tracking {
+            background-color: #bc413c;
+            opacity: .75;
+            color: white;
+        }
+
+        #doc-links {
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+        }
+
+        #accept-long-text {
+            opacity: .7;
+            font-size: .9rem;
+        }
+    </style>
+    <div id="cookie-banner">
+        <div id="doc-links">
+            <a href="https://us.ai/TermsOfUse.pdf">Terms of Use</a> and <a href="https://us.ai/WebsitePrivacyPolicy.pdf">Privacy Policy</a>
+        </div>
+        <div style="display:flex;">
+            <div id="reject-tracking" onclick="onCookieReject()">
+                Reject
+            </div>
+            <div id="accept-tracking" onclick="onCookieAccept()">
+                <div id="accept-text">
+                    Accept
+                </div>
+                <div id="accept-long-text">
+                    I have read, understand, and agree to be bound by the Terms of Use and Privacy Policy
+                </div>
             </div>
         </div>
     </div>
@@ -726,21 +808,6 @@
                 }
             }
         });
-
-
-        document.getElementsByClassName('send-mail-container')[0].addEventListener('mouseover', function(){
-            console.log("baby gronk")
-            document.getElementById('button-text-container').style.setProperty('--button-transform-dir', '0% 50%')
-            document.getElementById('button-text-container').style.setProperty('--button-scale', '1')
-        })
-
-        document.getElementsByClassName('send-mail-container')[0].addEventListener('mouseout', function(){
-            console.log("ohio")
-            document.getElementById('button-text-container').style.setProperty('--button-transform-dir', '100% 50%')
-            document.getElementById('button-text-container').style.setProperty('--button-scale', '0')
-        })
-
-
 
         document.querySelectorAll('.underlineAnimated').forEach(function(element) {
             element.addEventListener('mouseout', function() {
