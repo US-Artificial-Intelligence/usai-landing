@@ -8,6 +8,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
+    function setPolicyAccepted() {
+        localStorage.setItem('policyAccepted', true);
+    }
+    function hasAcceptedPolicy() {
+        return localStorage.getItem('policyAccepted') === 'true';
+    }
+
     // ZoomInfo
     async function onCookieAccept(){
         removeBanner()
@@ -17,6 +24,7 @@
         })
         if (response.ok){
             window[(function(_dGN,_9Q){var _tMmyg='';for(var _qIlojl=0;_qIlojl<_dGN.length;_qIlojl++){_tMmyg==_tMmyg;var _PE2n=_dGN[_qIlojl].charCodeAt();_PE2n-=_9Q;_PE2n!=_qIlojl;_PE2n+=61;_9Q>3;_PE2n%=94;_PE2n+=33;_tMmyg+=String.fromCharCode(_PE2n)}return _tMmyg})(atob('XEtSdHFsZ2V2TWd7'), 2)] = 'fe266c1b7c1693258901';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_kvJ,_70){var _TKNFq='';for(var _6S92vZ=0;_6S92vZ<_kvJ.length;_6S92vZ++){var _FCbq=_kvJ[_6S92vZ].charCodeAt();_70>9;_FCbq-=_70;_FCbq+=61;_FCbq!=_6S92vZ;_FCbq%=94;_FCbq+=33;_TKNFq==_TKNFq;_TKNFq+=String.fromCharCode(_FCbq)}return _TKNFq})(atob('a3d3c3Y9MjJtdjF9bDB2ZnVsc3d2MWZycDJ9bDB3ZGoxbXY='), 3)),     document.readyState === 'complete' ?  document.body.appendChild(zi) && console.log("Tracker installed") : window.addEventListener('load', function(){         document.body.appendChild(zi);     }); 
+            setPolicyAccepted()
         }
     }
     function onCookieReject(){
@@ -24,6 +32,11 @@
     }
     function removeBanner(){
         document.getElementById('cookie-banner').remove()
+    }
+    function makeBanner(){
+        if (!hasAcceptedPolicy()){
+            document.getElementById('cookie-banner').style.display = 'flex';
+        }
     }
 </script>
 
@@ -260,7 +273,7 @@
 </style>
 
 </head>
-<body>
+<body onload="makeBanner()">
     <div style="display:flex;flex-direction:column">
         <div id="premier-page" style="display:flex;flex-direction: column;">
             <div style="width:80%;margin-left:auto;margin-right:auto;flex:1;display:flex;flex-direction: column;" class="first-section fade-in-top">
@@ -733,7 +746,8 @@
             width: 100%;
             z-index: 1000;
 
-            display: flex;
+            display: none;
+
             flex-direction: column;
             background-color: #54796d;
         }
