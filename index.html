@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
+    /*
     function setPolicyAccepted() {
         localStorage.setItem('policyAccepted', true);
     }
@@ -38,6 +39,16 @@
             document.getElementById('cookie-banner').style.display = 'flex';
         }
     }
+    */
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-55KGTN4ZQQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-55KGTN4ZQQ');
 </script>
 
 
@@ -273,7 +284,7 @@
 </style>
 
 </head>
-<body onload="makeBanner()">
+<body> <!-- <body onload="makeBanner()">  -->
     <div style="display:flex;flex-direction:column">
         <div id="premier-page" style="display:flex;flex-direction: column;">
             <div style="width:80%;margin-left:auto;margin-right:auto;flex:1;display:flex;flex-direction: column;" class="first-section fade-in-top">
