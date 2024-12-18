@@ -1,6 +1,9 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>U.S. Artificial Intelligence Inc.</title>
+
 <meta name="description" content="U.S. Artificial Intelligence Inc. (US AI) is an American technology company focusing on building excellent learning and professional development software.">
 
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -15,8 +18,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
     html, body {
@@ -48,6 +49,11 @@
     }
     .underline-animated:hover:after { transform: scaleX(1); }
 
+    @media only screen and (max-width: 800px) {
+        .mobile-dissappear {
+            display: none;
+        }
+    }
 </style>
 
 </head>
@@ -56,6 +62,7 @@
         .premier-page {
             position: relative;
             height: 100vh;
+            width: 100vw;
             background-color: black;
             color: white;
         }
@@ -85,8 +92,9 @@
             padding: 20px;
             padding-left: 10%;
             padding-right: 10%;
-            gap: 30px;
+            gap: 20px;
             align-items: center;
+            flex-wrap: wrap;
         }
         .premier-content {
             display: flex;
@@ -101,8 +109,13 @@
             display: flex;
             align-items: center;
             font-family: 'Instrument Serif';
-            font-size: 12vh;
+            font-size: 6rem;
             flex: 1;
+        }
+        @media only screen and (max-width: 900px) {
+            .main-text {
+                font-size: 4rem;
+            }
         }
         .premier-button-wrapper {
             display: flex;
@@ -118,6 +131,14 @@
             padding: 10px 25px;
             font-size: 1.25rem;
         }
+        @media only screen and (max-width: 900px) {
+            .premier-button-wrapper {
+                gap: 10px;
+                padding-bottom: 15%;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
         .premier-link {
             cursor: pointer;
         }
@@ -126,12 +147,22 @@
         <div class="inner-premier">
             <div class="menu">
                 <div style="display:flex;align-items:center;flex:1">
-                    <img src="images/WhiteOwlAndText.png" height="80px" />
+                    <style>
+                        .logo {
+                            height: 80px;
+                        }
+                        @media only screen and (max-width: 900px) {
+                            .logo {
+                                height: 45px;
+                            }
+                        }
+                    </style>
+                    <img src="images/WhiteOwlAndText.png" class="logo" />
                 </div>
-                <a href="https://twitter.com/usaiinc">
+                <a class="mobile-dissappear" href="https://twitter.com/usaiinc">
                     <div class="premier-link underline-animated">Twitter</div>
                 </a>
-                <a href="https://www.linkedin.com/company/us-artificial-intelligence-inc">
+                <a class="mobile-dissappear" href="https://www.linkedin.com/company/us-artificial-intelligence-inc">
                     <div class="premier-link underline-animated">LinkedIn</div>
                 </a>
                 <a href="careers.html">
@@ -143,7 +174,7 @@
             </div>
             <div class="premier-content">
                 <div class="main-text">
-                    Technology in Service of <br/> Strategic Thinking
+                    Technology in Service of Strategic Thinking
                 </div>
                 <div class="premier-button-wrapper">
                     <div class="premier-button">Mission</div>
