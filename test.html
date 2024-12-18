@@ -1,0 +1,171 @@
+<html>
+<head>
+<title>U.S. Artificial Intelligence Inc.</title>
+<meta name="description" content="U.S. Artificial Intelligence Inc. (US AI) is an American technology company focusing on building excellent learning and professional development software.">
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    html, body {
+        font-family: "Inter";
+        margin: 0px;
+    }
+    .underline-animated {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        --transform-dir: 0% 50%;
+    }
+
+    .underline-animated::after {
+        display:block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: scaleX(0);
+        transform-origin: var(--transform-dir);
+        transition: transform 150ms ease-in-out;
+    }
+    .underline-animated:hover:after { transform: scaleX(1); }
+
+</style>
+
+</head>
+<body>
+    <style>
+        .premier-page {
+            position: relative;
+            height: 100vh;
+            background-color: black;
+            color: white;
+        }
+        .premier-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            z-index: 0;
+        }
+        .show-premier-video {
+            opacity: .25;
+            transition: opacity 1s ease-in;
+        }
+        .inner-premier {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .menu {
+            display: flex;
+            padding: 20px;
+            padding-left: 10%;
+            padding-right: 10%;
+            gap: 30px;
+            align-items: center;
+        }
+        .premier-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 5%;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-top: 10px;
+        }
+        .main-text {
+            display: flex;
+            align-items: center;
+            font-family: 'Instrument Serif';
+            font-size: 12vh;
+            flex: 1;
+        }
+        .premier-button-wrapper {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .premier-button {
+            border-radius: 10px;
+            background-color: black;
+            border: 1px solid #202020;
+            cursor: pointer;
+            padding: 10px 25px;
+            font-size: 1.25rem;
+        }
+        .premier-link {
+            cursor: pointer;
+        }
+    </style>
+    <div class="premier-page">
+        <div class="inner-premier">
+            <div class="menu">
+                <div style="display:flex;align-items:center;flex:1">
+                    <img src="images/WhiteOwlAndText.png" height="80px" />
+                </div>
+                <div class="premier-link underline-animated">Twitter</div>
+                <div class="premier-link underline-animated">LinkedIn</div>
+                <div class="premier-link underline-animated">Careers</div>
+                <div class="premier-link underline-animated">Blog</div>
+            </div>
+            <div class="premier-content">
+                <div class="main-text">
+                    Technology in Service of <br/> Strategic Thinking
+                </div>
+                <div class="premier-button-wrapper">
+                    <div class="premier-button">Mission</div>
+                    <div class="premier-button">Platform</div>
+                    <div class="premier-button">Team</div>
+                </div>
+            </div>
+        </div>
+        <video class="premier-video" autoplay muted loop playsinline preload="auto">
+            <source src="test-video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div>
+        Hello
+    </div>
+    <script>
+        document.querySelectorAll('.underline-animated').forEach(function(element) {
+            element.addEventListener('mouseout', function() {
+                this.style.setProperty('--transform-dir', '100% 50%');
+            });
+        });
+
+        document.querySelectorAll('.underline-animated').forEach(function(element) {
+            element.addEventListener('mouseover', function() {
+                this.style.setProperty('--transform-dir', '0% 50%');
+            });
+        });
+        
+        const video = document.querySelector('.premier-video');
+        video.load();  // without this, hard refreshes seem to delay loading?!?
+        video.addEventListener('canplay', () => {
+            video.classList.add('show-premier-video');
+        });
+    </script>
+</body>
+</html>
