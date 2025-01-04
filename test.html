@@ -17,15 +17,20 @@
 <meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@100..900&&family=Outfit:wght@300&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
     html, body {
         font-family: "Inter";
         margin: 0px;
+        scroll-behavior: smooth;
     }
     a {
         all: unset;
+        font-family: 'Inter';
     }
     .underline-animated {
         position: relative;
@@ -49,6 +54,10 @@
     }
     .underline-animated:hover:after { transform: scaleX(1); }
 
+    .header-text {
+        font-family: 'Instrument Serif';
+    }
+
     @media only screen and (max-width: 800px) {
         .mobile-dissappear {
             display: none;
@@ -59,7 +68,7 @@
 </head>
 <body>
     <style>
-        .premier-page {
+        #premier-page {
             position: relative;
             height: 100vh;
             width: 100vw;
@@ -108,13 +117,12 @@
         .main-text {
             display: flex;
             align-items: center;
-            font-family: 'Instrument Serif';
             font-size: 6rem;
             flex: 1;
         }
         @media only screen and (max-width: 900px) {
             .main-text {
-                font-size: 4rem;
+                font-size: 3rem;
             }
         }
         .premier-button-wrapper {
@@ -143,7 +151,7 @@
             cursor: pointer;
         }
     </style>
-    <div class="premier-page">
+    <div id="premier-page">
         <div class="inner-premier">
             <div class="menu">
                 <div style="display:flex;align-items:center;flex:1">
@@ -173,13 +181,13 @@
                 </a>
             </div>
             <div class="premier-content">
-                <div class="main-text">
+                <div class="main-text header-text">
                     Technology in Service of Strategic Thinking
                 </div>
                 <div class="premier-button-wrapper">
-                    <div class="premier-button">Mission</div>
+                    <a href="#mission-page"><div class="premier-button">Mission</div></a>
                     <div class="premier-button">Platform</div>
-                    <div class="premier-button">Team</div>
+                    <a href="#team-page"><div class="premier-button">Team</div></a>
                 </div>
             </div>
         </div>
@@ -187,8 +195,191 @@
             <source src="test-video.mp4" type="video/mp4">
         </video>
     </div>
-    <div>
-        Hello
+    <style>
+        #mission-page {
+            position: relative;
+            width: 100vw;
+            background-color: black;
+            color: white;
+        }
+        .inner-mission-page {
+            width: 100%;
+            padding: 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+        .mission-main-text {
+            font-size: 4rem;
+        }
+        .mission-sub-text {
+            font-size: 1.5rem;
+        }
+        @media only screen and (max-width: 900px) {
+            .mission-main-text {
+                font-size: 2rem;
+            }
+            .mission-sub-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <div id="mission-page">
+        <div class="inner-mission-page">
+            <div class="mission-main-text header-text">
+                We help governments and businesses make better strategic decisions.
+            </div>
+            <div class="mission-sub-text">
+                Intelligence and advisory powered by the world's most powerful AI models
+            </div>
+        </div>
+    </div>
+    <style>
+        #team-page {
+            position: relative;
+            width: 100vw;
+            background-color: black;
+            color: white;
+        }
+        .inner-team-page {
+            padding: 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+        .team-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            width: 100%;
+            align-items: center;
+        }
+        .team-section-label {
+            font-size: 2.5rem;
+        }
+        .team-people {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .team-person {
+            display: flex;
+            gap: 100px;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .team-img-container {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 100%;
+        }
+        .team-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .team-person-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 80%;
+        }
+        .team-name {
+            font-size: 2rem;
+            padding-bottom: 10px;
+        }
+        .team-person-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 1rem;
+        }
+    </style>
+    <div id="team-page">
+        <div class="inner-team-page">
+            <div class="team-section">
+                <div class="team-section-label header-text">
+                    Advisors
+                </div>
+                <div class="team-people">
+                    <div class="team-person">
+                        <div class="team-img-container">
+                            <img src="images/Rosen.jpeg" class="team-img" />
+                        </div>
+                        <div class="team-person-stack">
+                            <div class="team-name">
+                                Stephen P. Rosen
+                            </div>
+                            <div class="team-person-items">
+                                <div>
+                                    Fmr. Director of Political-Military Affairs for the National Security Council
+                                </div>
+                                <div>
+                                    Fmr. Civilian Assistant to the Director of Net Assessment
+                                </div>
+                                <div>
+                                    Harvard Professor for National Security and Military Affairs
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-person">
+                        <div class="team-img-container">
+                            <img src="images/Jackie.jpeg" class="team-img" />
+                        </div>
+                        <div class="team-person-stack">
+                            <div class="team-name">
+                                Jacqueline Deal
+                            </div>
+                            <div class="team-person-items">
+                                <div>
+                                    CEO of Long-Term Strategy Group, a Washington, D.C.-based consultancy
+                                </div>
+                                <div>
+                                    Senior Fellow at the Foreign Policy Research Institute
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-section">
+                <div class="team-section-label header-text">
+                    Officers
+                </div>
+                <div class="team-people">
+                    <div class="team-person">
+                        <div class="team-img-container">
+                            <img src="images/Gordon.jpeg" class="team-img" />
+                        </div>
+                        <div class="team-person-stack">
+                            <div class="team-name">
+                                Gordon Kamer - CEO
+                            </div>
+                            <div class="team-person-items">
+                                <div>
+                                    Studied computer science and government at Harvard College
+                                </div>
+                                <div>
+                                    Former national security analyst
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #footer {
+            height: 500px;
+            background-color: #505050;
+        }
+    </style>
+    <div id="footer">
+
     </div>
     <script>
         document.querySelectorAll('.underline-animated').forEach(function(element) {
