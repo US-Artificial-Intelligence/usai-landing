@@ -385,12 +385,52 @@
     </div>
     <style>
         #footer {
-            height: 500px;
             background-color: #505050;
+        }
+        .inner-footer {
+            padding: 5% 10%;
+            display: flex;
+            gap: 2rem;
+        }
+        .footer-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            color: white;
+        }
+        .footer-stack a {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        @media only screen and (max-width: 900px) {
+            .inner-footer {
+                flex-direction: column;
+            }
         }
     </style>
     <div id="footer">
-
+        <div class="inner-footer">
+            <div>
+                <img src="images/WhiteOwlAndText.png" class="logo" />
+            </div>
+            <div class="footer-stack">
+                <div>
+                    <a href="careers.html">Careers</a>
+                </div>
+                <div>
+                    Inquiries to team@us.ai
+                </div>
+                <div>
+                    <a href="https://us.ai/TermsOfUse.pdf">Terms of Use</a> and <a href="https://us.ai/WebsitePrivacyPolicy.pdf">Privacy Policy</a> 
+                </div>
+                <div>
+                    Copyright © U.S. Artificial Intelligence Inc. All rights reserved.
+                </div>
+                <div>
+                    Mountain View, CA
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         document.querySelectorAll('.underline-animated').forEach(function(element) {
