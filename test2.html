@@ -80,7 +80,7 @@
             position: relative;
             height: 100vh;
             width: 100vw;
-            background-color: black;
+            background-color: rgb(29, 29, 29);
         }
         .premier-video {
             position: absolute;
@@ -221,9 +221,6 @@
                 </div>
             </div>
         </div>
-        <video class="premier-video" autoplay muted loop playsinline preload="auto">
-            <source src="test-video.mp4" type="video/mp4">
-        </video>
     </div>
     <style>
         #mission-page {
@@ -307,29 +304,29 @@
             <div class="paragraph-page-header">
                 What do <i>you</i> do?
             </div>
-            <p>We can accomplish anything we set our minds on. But how do you decide <i>what</i> it is you want to do?</p>
-            <p>AI and other technologies are increasingly driving down the cost of actually doing stuff. Yet, we often find ourselves doing less – in fact, doing the thing is often the easiest part.</p>
-            <p>Take, for example, the process of building housing. The community must decide whether it wants the housing to be built; this process can take months of community outreach and meetings. The city must review the plans and be assured that any environmental impact is accounted for, which the builders must study. By the time the architects refine the plans, and the holes are ready to be dug, most of the work is already done – this was the work deciding whether or not to do it in the first place.</p>
-            <p>Consider congestion pricing in New York City. The political analysis and machinations took years: the budget meetings, the alternatives suggested. One impact assessment <a href="https://reason.com/2021/08/24/new-york-city-was-supposed-to-have-congestion-pricing-in-january-federally-mandated-environmental-review-pushed-the-start-date-to-2023/">took</a> 16 months to complete.</p>                
-            <p>It's true on a strategic level as well. The Defense Department has a nearly $1 trillion budget, yet it is still constrained by trade-offs: a base here, or there? A new jet, and what should it do? How should the defense posture of this country look in 5 years?</p>
+            <p>We can accomplish anything we set our minds on. But how do you decide <i>what</i> you want to do?</p>
+            <p>AI and other technologies are increasingly driving down costs, yet we often find ourselves actually doing <i>less</i>. Our time is increasingly spent on the planning stage.</p>
+            <p>Consider the Department of Defense: the pentagon has a nearly $1 trillion budget, yet it is still constrained by trade-offs: a base here, or there? A new jet, but what missions should it be designed for? How should the defense posture of this country look in 5 years? By the time the hordes of analysts have decided what to do, the work could've been done already</p>
+            <p>Another example is the process of building housing. The community must decide whether it wants the housing to be built; this process can take months of community outreach and meetings. The city must review the plans and be assured that any environmental impact is accounted for, which the builders must study. By the time the architects refine the plans, and the holes are ready to be dug, most of the work is already done – this was the work deciding whether or not to do it in the first place.</p>
+            <p>Consider congestion pricing in New York City. The political machinations and analysis took years: the budget meetings, the alternatives suggested. One impact assessment <a href="https://reason.com/2021/08/24/new-york-city-was-supposed-to-have-congestion-pricing-in-january-federally-mandated-environmental-review-pushed-the-start-date-to-2023/">took</a> 16 months to complete.</p>                
             <blockquote>
-                "Doing the thing is often the easiest part."
+                "Our time is increasingly spent on the planning stage."
             </blockquote>
-            <p>Many people wish for a world of machines that wait at our command. The last job for humanity, then, is deciding what those commands ought to be. Our mission as a company is to make those decisions – those studies and analyses – as correct, persuasive, and efficient as possible.</p>
+            <p>Many people wish for a world of machines that wait at our command. The last job for humanity, then, is deciding what those commands ought to be. <b>Our mission as a company is to make those decisions – those studies and analyses – as correct, persuasive, and efficient as possible.</b></p>
         </div>
     </div>
     <style>
         #platform-page {
-            background-color: black;
+            background-color: rgb(29, 29, 29);
         }
         .inner-platform-page {
             padding: 5% 10%;
             display: flex;
             flex-direction: column;
-            gap: 3rem;
+            gap: 5rem;
         }
         .platform-main-text {
-            font-size: 3rem;
+            font-size: 4rem;
             font-family: var(--font-header);
         }
         .platform-body-container {
@@ -347,8 +344,9 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 2.5rem;
             max-width: 400px;
+            font-size: 1.25rem;
             border: 1px solid #787878;
         }
         .abbey-logo-container {
@@ -357,7 +355,7 @@
             width: 100%;
             gap: 10px;
             font-family: Outfit;
-            font-size: 1.15rem;
+            font-size: 1.25rem;
         }
         .second-row-abbey-box {
             display: flex;
@@ -387,6 +385,25 @@
         .platform-item-text {
             flex: 4;
             font-size: 1.5rem;
+            margin-left: 3rem;
+            display: list-item;
+        }
+        .platform-ending {
+            font-size: 1.5rem;
+        }
+        @media only screen and (max-width: 900px) {
+            .platform-body-container {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            }
+            .platform-main-text {
+                font-size: 3rem;
+            }
+            .inner-platform-page {
+                gap: 2.5rem;
+                padding: 10% 10%;
+            }
         }
     </style>
     <div id="platform-page">
@@ -397,25 +414,16 @@
             <div class="platform-body-container">
                 <div class="platform-body-stack">
                     <div class="platform-body-item">
-                        <div class="platform-item-icon-container">
-                            <img src="icons/spider-web.png" class="platform-item-icon" />
-                        </div>
                         <div class="platform-item-text">
                             Automated web crawling en masse
                         </div>
                     </div>
                     <div class="platform-body-item">
-                        <div class="platform-item-icon-container">
-                            <img src="icons/filter.png" class="platform-item-icon" />
-                        </div>
                         <div class="platform-item-text">
                             Advanced labeling and filtering of information
                         </div>
                     </div>
                     <div class="platform-body-item">
-                        <div class="platform-item-icon-container">
-                            <img src="icons/report.png" class="platform-item-icon" />
-                        </div>
                         <div class="platform-item-text">
                             Summaries and analysis of papers, news, and reports
                         </div>
@@ -437,6 +445,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="platform-ending">
+                Better technology allows us to deliver more thoughtful and comprehensive analysis.
             </div>
         </div>
     </div>
@@ -515,52 +526,6 @@
     </style>
     <div id="team-page">
         <div class="inner-team-page">
-            <div class="team-section">
-                <div class="team-section-label header-text">
-                    Advisors
-                </div>
-                <div class="team-people">
-                    <div class="team-person">
-                        <div class="team-img-container">
-                            <img src="images/Rosen.jpeg" class="team-img" />
-                        </div>
-                        <div class="team-person-stack">
-                            <div class="team-name">
-                                Stephen P. Rosen
-                            </div>
-                            <div class="team-person-items">
-                                <div>
-                                    Fmr. Director of Political-Military Affairs for the National Security Council
-                                </div>
-                                <div>
-                                    Fmr. Civilian Assistant to the Director of Net Assessment
-                                </div>
-                                <div>
-                                    Harvard Professor for National Security and Military Affairs
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-person">
-                        <div class="team-img-container">
-                            <img src="images/Jackie.jpeg" class="team-img" />
-                        </div>
-                        <div class="team-person-stack">
-                            <div class="team-name">
-                                Jacqueline Deal
-                            </div>
-                            <div class="team-person-items">
-                                <div>
-                                    CEO of Long-Term Strategy Group, a Washington, D.C.-based consultancy
-                                </div>
-                                <div>
-                                    Senior Fellow at the Foreign Policy Research Institute
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="team-section">
                 <div class="team-section-label header-text">
                     Officers
