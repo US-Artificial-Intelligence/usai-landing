@@ -1,59 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@300&family=Playfair+Display&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script>
-    /*
-    function setPolicyAccepted() {
-        localStorage.setItem('policyAccepted', true);
-    }
-    function hasAcceptedPolicy() {
-        return localStorage.getItem('policyAccepted') === 'true';
-    }
+<title>U.S. Artificial Intelligence Inc.</title>
 
-    // ZoomInfo
-    async function onCookieAccept(){
-        removeBanner()
-        const url = 'https://cookie-monster.ngrok.io/accept'
-        const response = await fetch(url, {
-            'method': 'POST'
-        })
-        if (response.ok){
-            window[(function(_dGN,_9Q){var _tMmyg='';for(var _qIlojl=0;_qIlojl<_dGN.length;_qIlojl++){_tMmyg==_tMmyg;var _PE2n=_dGN[_qIlojl].charCodeAt();_PE2n-=_9Q;_PE2n!=_qIlojl;_PE2n+=61;_9Q>3;_PE2n%=94;_PE2n+=33;_tMmyg+=String.fromCharCode(_PE2n)}return _tMmyg})(atob('XEtSdHFsZ2V2TWd7'), 2)] = 'fe266c1b7c1693258901';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_kvJ,_70){var _TKNFq='';for(var _6S92vZ=0;_6S92vZ<_kvJ.length;_6S92vZ++){var _FCbq=_kvJ[_6S92vZ].charCodeAt();_70>9;_FCbq-=_70;_FCbq+=61;_FCbq!=_6S92vZ;_FCbq%=94;_FCbq+=33;_TKNFq==_TKNFq;_TKNFq+=String.fromCharCode(_FCbq)}return _TKNFq})(atob('a3d3c3Y9MjJtdjF9bDB2ZnVsc3d2MWZycDJ9bDB3ZGoxbXY='), 3)),     document.readyState === 'complete' ?  document.body.appendChild(zi) && console.log("Tracker installed") : window.addEventListener('load', function(){         document.body.appendChild(zi);     }); 
-            setPolicyAccepted()
-        }
-    }
-    function onCookieReject(){
-        removeBanner()
-    }
-    function removeBanner(){
-        document.getElementById('cookie-banner').remove()
-    }
-    function makeBanner(){
-        if (!hasAcceptedPolicy()){
-            document.getElementById('cookie-banner').style.display = 'flex';
-        }
-    }
-    */
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-55KGTN4ZQQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-55KGTN4ZQQ');
-</script>
-
-
-<title>U.S. Artificial Intelligence Inc</title>
-<meta name="description" content="U.S. Artificial Intelligence Inc. (US AI) is an American technology company focusing on building excellent learning and professional development software.">
+<meta name="description" content="U.S. Artificial Intelligence Inc. (US AI) is an American technology company focusing on helping businesses and governments make better strategic decisions.">
 
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -63,38 +14,41 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@100..900&&family=Outfit:wght@300&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- For the GitHub stars button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
 <style>
-
+    * {
+        box-sizing: border-box;
+    }
+    :root {
+        --font-header: "Instrument Serif";
+        --font-body: "Inter"
+    }
     html, body {
-        background-color: #385149;
-        font-family: Raleway;
+        font-family: var(--font-body);
         margin: 0px;
+        scroll-behavior: smooth;
+        color: white;
     }
-
-    .fade-in {
-        opacity: 0;
-        transition: opacity 1.5s;
+    a {
+        all: unset;
+        font-family: var(--font-body);
     }
-
-    @keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-    }
-
-    .fade-in-top {
-        opacity: 0;
-        animation: fadeIn ease 1.5s forwards; /* adjust duration as needed */
-    }
-
-    .underlineAnimated {
+    .underline-animated {
         position: relative;
         display: inline-block;
         text-decoration: none;
         --transform-dir: 0% 50%;
     }
 
-    .underlineAnimated::after {
-        display:block;
+    .underline-animated::after {
+        display: block;
         content: '';
         position: absolute;
         bottom: 0;
@@ -106,689 +60,568 @@
         transform-origin: var(--transform-dir);
         transition: transform 150ms ease-in-out;
     }
+    .underline-animated:hover:after { transform: scaleX(1); }
 
-    .underlineAnimated:hover:after { transform: scaleX(1); }
-
-    #button-text-container {
-        position: relative;
-        --button-transform-dir: 0% 50%;
-        --button-scale: 0;
+    .header-text {
+        font-family: var(--font-header);
     }
 
-    #button-text-container::after {
-        display: block;
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        opacity: .2;
-        background: black;
-        transform: scaleX(var(--button-scale));
-        transform-origin: var(--button-transform-dir);
-        transition: transform 150ms ease-in-out;
-    }
-
-    .headline {
-        font-size: 2.1rem;
-        font-weight: bold;
-    }
-
-    .email-input {
-        outline: 0;
-        padding: 5px;
-        font-family: Raleway;
-        font-size: 1.25rem;
-        border-radius: 10px;
-        border-width: 0px;
-        width: 100%;
-        height: 50px;
-        box-sizing: border-box;
-        padding-left: 15px;
-    }
-
-    .send-mail-container {
-        border-radius: 10px;
-        background-color: #f0f0f0f0;
-        padding: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
-        gap: 25px;
-        color: black;
-        transition: background-color .1s ease-in-out;
-    }
-
-    .send-mail-container:hover {
-        background-color: #f0f0f0;
-        cursor: pointer;
-    }
-
-    a {
-        all: unset;
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-
-    .rosePic {
-        animation: spin 15s linear infinite;
-    }
-
-    .screenshotPic {
-        display: block;
-    }
-
-    .screenshotPicCropped {
-        display: none;
-    }
-
-    .topSideText {
-        width: 500px;
-        display:flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .doc {
-
-        margin: auto;
-
-        display: flex;
-        gap: 2rem;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-    }
-
-    .doc-item {
-        font-size: 1.25rem;
-
-        background-color: rgba(255, 255, 255, 0.166);
-        padding: 2rem;
-        border-radius: 10px;
-
-        color: rgba(255, 255, 255, 0.801);
-
-        display: flex;
-        align-items: center;
-
-        box-sizing: border-box;
-
-        line-height: 1.75rem;
-
-        width: calc(33% - 2rem);
-        align-items: stretch;
-    }
-
-    .emphasis {
-        font-weight: bold;
-        color: white;
-    }
-
-    .abbey-first-text {
-        margin:auto;
-        color: white;
-        font-size: 2rem;
-    }
-
-    @media only screen and (max-width: 1000px) {
-        .screenshotPic {
-            display: none;
-        }
-        .topSideText {
-            width: unset;
-        }
-        .doc-item {
-            width: 100%;
-        }
-        .erase-first {
-            display: none;
-        }
-        .abbey-first-text{
-            font-size: 1.5rem;
-            text-align: center;
-        }
-        .mobileDissappear {
-            display: none;
-        }
-        .headline {
-            font-size: 2.3rem;
-        }
-    }
-
-    @media only screen and (max-width: 1200px) and (min-width: 1000px) {
-        .screenshotPicCropped {
-            display: block;   
-        }
-        .screenshotPic {
+    @media only screen and (max-width: 800px) {
+        .mobile-dissappear {
             display: none;
         }
     }
-
 </style>
 
 </head>
-<body> <!-- <body onload="makeBanner()">  -->
-    <div style="display:flex;flex-direction:column">
-        <div id="premier-page" style="display:flex;flex-direction: column;">
-            <div style="width:80%;margin-left:auto;margin-right:auto;flex:1;display:flex;flex-direction: column;" class="first-section fade-in-top">
-                <div style="padding-top: 2rem;display:flex;align-items:center;">
-                    <div style="flex:1;display:flex;align-items: center;gap:5px;">
-                        <style>
+<body>
+    <style>
+        #premier-page {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(29, 29, 29);
+        }
+        .premier-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            z-index: 0;
+        }
+        .show-premier-video {
+            opacity: .25;
+            transition: opacity 1s ease-in;
+        }
+        .inner-premier {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .menu {
+            display: flex;
+            padding: 20px;
+            padding-left: 10%;
+            padding-right: 10%;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .premier-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 5%;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-top: 10px;
+        }
+        .main-text {
+            display: flex;
+            align-items: center;
+            font-size: 6rem;
+            flex: 1;
+        }
+        @media only screen and (max-width: 900px) {
+            .main-text {
+                font-size: 3rem;
+            }
+        }
+        .premier-secondary {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .premier-inquiries {
+            font-size: 2rem;
+            font-family: var(--font-header);
+        }
+        .premier-inquiries a {
+            text-decoration: underline;
+            cursor: pointer;
+            font-family: var(--font-header);
+        }
+        .premier-button-wrapper {
+            display: flex;
+            flex: 1;
+            gap: 50px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .premier-button {
+            border-radius: 10px;
+            background-color: black;
+            border: 1px solid #202020;
+            cursor: pointer;
+            padding: 10px 35px;
+            font-size: 1.25rem;
+        }
+        @media only screen and (max-width: 900px) {
+            .premier-button-wrapper {
+                gap: 10px;
+                padding-bottom: 15%;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .premier-inquiries {
+                display: none;
+            }
+        }
+        .premier-link {
+            cursor: pointer;
+        }
+    </style>
+    <div id="premier-page">
+        <div class="inner-premier">
+            <div class="menu">
+                <div style="display:flex;align-items:center;flex:1">
+                    <style>
+                        .logo {
+                            height: 80px;
+                        }
+                        @media only screen and (max-width: 900px) {
                             .logo {
-                                height: 70px;
-                            }
-                            @media only screen and (max-width: 900px) {
-                                .logo {
-                                    height: 45px;
-                                }
-                            }
-                        </style>
-                        <img src="images/WhiteOwlAndText.png" class="logo" />
-                    </div>
-                    <div style="color:white;font-size:1.2rem;display:flex;gap:20px">
-                        <a href="https://twitter.com/usaiinc" style="text-decoration: none;color: white;" class="underlineAnimated mobileDissappear">
-                            Twitter
-                        </a>
-                        <a href="https://www.linkedin.com/company/us-artificial-intelligence-inc" style="text-decoration: none;color: white;" class="underlineAnimated mobileDissappear">
-                            LinkedIn
-                        </a>
-                        <a href="careers.html" style="text-decoration: none;color: white;" class="underlineAnimated">
-                            Careers
-                        </a>
-                        <a href="https://blog.us.ai" style="text-decoration: none;color: white;" class="underlineAnimated">
-                            Blog
-                        </a>
-                    </div>
-                </div>
-                <style>
-                    .top-container {
-                        font-size: 1.25rem;
-                        color: white;
-                        display: flex;
-                        align-items: center;
-                        justify-content:center;
-                        padding-top: 5rem;
-                    }
-                    @media only screen and (max-width: 1000px) {
-                        .top-container {
-                            padding-top: 3rem;
-                        }
-                    }
-                </style>
-                <div class="top-container">
-                    <div style="display:flex;gap:100px;line-height: 1.25;align-items: center;justify-content:center">
-                        <div class="topSideText">
-                            <div class="headline">
-                                Software for Analysis and Critical Thinking 
-                            </div>
-                            <div style="color: #d0d0d0;">
-                                Search the web with AI. Easily summarize long documents. Get commentary and notes. Turn articles into podcasts.
-                            </div>
-                            <div style="display:flex;padding-top:.5rem;flex-direction: column;gap:1rem">
-                                <a href="https://abbey.us.ai" style="text-decoration: none;"> 
-                                    <div class="send-mail-container">
-                                        <div style="display:flex;justify-content: center" id="button-text-container">
-                                            Check out Abbey
-                                        </div>
-                                        <img src="JustBooks.png" style="height:30px;" />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div style="flex:1" class="screenshotPic">
-                            <img src="images/go.png" style="width:100%;max-height:300px;" />
-                        </div>
-                        <div style="flex:1" class="screenshotPicCropped">
-                            <img src="images/ShortChatSS.png" style="width:100%;filter:grayscale(90%);max-height:450px" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="padding-top:5rem;" class="fade-in-top">
-                <div style="width: 80%;margin:auto;">
-                    <div style="display:flex;justify-content: center;flex-direction: column;gap:3rem">
-                        <div style="margin:auto;display:flex;gap:8px;align-items: center;">
-                            <div style="font-size: 4rem;color: white;font-family: Outfit;font-weight: bold;">
-                                Abbey
-                            </div>
-                            <object data="Smallbookswave.svg" style="height:4.5rem;margin:auto;"></object>
-                        </div>
-                        <div class="abbey-first-text">
-                            Book-up on anything.
-                        </div>
-                        <div class="doc">
-                            <div class="doc-item">
-                                <div>
-                                    Turns articles into audio podcasts.
-                                </div>
-                            </div>
-                            <div class="doc-item">
-                                <div>
-                                    <span class="emphasis">AI Q&A</span> with any document, all stored online.
-                                </div>
-                            </div>
-                            <div class="doc-item doc-item erase-first">
-                                <div>
-                                    Works with scans using <span class="emphasis">optical character recognition</span>.
-                                </div>
-                            </div>
-                            <div class="doc-item">
-                                <div>
-                                    Interact with a library of <span class="emphasis">quality</span> material
-                                </div>
-                            </div>
-                            <div class="doc-item erase-first">
-                                <div>
-                                    Works <span class="emphasis">seamlessly</span> with <span class="emphasis">Word</span> Docs, <span class="emphasis">PDFs</span>, and more.
-                                </div>
-                            </div>
-                            <div class="doc-item erase-first">
-                                <div>
-                                    Finish <span class="emphasis">hours of reading in minutes.</span>        
-                                </div>
-                            </div>
-                        </div>
-                        <div style="margin:auto; color: white;font-size: 2rem;">
-                            ...and more.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="padding-top:5rem;" class="fade-in">
-                <div style="padding-top:3rem;padding-bottom:3rem;color:white;display:flex;flex-direction:column;align-items:center;">
-                    <style>
-                        .dormHeader {
-                            font-size: 2.5rem;
-                        }
-                        .pdfImage {
-                            border-radius: 5%;
-                        }
-                        .shortChatPic {
-                            width: 40%;
-                        }
-                        .dormList {
-                            width: 40%
-                        }
-                        
-                        .businessImageContainer {
-                            width: 40%;
-                        }
-                        .businessList {
-                            width: 40%;
-                        }
-                        @media only screen and (max-width: 1000px) {
-                            .dormroomContainer {
-                                flex-direction: column;
-                            }
-                            .shortChatPic {
-                                width: 100%;
-                            }
-                            .dormList {
-                                width: 100%;
-                                padding-top: 4rem;
-                            }
-                            .businessList {
-                                width: 100%;
-                                padding-top: 4rem;
-                            }
-                            .businessImageContainer {
-                                width: 100%;
-                            }
-                            .businessContainer {
-                                flex-direction: column-reverse;
+                                height: 45px;
                             }
                         }
                     </style>
-                    <div style="width:80%;display: flex;flex-direction: column;gap:4rem">
-                        <div>
-                            <div style="display:flex;gap:10%;align-items: center;justify-content: center;" class="dormroomContainer">
-                                <div class="shortChatPic">
-                                    <img src="images/ShortChatSS.png" style="width:100%;" />
-                                </div>
-                                <div style="display:flex;flex-direction: column;gap: 2rem;line-height:1.5rem;font-size: 1.25rem;" class="dormList">
-                                    <div style="display:flex;align-items: center;gap:1rem;">
-                                        <img src="icons/CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
-                                        <div>
-                                            Get comphrehensive <b>summaries</b>, touching on the entirety of long documents
-                                        </div>
-                                    </div>
-                                    <div style="display:flex;align-items: center;gap:1rem;">
-                                        <img src="icons/CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
-                                        <div>
-                                            <b>Ask questions</b> of any document
-                                        </div>
-                                    </div>
-                                    <div style="display:flex;align-items: center;gap:1rem;">
-                                        <img src="icons/CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
-                                        <div>
-                                            Works with <b>scans and images</b> using optical character recognition 
-                                        </div>
-                                    </div>
-                                    <div style="display:flex;align-items: center;gap:1rem;">
-                                        <img src="icons/CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
-                                        <div>
-                                            Handles collections of documents of <b>unlimited length</b>
-                                        </div>
-                                    </div>
-                                    <div style="display:flex;align-items: center;gap:1rem;">
-                                        <img src="icons/CircleCheckIcon.png" style="height:20px;filter:invert(100%)" />
-                                        <div>
-                                            <b>Cites</b> its sources
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <img src="images/WhiteOwlAndText.png" class="logo" />
+                </div>
+                <a class="mobile-dissappear" href="https://twitter.com/usaiinc">
+                    <div class="premier-link underline-animated">Twitter</div>
+                </a>
+                <a class="mobile-dissappear" href="https://www.linkedin.com/company/us-artificial-intelligence-inc">
+                    <div class="premier-link underline-animated">LinkedIn</div>
+                </a>
+                <a href="careers.html">
+                    <div class="premier-link underline-animated">Careers</div>
+                </a>
+                <a href="https://blog.us.ai">
+                    <div class="premier-link underline-animated">Blog</div>
+                </a>
+            </div>
+            <div class="premier-content">
+                <div class="main-text header-text">
+                    Technology in Service of Strategic Thinking
+                </div>
+                <div class="premier-secondary">
+                    <div class="premier-inquiries">
+                        Inquiries to <a href="mailto:team@us.ai">team@us.ai</a>
+                    </div>
+                    <div class="premier-button-wrapper">
+                        <a href="#mission-page"><div class="premier-button">Mission</div></a>
+                        <a href="#platform-page"><div class="premier-button">Platform</div></a>
+                        <a href="#team-page"><div class="premier-button">Team</div></a>
                     </div>
                 </div>
-            </div>
-
-            <div style="padding-top:5rem;" class="fade-in">
-                <div style="padding-top:3rem;padding-bottom:3rem;background-color:rgb(254, 255, 244);color:white;background-color:rgb(37, 37, 37);display:flex;flex-direction: column;">
-                    <style>
-                        .mag-image-container {
-                            display:flex;
-                            gap:2rem;
-                            padding-left:10%;
-                            padding-right:10%;
-                            justify-content: center;
-                            align-items: center;
-                        }
-                        .mag-img {
-                            width: 100%;
-                        }
-                        .mag-text-container {
-                            padding:5%;
-                            margin-left: 5%;
-                            margin-right: 5%;
-                            line-height: 1.5rem;
-                            display:flex;
-                            gap:2rem;
-                        }
-                        @media only screen and (max-width: 1000px) {
-                            .mag-image-container {
-                                flex-direction: column;
-                            }
-                            .mag-img {
-                                width: unset;
-                                max-width: 100%;
-                                height: 120px;
-                            }
-                            .mag-text-container {
-                                flex-direction: column;
-                            }
-                        }
-                    </style>
-                    <div class="mag-image-container">
-                        <div>
-                            <img src="images/SlideRule.png" class="mag-img" />
-                        </div>
-                        <div>
-                            <img src="images/GPU.png" class="mag-img" />
-                        </div>
-                    </div>
-                    <div style="font-size:3rem;display:flex;justify-content: center;align-items: center;padding-top:3rem;padding-bottom:1rem;padding-left:10%;padding-right:10%;">
-                        We've come a long way.
-                    </div>
-                    <div class="mag-text-container">
-                        <div style="display:flex;flex-direction: column;gap:2rem;flex:1">
-                            <div style="flex:1">
-                                Before calculators, an engineer was nothing without his slide rule. These analog devices help compute large multiplications and divisions faster than with pen and paper. They take advantage of the fact that the log of a number, when added to the log of another number, is the same as the log of the numbers' product. Arranging the figures on a slide rule in log scale makes multiplication and division as easy as addition or subtraction. 
-                            </div>
-                            <div style="flex:1">
-                                Today, large language models like ChatGPT multiply and divide billions of numbers in the blink of an eye on GPUs. GPUs parallelize those operations so that while a number is being multiplied in one part of the device, thousands of other operations are happening in other areas of the chip.
-                            </div>
-                        </div>
-                        <div style="display:flex;flex-direction: column;gap:2rem;flex:1">
-                            <div>
-                                In the same way GPUs multiply numbers in parallel, our software spawns hundreds of copies of a language model at the same time, all working together for you. It can apply one question to hundreds of sources or ask a hundred questions of one source, and it answers in seconds. Parallelization is just one technique we use to make sure that you are receiving fast and accurate responses.
-                            </div>
-                            <div>
-                                Most innovations - from the slide rule to the GPU to AI - increase complexity, detaching the user from the result. We hope that explanations like these as well as the software itself demystifies the process. A tool that exposes its functionality can be far more useful than a black box, especially when in the hands of an intelligent user. This belief is reflected in everything we do.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="padding-top:5rem;padding-bottom:7rem;display:flex;justify-content:center;" class="fade-in">
-                <div class="aboutUsContainer" style="color:white;display:flex;flex-direction:column;gap:2rem;text-align:center;align-items:center;">
-                    <style>
-                        .aboutUsHeader {
-                            font-size: 2rem;
-                        }
-                        table {
-                            border-collapse: collapse;
-                            font-size: 1.1rem;
-                            width: 100%;
-                        }
-                        tbody tr {
-                            border-bottom: 1px solid #d9d9d9;
-                        }
-                        thead tr {
-                            border-bottom: 2px solid #f0f0f0;
-                        }
-                        th, td {
-                            padding: 15px;
-                            padding-top: 25px;
-                            padding-bottom: 25px;
-                            text-align: left;
-                            line-height: 2rem;
-                        }
-                        @media only screen and (min-width: 1000px) {
-                            th, td {
-                                min-width: 200px;
-                            }
-                            .aboutUsContainer {
-                                width:80%;
-                            }
-                        }
-                        @media only screen and (max-width: 1000px) {
-                            .ocken {
-                                display:none;
-                            }
-                            th, td {
-                                font-size: 1rem;
-                                padding: 15px;
-                                padding-top: 25px;
-                                padding-bottom: 25px;
-                                line-height: 1rem;
-                            }
-                            tbody tr, thead tr {
-                                border-bottom-width: 0px;
-                                border-bottom-color: rgba(255, 255, 255, 0.398);
-                            }
-                            td {
-                                background-color: rgba(255, 255, 255, 0.166);
-                            }
-                            th {
-                                background-color: rgba(255, 255, 255, 0.398);
-                            }
-                            td div {
-                                margin-top: .5rem;
-                                margin-bottom: .5rem;
-                            }
-                            .aboutUsHeader {
-                                font-size: 2.75rem;
-                            }
-                            .aboutUsContainer {
-                                flex: 1;
-                                width: 80%;
-                            }
-                        }
-                    </style>
-                    <div class="aboutUsHeader">
-                        About the Founder
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Gordon Kamer</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    Title
-                                </td>
-                                <td>
-                                    Founder & CEO
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Hometown
-                                </td>
-                                <td>
-                                    Somers, NY
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Background
-                                </td>
-                                <td>
-                                    <div>Quant Trading</div> <div>Defense Research</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Education
-                                </td>
-                                <td>
-                                    Harvard
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div style="background-color:white;padding:20px">
-            <div style="width: 80%;margin:auto;">
-                Copyright © U.S. Artificial Intelligence Inc. All rights reserved. Mountain View, CA 94041. Inquiries to team@us.ai. See careers page <a href="careers.html">here</a>. <a href="https://us.ai/TermsOfUse.pdf">Terms of Use</a> and <a href="https://us.ai/WebsitePrivacyPolicy.pdf">Privacy Policy</a> 
             </div>
         </div>
     </div>
     <style>
-        #cookie-banner {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 1000;
-
-            display: none;
-
-            flex-direction: column;
-            background-color: #54796d;
+        #mission-page {
+            position: relative;
+            width: 100vw;
+            background-color: black;
         }
-
-        #accept-tracking, #reject-tracking {
-            flex: 1;
-            padding: 20px;
-            cursor: pointer;
-            text-align: center;
+        .inner-mission-page {
+            width: 100%;
+            padding: 10%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
+            gap: 4rem;
         }
-
-        #accept-tracking {
-            color: white;
-            background-color: #54796d;
-            box-shadow: inset 0px 0px 5px 5px #426158;
-            transition: all .1s ease-in-out;
+        .mission-main-text {
+            font-size: 4rem;
         }
-
-        #accept-tracking:hover {
-            box-shadow: unset;
-            background-color: #598073;
+        .mission-sub-text {
+            font-size: 1.5rem;
         }
-
-        #reject-tracking {
-            background-color: #bc413c;
-            opacity: .75;
-            color: white;
-        }
-
-        #doc-links {
-            padding: 10px;
-            text-align: center;
-            background-color: white;
-        }
-
-        #accept-long-text {
-            opacity: .7;
-            font-size: .9rem;
+        @media only screen and (max-width: 900px) {
+            .mission-main-text {
+                font-size: 3rem;
+            }
+            .mission-sub-text {
+                font-size: 1.5rem;
+            }
         }
     </style>
-    <div id="cookie-banner">
-        <div id="doc-links">
-            <a href="https://us.ai/TermsOfUse.pdf">Terms of Use</a> and <a href="https://us.ai/WebsitePrivacyPolicy.pdf">Privacy Policy</a>
+    <div id="mission-page">
+        <div class="inner-mission-page">
+            <div class="mission-main-text header-text">
+                We help governments and businesses make better strategic decisions.
+            </div>
+            <div class="mission-sub-text">
+                Intelligence and advisory powered by the world's most powerful AI models
+            </div>
         </div>
-        <div style="display:flex;">
-            <div id="reject-tracking" onclick="onCookieReject()">
-                Reject
-                <div id="accept-long-text">
-                    I reject your use of third party tracking cookies.
+    </div>
+    <style>
+        #paragraph-page {
+            background-color: #d4d4d4;
+            color: black;
+        }
+        .inner-paragraph-page {
+            padding: 5% 10%;
+            column-count: 3;
+            column-gap: 20px;
+        }
+        .inner-paragraph-page blockquote {
+            font-size: 2rem;
+            font-family: var(--font-header);
+        }
+        .inner-paragraph-page p:first-of-type::first-letter {
+            font-size: 3em; /* Larger font size for the drop cap */
+            float: left;
+            line-height: 1;
+            margin-right: 15px;
+            font-weight: bold;
+            font-family: var(--font-header);
+        }
+        .inner-paragraph-page a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .paragraph-page-header {
+            font-size: 3.5rem;
+            font-family: var(--font-header);
+        }
+        @media only screen and (max-width: 900px) {
+            .paragraph-page-header {
+                font-size: 3rem;
+            }
+            .inner-paragraph-page {
+                column-count: 1;
+            }
+        }
+    </style>
+    <div id="paragraph-page">
+        <div class="inner-paragraph-page">
+            <div class="paragraph-page-header">
+                What do <i>you</i> do?
+            </div>
+            <p>We can accomplish anything we set our minds on. But how do you decide <i>what</i> you want to do?</p>
+            <p>AI and other technologies are increasingly driving down costs, yet we often find ourselves actually doing <i>less</i>. Our time is increasingly spent on the planning stage.</p>
+            <p>Consider the Department of Defense: the pentagon has a nearly $1 trillion budget, yet it is still constrained by trade-offs: a base here, or there? A new jet, but what missions should it be designed for? How should the defense posture of this country look in 5 years? By the time the hordes of analysts have decided what to do, the work could've been done already</p>
+            <p>Another example is the process of building housing. The community must decide whether it wants the housing to be built; this process can take months of community outreach and meetings. The city must review the plans and be assured that any environmental impact is accounted for, which the builders must study. By the time the architects refine the plans, and the holes are ready to be dug, most of the work is already done – this was the work deciding whether or not to do it in the first place.</p>
+            <p>Consider congestion pricing in New York City. The political machinations and analysis took years: the budget meetings, the alternatives suggested. One impact assessment <a href="https://reason.com/2021/08/24/new-york-city-was-supposed-to-have-congestion-pricing-in-january-federally-mandated-environmental-review-pushed-the-start-date-to-2023/">took</a> 16 months to complete.</p>                
+            <blockquote>
+                "Our time is increasingly spent on the planning stage."
+            </blockquote>
+            <p>Many people wish for a world of machines that wait at our command. The last job for humanity, then, is deciding what those commands ought to be. <b>Our mission as a company is to make those decisions – those studies and analyses – as correct, persuasive, and efficient as possible.</b></p>
+        </div>
+    </div>
+    <style>
+        #platform-page {
+            background-color: rgb(29, 29, 29);
+        }
+        .inner-platform-page {
+            padding: 5% 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+        }
+        .platform-main-text {
+            font-size: 4rem;
+            font-family: var(--font-header);
+        }
+        .platform-body-container {
+            display: flex;
+            gap: 2rem;
+        }
+        .platform-abbey-box-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .platform-abbey-box {
+            background-color: #505050;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            max-width: 400px;
+            font-size: 1.25rem;
+            border: 1px solid #787878;
+        }
+        .abbey-logo-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+            font-family: Outfit;
+            font-size: 1.25rem;
+        }
+        .second-row-abbey-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .platform-body-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            flex: 1;
+        }
+        .platform-body-item {
+            display: flex;
+        }
+        .platform-item-icon {
+            height: 30px;
+            filter: invert(100%);
+        }
+        .platform-item-icon-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .platform-item-text {
+            flex: 4;
+            font-size: 1.5rem;
+            margin-left: 3rem;
+            display: list-item;
+        }
+        .platform-ending {
+            font-size: 1.5rem;
+        }
+        @media only screen and (max-width: 900px) {
+            .platform-body-container {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            }
+            .platform-main-text {
+                font-size: 3rem;
+            }
+            .inner-platform-page {
+                gap: 2.5rem;
+                padding: 10% 10%;
+            }
+        }
+    </style>
+    <div id="platform-page">
+        <div class="inner-platform-page">
+            <div class="platform-main-text">
+                More correct, more comprehensive, and faster intelligence
+            </div>
+            <div class="platform-body-container">
+                <div class="platform-body-stack">
+                    <div class="platform-body-item">
+                        <div class="platform-item-text">
+                            Automated web crawling en masse
+                        </div>
+                    </div>
+                    <div class="platform-body-item">
+                        <div class="platform-item-text">
+                            Advanced labeling and filtering of information
+                        </div>
+                    </div>
+                    <div class="platform-body-item">
+                        <div class="platform-item-text">
+                            Summaries and analysis of papers, news, and reports
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-abbey-box-container">
+                    <div class="platform-abbey-box">
+                        <div>
+                            Our internal platform is forked from Abbey, our open source project.
+                        </div>
+                        <div class="second-row-abbey-box">
+                            <div class="abbey-logo-container">
+                                Abbey
+                                <img src="JustBooks.png" style="height:25px;" />
+                            </div>
+                            <div>
+                                <a class="github-button" href="https://github.com/us-artificial-intelligence/abbey" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star us-artificial-intelligence/abbey on GitHub">Star</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="accept-tracking" onclick="onCookieAccept()">
-                <div id="accept-text">
-                    Accept
+            <div class="platform-ending">
+                Better technology allows us to deliver more thoughtful and comprehensive analysis.
+            </div>
+        </div>
+    </div>
+    <style>
+        #team-page {
+            position: relative;
+            width: 100vw;
+            background-color: black;
+        }
+        .inner-team-page {
+            padding: 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+        .team-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            width: 100%;
+            align-items: center;
+        }
+        .team-section-label {
+            font-size: 2.5rem;
+        }
+        .team-people {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .team-person {
+            display: flex;
+            gap: 100px;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .team-img-container {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 100%;
+        }
+        .team-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .team-person-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 80%;
+        }
+        .team-name {
+            font-size: 2rem;
+            padding-bottom: 10px;
+        }
+        .team-person-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 1rem;
+        }
+        @media only screen and (max-width: 900px) {
+            .team-name {
+                font-size: 1.5rem;
+            }
+            .team-person-items {
+                font-size: .8rem;
+            }
+            .team-person {
+                gap: 50px;
+            }
+        }
+    </style>
+    <div id="team-page">
+        <div class="inner-team-page">
+            <div class="team-section">
+                <div class="team-section-label header-text">
+                    Officers
                 </div>
-                <div id="accept-long-text">
-                    I accept your use of third party tracking cookies.
+                <div class="team-people">
+                    <div class="team-person">
+                        <div class="team-img-container">
+                            <img src="images/Gordon.jpeg" class="team-img" />
+                        </div>
+                        <div class="team-person-stack">
+                            <div class="team-name">
+                                Gordon Kamer - CEO
+                            </div>
+                            <div class="team-person-items">
+                                <div>
+                                    Studied computer science and government at Harvard College
+                                </div>
+                                <div>
+                                    Published work on artificial intelligence
+                                </div>
+                                <div>
+                                    Former national security analyst
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-        window.addEventListener('scroll', function() {
-            let fade = document.querySelectorAll('.fade-in');
-            for (let i = 0; i < fade.length; i++) {
-                let rect = fade[i].getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    fade[i].style.opacity = "1";
-                }
+    <style>
+        #footer {
+            background-color: #505050;
+        }
+        .inner-footer {
+            padding: 5% 10%;
+            display: flex;
+            gap: 2rem;
+        }
+        .footer-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .footer-stack a {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        @media only screen and (max-width: 900px) {
+            .inner-footer {
+                flex-direction: column;
             }
-        });
-
-        document.querySelectorAll('.underlineAnimated').forEach(function(element) {
+        }
+    </style>
+    <div id="footer">
+        <div class="inner-footer">
+            <div>
+                <img src="images/WhiteOwlAndText.png" class="logo" />
+            </div>
+            <div class="footer-stack">
+                <div>
+                    <a href="careers.html">Careers</a>
+                </div>
+                <div>
+                    Inquiries to team@us.ai
+                </div>
+                <div>
+                    <a href="https://us.ai/TermsOfUse.pdf">Terms of Use</a> and <a href="https://us.ai/WebsitePrivacyPolicy.pdf">Privacy Policy</a> 
+                </div>
+                <div>
+                    Copyright © U.S. Artificial Intelligence Inc. All rights reserved.
+                </div>
+                <div>
+                    Mountain View, CA
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.underline-animated').forEach(function(element) {
             element.addEventListener('mouseout', function() {
                 this.style.setProperty('--transform-dir', '100% 50%');
             });
         });
 
-        document.querySelectorAll('.underlineAnimated').forEach(function(element) {
+        document.querySelectorAll('.underline-animated').forEach(function(element) {
             element.addEventListener('mouseover', function() {
                 this.style.setProperty('--transform-dir', '0% 50%');
             });
         });
-
-
+        
+        const video = document.querySelector('.premier-video');
+        video.load();  // without this, hard refreshes seem to delay loading?!?
+        video.addEventListener('canplay', () => {
+            video.classList.add('show-premier-video');
+        });
     </script>
 </body>
 </html>
