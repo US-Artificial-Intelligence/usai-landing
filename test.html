@@ -307,29 +307,29 @@
             <div class="paragraph-page-header">
                 What do <i>you</i> do?
             </div>
-            <p>We can accomplish anything we set our minds on. But how do you decide <i>what</i> it is you want to do?</p>
-            <p>AI and other technologies are increasingly driving down the cost of actually doing stuff. Yet, we often find ourselves doing less – in fact, doing the thing is often the easiest part.</p>
-            <p>Take, for example, the process of building housing. The community must decide whether it wants the housing to be built; this process can take months of community outreach and meetings. The city must review the plans and be assured that any environmental impact is accounted for, which the builders must study. By the time the architects refine the plans, and the holes are ready to be dug, most of the work is already done – this was the work deciding whether or not to do it in the first place.</p>
-            <p>Consider congestion pricing in New York City. The political analysis and machinations took years: the budget meetings, the alternatives suggested. One impact assessment <a href="https://reason.com/2021/08/24/new-york-city-was-supposed-to-have-congestion-pricing-in-january-federally-mandated-environmental-review-pushed-the-start-date-to-2023/">took</a> 16 months to complete.</p>                
-            <p>It's true on a strategic level as well. The Defense Department has a nearly $1 trillion budget, yet it is still constrained by trade-offs: a base here, or there? A new jet, and what should it do? How should the defense posture of this country look in 5 years?</p>
+            <p>We can accomplish anything we set our minds on. But how do you decide <i>what</i> you want to do?</p>
+            <p>AI and other technologies have driven down innumerable costs, yet we often find ourselves actually accomplishing <i>less</i>. Our time is increasingly spent on the planning stage.</p>
+            <p>Consider the Department of Defense: the pentagon has a nearly $1 trillion budget, yet it is still constrained by trade-offs: a base here, or there? A new jet, but what missions should it be designed for? How should the defense posture of this country look in 5 years? By the time the hordes of analysts have decided what to do, the work could've been done already</p>
+            <p>Another example is the process of forest management. By the time reviews are completed that confirm that a proposed controlled burn would be effective, it's <a href="https://www.newsweek.com/controlled-burns-california-forest-management-los-angeles-fires-2012492">possible</a> that the area already burned down in an uncontrolled fashion.</p>
+            <p>We want to have it both ways: to be assured that we are doing the right thing and to get it done. Proposals to reduce legally mandated reviews favor one side of the tradeoff, but they might be political non-starters: shouldn't we measure twice before cutting? We hope to build technology that pushes the possibilities frontier so we can both be sure we're doing the right thing and also get it done.</p>
             <blockquote>
-                "Doing the thing is often the easiest part."
+                "Our time is increasingly spent on the planning stage."
             </blockquote>
-            <p>Many people wish for a world of machines that wait at our command. The last job for humanity, then, is deciding what those commands ought to be. Our mission as a company is to make those decisions – those studies and analyses – as correct, persuasive, and efficient as possible.</p>
+            <p>Many people wish for a world of machines that wait at our command. The last job for humanity, then, is deciding what those commands ought to be. <b>Our mission as a company is to make those decisions – those studies and analyses – as correct, persuasive, and efficient as possible.</b></p>
         </div>
     </div>
     <style>
         #platform-page {
-            background-color: black;
+            background-color: rgb(29, 29, 29);
         }
         .inner-platform-page {
             padding: 5% 10%;
             display: flex;
             flex-direction: column;
-            gap: 3rem;
+            gap: 5rem;
         }
         .platform-main-text {
-            font-size: 3rem;
+            font-size: 4rem;
             font-family: var(--font-header);
         }
         .platform-body-container {
@@ -347,17 +347,18 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 2.5rem;
             max-width: 400px;
+            font-size: 1.25rem;
             border: 1px solid #787878;
         }
         .abbey-logo-container {
             display: flex;
             align-items: center;
-            width: 100%;
             gap: 10px;
             font-family: Outfit;
-            font-size: 1.15rem;
+            font-size: 1.25rem;
+            cursor: pointer;
         }
         .second-row-abbey-box {
             display: flex;
@@ -387,6 +388,26 @@
         .platform-item-text {
             flex: 4;
             font-size: 1.5rem;
+            margin-left: 3rem;
+            display: list-item;
+        }
+        .platform-ending {
+            font-size: 2.5rem;
+            font-family: var(--font-header);
+        }
+        @media only screen and (max-width: 900px) {
+            .platform-body-container {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            }
+            .platform-main-text {
+                font-size: 3rem;
+            }
+            .inner-platform-page {
+                gap: 2.5rem;
+                padding: 10% 10%;
+            }
         }
     </style>
     <div id="platform-page">
@@ -397,27 +418,23 @@
             <div class="platform-body-container">
                 <div class="platform-body-stack">
                     <div class="platform-body-item">
-                        <div class="platform-item-icon-container">
-                            <img src="icons/spider-web.png" class="platform-item-icon" />
-                        </div>
                         <div class="platform-item-text">
-                            Automated web crawling en masse
+                            Pushing the frontier of capabilities for AI reasoning
                         </div>
                     </div>
                     <div class="platform-body-item">
-                        <div class="platform-item-icon-container">
-                            <img src="icons/filter.png" class="platform-item-icon" />
-                        </div>
                         <div class="platform-item-text">
-                            Advanced labeling and filtering of information
+                            Advanced filtering of information
                         </div>
                     </div>
                     <div class="platform-body-item">
-                        <div class="platform-item-icon-container">
-                            <img src="icons/report.png" class="platform-item-icon" />
-                        </div>
                         <div class="platform-item-text">
-                            Summaries and analysis of papers, news, and reports
+                            Complex hypothesis generation and evaluation
+                        </div>
+                    </div>
+                    <div class="platform-body-item">
+                        <div class="platform-item-text">
+                            Verifiable chains of thought
                         </div>
                     </div>
                 </div>
@@ -427,9 +444,14 @@
                             Our internal platform is forked from Abbey, our open source project.
                         </div>
                         <div class="second-row-abbey-box">
-                            <div class="abbey-logo-container">
-                                Abbey
-                                <img src="JustBooks.png" style="height:25px;" />
+                            <a href="https://abbey.us.ai">
+                                <div class="abbey-logo-container">
+                                    Abbey
+                                    <img src="JustBooks.png" style="height:25px;" />
+                                </div>
+                            </a>
+                            <div style="font-size:1rem">
+                                1000s of users
                             </div>
                             <div>
                                 <a class="github-button" href="https://github.com/us-artificial-intelligence/abbey" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star us-artificial-intelligence/abbey on GitHub">Star</a>
@@ -437,6 +459,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="platform-ending">
+                Better technology enables entirely new modes of analysis.
             </div>
         </div>
     </div>
