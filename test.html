@@ -36,6 +36,18 @@
         scroll-behavior: smooth;
         color: white;
     }
+    .fade-in {
+        opacity: 0;
+        transition: opacity 1.5s;
+    }
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+    .fade-in-top {
+        opacity: 0;
+        animation: fadeIn ease 1.5s forwards; /* adjust duration as needed */
+    }
     a {
         all: unset;
         font-family: var(--font-body);
@@ -178,7 +190,7 @@
         }
     </style>
     <div id="premier-page">
-        <div class="inner-premier">
+        <div class="inner-premier fade-in-top">
             <div class="menu">
                 <div style="display:flex;align-items:center;flex:1">
                     <style>
@@ -255,7 +267,7 @@
         }
     </style>
     <div id="mission-page">
-        <div class="inner-mission-page">
+        <div class="inner-mission-page fade-in">
             <div class="mission-main-text header-text">
                 We help governments and businesses make better strategic decisions.
             </div>
@@ -304,7 +316,7 @@
         }
     </style>
     <div id="paragraph-page">
-        <div class="inner-paragraph-page">
+        <div class="inner-paragraph-page fade-in">
             <div class="paragraph-page-header">
                 What do <i>you</i> do?
             </div>
@@ -420,7 +432,7 @@
         }
     </style>
     <div id="platform-page">
-        <div class="inner-platform-page">
+        <div class="inner-platform-page fade-in">
             <div class="platform-main-text">
                 More correct, more comprehensive, and faster intelligence
             </div>
@@ -552,7 +564,7 @@
     </style>
     <div id="team-page">
         <div class="inner-team-page">
-            <div class="team-section">
+            <div class="team-section fade-in">
                 <div class="team-section-label header-text">
                     Advisors
                 </div>
@@ -674,6 +686,17 @@
         </div>
     </div>
     <script>
+
+        window.addEventListener('scroll', function() {
+            let fade = document.querySelectorAll('.fade-in');
+            for (let i = 0; i < fade.length; i++) {
+                let rect = fade[i].getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    fade[i].style.opacity = "1";
+                }
+            }
+        });
+
         document.querySelectorAll('.underline-animated').forEach(function(element) {
             element.addEventListener('mouseout', function() {
                 this.style.setProperty('--transform-dir', '100% 50%');
